@@ -30,7 +30,7 @@ class OneCardFragment : Fragment() {
 
         val cardID = requireArguments().getInt("cardID").toString()
 
-        binding.editValueTV.text = cardID.toString()
+        binding.editValueTV.text = cardID
     }
 
 }

@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentOneCardBinding
 import com.example.tarotappdb_01.databinding.FragmentVeryHomeBinding
+import kotlin.random.Random
 
 
 class VeryHomeFragment : Fragment() {
@@ -21,7 +22,8 @@ class VeryHomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentVeryHomeBinding.inflate(inflater, container, false)
-        return binding.root      }
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,7 +38,13 @@ class VeryHomeFragment : Fragment() {
         }
 
         dayCardBTN.setOnClickListener {
-            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToOneCardFragment(21))
+            // Generates a random card-ID, which is trasmitted by argument in the nav_graph to the OneCardFragment
+            val randomCardID = (0 until 23).random()
+            findNavController().navigate(
+                VeryHomeFragmentDirections.actionVeryHomeFragmentToOneCardFragment(
+                    randomCardID
+                )
+            )
         }
     }
 }

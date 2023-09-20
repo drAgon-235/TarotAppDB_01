@@ -34,14 +34,14 @@ class DayCardFragment : Fragment() {
 
         viewmodel.loadCardsFromDBinVM()
 
+        // How to get one distinct Card from the viewmodel.LiveData:
         val listLD = viewmodel.cardsListLD
 
         val list = listLD.value
 
         val oneCard = list!![1]
 
-        binding2.descriptionTV.setText(oneCard.description)
-
+        binding2.descriptionTV.text = oneCard.description
 
     }
 
