@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/veryHomeFragment">
+
+    <fragment
+        android:id="@+id/veryHomeFragment"
+        android:name="com.example.tarotappdb_01.veryHomeFrag.VeryHomeFragment"
+        android:label="fragment_very_home"
+        tools:layout="@layout/fragment_very_home">
+        <action
+            android:id="@+id/action_veryHomeFragment_to_allCardsRVFragment"
+            app:destination="@id/allCardsRVFragment" />
+        <action
+            android:id="@+id/action_veryHomeFragment_to_oneCardFragment"
+            app:destination="@id/oneCardFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/allCardsRVFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.allCardsRVFrag.AllCardsRVFragment"
+        android:label="fragment_all_cards_rv"
+        tools:layout="@layout/fragment_all_cards_rv">
+        <action
+            android:id="@+id/action_allCardsRVFragment_to_oneCardFragment"
+            app:destination="@id/oneCardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/oneCardFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.oneCardFrag.OneCardFragment"
+        android:label="fragment_one_card"
+        tools:layout="@layout/fragment_one_card">
+        <argument
+            android:name="cardID"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
