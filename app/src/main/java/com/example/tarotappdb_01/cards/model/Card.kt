@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "cards_table")
-data class Card (
+data class Card(
     @PrimaryKey
     val id: Int,
     val name: String,
@@ -16,5 +16,5 @@ data class Card (
     val meaning_rev: String,
     val qta: String,
     val description: String,
-    val picture: String
+    val picture: Int
         )

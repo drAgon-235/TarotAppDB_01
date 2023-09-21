@@ -6,15 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import com.example.tarotappdb_01.R
+import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
 import com.example.tarotappdb_01.databinding.FragmentOneCardBinding
 
 
 class OneCardFragment : Fragment() {
 
     private lateinit var binding: FragmentOneCardBinding
-    private val viewmodel: ViewModel by activityViewModels()
+    private val viewmodel: CardsViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -28,9 +27,43 @@ class OneCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cardID = requireArguments().getInt("cardID").toString()
+        //viewmodel.loadCardsFromDBinVM()   // Bullshit ;D
 
-        binding.editValueTV.text = cardID
+        // How to get one distinct Card from the viewmodel.LiveData:
+        val listLD = viewmodel.cardsListLD
+            // Transform from LiveData to usual List:
+        val list = listLD.value
+            // Get the ID from the argument in the nav_graph:
+        val cardID = requireArguments().getInt("cardID")
+            // Use the ID to get our wanted Card:
+        val oneCard = list!![cardID - 1]
+            // Corresponding picture:
+        val pic = oneCard.picture
+
+        // Binding texts and picture to OneCardFragment:
+        binding.cardPictureIV.setImageResource(pic)
+        binding.editNameTV.text = oneCard.name
+        binding.editValueTV.text = oneCard.value
+        binding.editMeaningtTV.text = oneCard.meaning_up
+        binding.editDescriptionTV.text = oneCard.description
+
+
+
     }
 
 }
+
+/*
+
+        binding2.title2TV.setText("YOUR Card of the day")
+
+        viewmodel.loadCardsFromDBinVM()
+
+        // How to get one distinct Card from the viewmodel.LiveData:
+        val listLD = viewmodel.cardsListLD
+
+        val list = listLD.value
+
+        val oneCard = list!![1]
+
+ */
