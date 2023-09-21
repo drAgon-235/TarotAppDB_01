@@ -37,20 +37,21 @@ class OneCardFragment : Fragment() {
         val cardID = requireArguments().getInt("cardID")
             // Use the ID to get our wanted Card:
         val oneCard = list!![cardID - 1]
-            // Corresponding picture:
+            // Isolating corresponding picture as "Drawable" (always by Int):
         val pic = oneCard.picture
 
-        // Binding texts and picture to OneCardFragment:
+        // Binding picture and texts to (re-usable & very flexible) OneCardFragment:
         binding.cardPictureIV.setImageResource(pic)
         binding.editNameTV.text = oneCard.name
+        binding.editArcanaTV.text = oneCard.suit.toString()
         binding.editValueTV.text = oneCard.value
+        binding.editKeywordsTV.text = oneCard.keywords
         binding.editMeaningtTV.text = oneCard.meaning_up
+        binding.editFortuneTellTV.text = oneCard.fortuneTelling
+        binding.editQtaTV.text = oneCard.qta
         binding.editDescriptionTV.text = oneCard.description
 
-
-
     }
-
 }
 
 /*
