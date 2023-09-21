@@ -69,6 +69,10 @@ class Repository(private val databse: CardsDatabase) {
         return databse.cardsDao.getAllCardsDao()
     }
 
+    fun getCardsListRepo(): List<Card> {
+        return databse.cardsDao.getCardsList()
+    }
+
 }
 
 

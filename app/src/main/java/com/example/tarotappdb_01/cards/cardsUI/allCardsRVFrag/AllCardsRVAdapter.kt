@@ -26,6 +26,7 @@ class AllCardsRVAdapter(
 
 
         holder.binding.nameTV.text = card.name
+        holder.binding.imageView.setImageResource(card.picture)
 
 
         holder.binding.itemCardView.setOnClickListener {

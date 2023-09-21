@@ -1,14 +1,20 @@
 package com.example.tarotappdb_01.cards.cardsUI.oneCardFrag
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
+import com.example.tarotappdb_01.cards.model.Card
+import com.example.tarotappdb_01.cards.model.RawCardData
 import com.example.tarotappdb_01.databinding.FragmentOneCardBinding
+import java.lang.Exception
 
+
+private val TAG = "OneCardFragment_TAG"
 
 class OneCardFragment : Fragment() {
 
@@ -29,18 +35,54 @@ class OneCardFragment : Fragment() {
 
         //viewmodel.loadCardsFromDBinVM()   // Bullshit ;D
 
-        // How to get one distinct Card from the viewmodel.LiveData:
+        // Neccessary pre-declarations & inits:
+        var oneCard: Card = RawCardData.card21Judgement
+        var pic: Int = 0
+
+
+        // How to get one distinct Card from the viewmodel:
+
+        // Get the ID from the argument in the nav_graph:
+        val cardID = requireArguments().getInt("cardID")
+
+        // **"A"** For the LiveData (for RecyclerView):
         val listLD = viewmodel.cardsListLD
             // Transform from LiveData to usual List:
-        val list = listLD.value
-            // Get the ID from the argument in the nav_graph:
-        val cardID = requireArguments().getInt("cardID")
-            // Use the ID to get our wanted Card:
-        val oneCard = list!![cardID - 1]
-            // Isolating corresponding picture as "Drawable" (always by Int):
-        val pic = oneCard.picture
+        val list = listLD.value.orEmpty()
 
-        // Binding picture and texts to (re-usable & very flexible) OneCardFragment:
+
+        // Habe ich mal gecatcht, weil es hier crasht, wenn Button 1 'Tageskarte' angeklickt wird?
+        // Following Block is always executed, when Button 1 is clicked first.
+        try {
+            // Use the ID to get our wanted Card:
+            oneCard = list[cardID - 1]
+            // Doesn't work with Button 1 (from the beginning, if Button 3 is clicked fist, then Button 1 works properly ?!?!?!?!)
+        }catch (e: Exception){
+            Log.e(TAG, "ERROR_1 getting one Card from VM - continue to Error2 ;-D ???")
+        }
+
+
+        // And in Case Button 1 ('Card of the day') is clicked first
+        // **"B"** for NO LiveData - just simple List, no Nullables !! (which made trouble here) :
+
+        // Rescue: extra Funktion in Dao (without LiveData - just simple List<Card>)
+        // -> extra Variable in Repo, in VM & here in the Fragment, after catching the upper TC-Blocks,
+        val listNoLD = viewmodel.cardListSimple
+
+        // Try again, with simple List<Card> - NO LiveData !!:
+        // Only the following helps working Button 1 work properly from the first click on:
+        try {
+            // Use the ID to get our wanted Card:
+            oneCard = listNoLD[cardID - 1]
+        }catch (e: Exception){
+            Log.e(TAG, "ERROR_2 getting one Card from VM - now you're really dumped")
+        }
+
+
+        // Isolating corresponding picture as "Drawable" (always by Int):
+        pic = oneCard.picture
+
+        // Binding picture and texts to (re-usable, scrollable & very flexible) OneCardFragment:
         binding.cardPictureIV.setImageResource(pic)
         binding.editNameTV.text = oneCard.name
         binding.editArcanaTV.text = oneCard.suit.toString()
@@ -53,6 +95,9 @@ class OneCardFragment : Fragment() {
 
     }
 }
+
+
+
 
 /*
 

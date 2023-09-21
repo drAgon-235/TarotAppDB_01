@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
 import com.example.tarotappdb_01.databinding.FragmentAllCardsRvBinding
-import kotlinx.coroutines.launch
 
 
 class AllCardsRVFragment : Fragment() {
@@ -31,7 +27,7 @@ class AllCardsRVFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Load Databaseto VM used here:
-        viewmodel.loadCardsFromDBinVM()
+        viewmodel.loadCardsFromDBinVMasLD()
         //bind recyclerview to this Fragment:
         val recyclerView = binding.cardsListRV
         //optimize occurence of RV:

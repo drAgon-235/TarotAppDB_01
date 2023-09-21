@@ -16,6 +16,9 @@ interface CardsDao {
     @Query("SELECT * FROM cards_table")
     fun getAllCardsDao(): LiveData<List<Card>>
 
+    @Query("SELECT * FROM cards_table")
+    fun getCardsList(): List<Card>
+
     @Query("SELECT COUNT(*) FROM cards_table")
     fun countDAO(): Int
 

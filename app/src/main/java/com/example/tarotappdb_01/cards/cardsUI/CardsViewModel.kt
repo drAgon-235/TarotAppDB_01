@@ -22,6 +22,8 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     // Creating a LD where the abstract LDList of the Repository ist saved
     var cardsListLD: LiveData<List<Card>> = repository.cardsLiveList
 
+    var cardListSimple = repository.getCardsListRepo()
+
     init{
         // Filling Cards to Room-DB in App is run for the first time (in Main)
         Log.d(TAG, "PrepopulateDB while crating VM")
@@ -30,10 +32,13 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
 
 
     // Finally loading the DB to the LD-Variable:
-    fun loadCardsFromDBinVM(){
+    fun loadCardsFromDBinVMasLD(){
         cardsListLD = repository.getAllCardsRepoAsLD()
     }
 
+    fun loadCardListFromDBinViewModel(){
+        cardListSimple = repository.getCardsListRepo()
+    }
 
 
 }
