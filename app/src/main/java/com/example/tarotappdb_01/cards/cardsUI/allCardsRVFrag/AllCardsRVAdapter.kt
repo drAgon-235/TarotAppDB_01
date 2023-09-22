@@ -21,12 +21,11 @@ class AllCardsRVAdapter(
         return tarotDeckList.size
     }
 
-    override fun onBindViewHolder(holder: CardItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CardItemViewHolder , position: Int) {
         val card = tarotDeckList[position]
 
-
-        holder.binding.nameTV.text = card.name
         holder.binding.imageView.setImageResource(card.picture)
+        holder.binding.numberInArcanaTV.text = card.value
 
 
         holder.binding.itemCardView.setOnClickListener {

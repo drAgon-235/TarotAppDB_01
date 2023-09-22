@@ -19,10 +19,11 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     private var repository = Repository(database)
 
 
-    // Creating a LD where the abstract LDList of the Repository ist saved
+    // Creating a LiveData! where the abstract LDList of the Repository ist saved,
+    // and will be filled by the Fragment which uses this ViewModel 'by activitiesViewModels()'
     var cardsListLD: LiveData<List<Card>> = repository.cardsLiveList
 
-    // Creating a simple List<Card> for Card of the Day Fragment:
+    // Creating a simple List<Card> for Card of the Day Fragment (NO LiveData!):
     var cardListSimple = repository.cardsListNoLD
 
     init{

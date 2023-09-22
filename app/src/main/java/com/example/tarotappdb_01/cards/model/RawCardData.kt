@@ -324,6 +324,201 @@ object RawCardData {
         picture = R.drawable.m21_world
     )
 
+    val card23Cups01 = Card(
+        id = 23,
+        name = "Ace of Cups",
+        suit = SuitEnum.CUPS,
+        value = "1",
+        keywords = "intuition, spirituality, affection, motivation",
+        fortuneTelling = "Romance is in the cards. \nA new relationship or marriage is just around the corner. \nPrayers are answered.",
+        meaning_up = "Trusting your feelings, Opening yourself to spirit, Accepting and returning affection, Getting in touch with what motivates you, Taking advantage of an opportunity to express love to others, Listening to the still, small voice",
+        meaning_rev = "Hiding your feelings, Spurning an opportunity to love or be loved, Numbing yourself to spiritual yearnings, Rejecting the counsel of your heart, Becoming a puppet of your own emotions, Indulging in hysteria or obsession",
+        qta = "What am I feeling right now? \nHow would I go about opening myself to spiritual guidance? \nWhat motivates me the most - pleasure or pain? Why?",
+        description = "The waters are beneath, and thereon are water-lilies; the hand issues from the cloud, holding in its palm the cup, from which four streams are pouring; a dove, bearing in its bill a cross-marked Host, descends to place the Wafer in the Cup; the dew of water is falling on all sides. It is an intimation of that which may lie behind the Lesser Arcana.",
+        picture = R.drawable.c01
+    )
+
+    val card24Cups02 = Card(
+        id = 24,
+        name = "Two Cups",
+        suit = SuitEnum.CUPS,
+        value = "2",
+        keywords = "union, attraction, combination, affection",
+        fortuneTelling = "Someone has a secret crush on you. \nRelationships should be mutual; get rid of a leech.",
+        meaning_up = "Being drawn to someone, Longing for someone or something, Acting on your desires, Discovering a feeling is mutual, Doing what makes you feel good, Merging, Healing broken ties, Admitting two people feel differently about each other and moving on",
+        meaning_rev = "Burning bridges, Becoming caught up in unhealthy codependency, Shutting out anyone but your chosen few, Obsessing on someone who does not return your affections, Despairing over finding \"The One\", Deceiving yourself about your true orientation",
+        qta = "How can I make sure that what I'm feeling is mutual? \nWhen was the last time I felt \"in love\" with someone or something? \nWhat do you need in order to feel emotionally stable?",
+        description = "A youth and maiden are pledging one another, and above their cups rises the Caduceus of Hermes, between the great wings of which there appears a lion's head. It is a variant of a sign which is found in a few old examples of this card. Some curious emblematical meanings are attached to it, but they do not concern us in this place.",
+        picture = R.drawable.c02
+    )
+
+    val card25Cups03 = Card(
+        id = 25,
+        name = "Three Cups",
+        suit = SuitEnum.CUPS,
+        value = "3",
+        keywords = "celebration, expression, community, friendliness",
+        fortuneTelling = "Unconventional romance is coming your way: a love affair with someone you've always dismissed",
+        meaning_up = "Celebrating your feelings or connections with others, Expressing joy through song, dance, or physical affection, Working together with others who share your feelings, Performing acts of service as a way of saying, \"I love you\", Embracing unconventional romantic arrangements",
+        meaning_rev = "Mistaking giddiness for true affection, Being dominated by manic emotions, Expecting everyone to always feel the same way you do, Demanding unreasonable support from friends or family, Partying to a dangerous or unhealthy extent",
+        qta = "What's worth celebrating in my life? \nHow can I demonstrate my feelings in appropriate ways? \nWhat can I do to show my partner how I really feel?",
+        description = "Maidens in a garden-ground with cups uplifted, as if pledging one another.",
+        picture = R.drawable.c03
+    )
+
+    val card26Cups04 = Card(
+        id = 26,
+        name = "Four Cups",
+        suit = SuitEnum.CUPS,
+        value = "4",
+        keywords = "boredom, listlessness, lethargy, stability, ingratitude",
+        fortuneTelling = "A lover is getting restless. \nFind out what he or she needs, or new opportunities may lure your partner away.",
+        meaning_up = "Maintaining your emotional stability, Refusing to give in to overwhelming emotions, Appreciating what you have and refusing to take it for granted, Seeing the value of long-term commitments",
+        meaning_rev = "Being bored, Daydreaming at the expense of your work, Refusing to be engaged by opportunity, Taking people and relationships for granted, Ignoring romantic or spiritual opportunities, Spurning inspiration, Feeling everything should stay \"just like it is\"",
+        qta = "How can I use this \"downtime\" to my best advantage? \nHow can I show my partner that I don't take him or her for granted? \nTo what extent is my mood blinding me to new opportunities?",
+        description = "A young man is seated under a tree and contemplates three cups set on the grass before him; an arm issuing from a cloud offers him another cup. His expression notwithstanding is one of discontent with his environment.",
+        picture = R.drawable.c04
+    )
+
+    val card27Cups05 = Card(
+        id = 27,
+        name = "Five Cups",
+        suit = SuitEnum.CUPS,
+        value = "5",
+        keywords = "loss, despair, re-evaluation, regret, uncertainty, repentance",
+        fortuneTelling = "A breakup looms. \nDon't cry over spilt milk. \nTake your lumps and get back in the saddle.",
+        meaning_up = "Acknowledging loss and moving on, Focusing on how the glass remains \"half-full\", Finding the silver lining in a dark cloud, Recognizing that loss is a natural part of life, Embracing healthy grief, Learning lessons from harsh consequences",
+        meaning_rev = "Wallowing in unhealthy grief or self-pity, Refusing to move on and let go, Clinging to the past, Obsessing on past lives and past loves, Failing to live in the present, Beating yourself up over past mistakes, Allowing fear of failure to limit your efforts",
+        qta = "How do I tend to deal with loss? \nWhat life lesson might I be learning now? \nHow can I shift my attention from the past to the future?",
+        description = "A dark, cloaked figure, looking sideways at three prone cups two others stand upright behind him; a bridge is in the background, leading to a small keep or holding. Divanatory Meanings: It is a card of loss, but something remains over; three have been taken, but two are left; it is a card of inheritance, patrimony, transmission, but not corresponding to expectations; with some interpreters it is a card of marriage, but not without bitterness or frustration. Reversed: News, alliances, affinity, consanguinity, ancestry, return, false projects",
+        picture = R.drawable.c05
+    )
+
+    val card28Cups06 = Card(
+        id = 28,
+        name = "Six Cups",
+        suit = SuitEnum.CUPS,
+        value = "6",
+        keywords = "charity, sharing, sacrifice, cooperation, fairness",
+        fortuneTelling = "A stingy spirit is strangling your enjoyment of life. \nLoosen up and think of others for once, why don't you?",
+        meaning_up = "Donating your time and talents to others, Taking satisfaction in knowing how your efforts will aid others, Creating a \"win-win\" scenario, Giving even when you know repayment is not possible, Being motivated to do a good deed",
+        meaning_rev = "Linking your sense of self-worth to the appraisals of others, Striving to appear more needy than you really are, Taking undeserved or unmerited charity, Bragging about your charitable efforts, Profiteering in times of distress, Refusing to share a burden",
+        qta = "What gifts do I possess? How freely do I give them? \nHow can I practice unconditional giving? \nHow would things change if I became a more charitable person?",
+        description = "Children in an old garden, their cups filled with flowers.",
+        picture = R.drawable.c06
+    )
+
+    val card29Cups07 = Card(
+        id = 29,
+        name = "Seven Cups",
+        suit = SuitEnum.CUPS,
+        value = "7",
+        keywords = "imagination, dreams, illusions, goals",
+        fortuneTelling = "You're being fed a line. \nRather than be dazzled by fancy words and promises, demand something real.",
+        meaning_up = "Motivating yourself with images of future success, Using visualization to encourage progress, Taking an imaginative or creative approach to problem solving, Making dreams come true, Gleaning insight from personal visions",
+        meaning_rev = "Obsessing on imaginary fears or uncertain consequences, Giving in to emotional or political terrorism, Spending more time dreaming than working, Failing to envision the possible repercussions of your choices, Being controlled by fear",
+        qta = "What do you want most? What do you fear most? How are these related? \nHow is your imagination working for you? Against you? \nHow might a clearer personal vision help you choose a single cup from the many available?",
+        description = "Strange chalices of vision, but the images are more especially those of the fantastic spirit.",
+        picture = R.drawable.c07
+    )
+
+    val card30Cups08 = Card(
+        id = 30,
+        name = "Eight Cups",
+        suit = SuitEnum.CUPS,
+        value = "8",
+        keywords = "imagination, dreams, illusions, goals",
+        fortuneTelling = "Someone's \"stepping out\" on you, now or in the near future. \nMaybe it's time to quit talking about the problem and just move on.",
+        meaning_up = "Wanting something better, Blazing your own trail, Realizing there must be more to life, Leaving an unhealthy situation behind, Starting your own business, Going on a retreat, Seeking the \"still, small voice\"",
+        meaning_rev = "Being implacable, Finding fault, Nitpicking, Refusing to settle down, Running away from problems or confrontations, Saying, \"It's my way or the highway!\", Harping on past mistakes and disappointments, Threatening to quit as a strategy to get your way",
+        qta = "What do I need to leave behind once and for all? \nIf I left in search of \"more,\" what would I be looking for, exactly? \nHow might a retreat enhance my perspective?",
+        description = "A man of dejected aspect is deserting the cups of his felicity, enterprise, undertaking or previous concern.",
+        picture = R.drawable.c08
+    )
+
+    val card31Cups09 = Card(
+        id = 31,
+        name = "Nine Cups",
+        suit = SuitEnum.CUPS,
+        value = "9",
+        keywords = "satisfaction, sensuality, luxury, pleasure",
+        fortuneTelling = "Whatever you want, you'll get it",
+        meaning_up = "Being delighted with your own achievements, Recognizing your own talents and abilities, Reveling in the good things life has to offer, Indulging yourself, Relaxing and unwinding, Having everything you need in order to feel complete",
+        meaning_rev = "Being smug, Satisfying yourself at the expense of others, Being selfish, Over-indulging, Avoiding work that needs to be done, Claiming achievements or skills you do not possess, Never being satisfied, no matter how much you have",
+        qta = "What is true happiness? \nIf I could have anything, what would I have? \nWhat is my attitude toward luxury? Do I deserve it?",
+        description = "A goodly personage has feasted to his heart's content, and abundant refreshment of wine is on the arched counter behind him, seeming to indicate that the future is also assured. The picture offers the material side only, but there are other aspects.",
+        picture = R.drawable.c09
+    )
+
+    val card32Cups10 = Card(
+        id = 32,
+        name = "Ten Cups",
+        suit = SuitEnum.CUPS,
+        value = "10",
+        keywords = "joy, fulfillment, overwhelming emotion, giddiness",
+        fortuneTelling = "Marriage and family are in the cards. \nExpect a friendship to blossom into a romance.",
+        meaning_up = "Having more than you ever dreamed, Being deeply thankful for all you've been given, Recognizing the Hand of God in the gifts the Universe brings your way, Experiencing transcendent joy, Achieving domestic bliss",
+        meaning_rev = "Comparing your achievements or relationships to unrealistic fantasy standards, Experiencing emotions so intense they blunt your ability to cope with reality, Feeling overwhelmed, Envying the achievements and happiness of others",
+        qta = "Who gets to define what \"joy\" consists of? \nWhat course of action is available when you feel overwhelmed? \nHow might vows or promises play a role in achieving a greater level of joy in your life?",
+        description = "Appearance of Cups in a rainbow; it is contemplated in wonder and ecstacy by a man and woman below, evidently husband and wife. His right arm is about her; his left is raised upward; she raises her right arm. The two children dancing near them have not observed the prodigy but are happy after their own manner. There is a home-scene beyond.",
+        picture = R.drawable.c10
+    )
+
+    val card33CupsPage = Card(
+        id = 33,
+        name = "Page of Cups",
+        suit = SuitEnum.CUPS,
+        value = "11",
+        keywords = "enthusiasm, first impressions, romanticism, superficiality",
+        fortuneTelling =  "This card represents a young man or woman with a watery, dreamy demeanor, likely born a Libra, Scorpio, or Sagittarius, who wants to start a new relationship with you",
+        meaning_up = "Showing your emotions freely, Throwing yourself into romance, Nursing a secret crush, Indulging in romantic fantasy, Starting a new relationship, Recalling your first love, Experiencing love for the first time, Converting to a new religion",
+        meaning_rev = "Mistaking a crush for true love, Reading romantic intention into innocent action, Frantically trying to impress others, Indulging in overly-sweet sentimentality, Pretending to more romantic or spiritual experience than you possess",
+        qta = "How worried are you that others will see you as foolish or inexperienced? \nTo what extent can you be honest about your lack of experience in love and faith? \nHow can you maintain enthusiasm over time?",
+        description = "A youthful figure, looking intently at the pentacle which hovers over his raised hands. He moves slowly, insensible of that which is about him.",
+        picture = R.drawable.c11
+    )
+
+    val card34CupsKnight = Card(
+        id = 34,
+        name = "Knight of Cups",
+        suit = SuitEnum.CUPS,
+        value = "12",
+        keywords = "fervor, zeal, moodiness, illumination",
+        fortuneTelling = "This card represents a man with an emotional, sensitive personality, likely born between October 13th and November 11th, who wants you to rally around his latest passionate cause",
+        meaning_up = "Being deeply committed to a cause, Giving in to strong emotions, from excitement to depression, Acting on intuition alone, Solving problems intuitively, Believing in and basing decisions on ideals instead of realities, Bringing intuition or passion to the table",
+        meaning_rev = "Becoming a fanatic, Rejecting information that suggests your intuitions are misguided, Allowing your emotions to control you, Giving in to jealousy, confrontation, and peer pressure, Hiding or ignoring intuitive insights",
+        qta = "How prone to emotional extremes are you? \nWhat's the difference in driving passion and blind zeal? \nHow can you inspire others without inciting a riot?",
+        description = "He rides a slow, enduring, heavy horse, to which his own aspect corresponds. He exhibits his symbol, but does not look therein.",
+        picture = R.drawable.c12
+    )
+
+    val card35CupsQueen = Card(
+        id = 35,
+        name = "Queen of Cups",
+        suit = SuitEnum.CUPS,
+        value = "13",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.c13
+    )
+
+    val card36CupsKing = Card(
+        id = 36,
+        name = "King of Cups",
+        suit = SuitEnum.CUPS,
+        value = "14",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.c14
+    )
 
 
 
@@ -332,7 +527,7 @@ object RawCardData {
         val card23 = Card(
             id = 23,
             name = "",
-            suit = SuitEnum.CUPS,
+            suit = SuitEnum.COINS,
             value = "1",
             keywords = "",
             fortuneTelling = "",
@@ -372,7 +567,21 @@ object RawCardData {
         card19TheMoon,
         card20TheSun,
         card21Judgement,
-        card22TheWorld
+        card22TheWorld,
+        card23Cups01,
+        card24Cups02,
+        card25Cups03,
+        card26Cups04,
+        card27Cups05,
+        card28Cups06,
+        card29Cups07,
+        card30Cups08,
+        card31Cups09,
+        card32Cups10,
+        card33CupsPage,
+        card34CupsKnight,
+        card35CupsQueen,
+        card36CupsKing,
 
     )
 

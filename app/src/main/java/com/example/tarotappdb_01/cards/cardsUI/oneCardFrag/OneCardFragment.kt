@@ -33,12 +33,12 @@ class OneCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //viewmodel.loadCardsFromDBinVM()   // Bullshit ;D
-
-        viewmodel.loadCardListFromDBinViewModel()
-
         // Neccessary pre-declarations & inits:
+        // Loading the simple List<Cards> into viewmodel's 'cardListSimple' (NO LiveData), used later on:
+        viewmodel.loadCardListFromDBinViewModel()
+        // Create & initialize "holder" for one Card (DefaultData neccessery!)
         var oneCard: Card = RawCardData.card21Judgement
+        // Create & initialize "holder" for picture Drawable (always by Int !!!) (DefaultData neccessery!)
         var pic: Int = 0
 
 
@@ -64,10 +64,10 @@ class OneCardFragment : Fragment() {
         }
 
 
-        // And in Case Button 1 ('Card of the day') is clicked first
+        // And in Case Button 1 ('Card of the day') is clicked first!:
         // **"B"** for NO LiveData - just simple List, no Nullables !! (which made trouble here) :
 
-        // Rescue: extra Funktion in Dao (without LiveData - just simple List<Card>)
+        // Rescue: extra Function in Dao (without LiveData - just get simple List<Card>)
         // -> extra Variable in Repo, in VM & here in the Fragment, after catching the upper TC-Blocks,
         val listNoLD = viewmodel.cardListSimple
 
@@ -80,7 +80,7 @@ class OneCardFragment : Fragment() {
         }catch (e: Exception){
             Log.e(TAG, "ERROR_2 getting one Card from VM - now you're really dumped")
         }
-
+        // This double-treatment (LiveData / No LiveData) is neccessary, because I'm reusing this Fragment by different Buttons with different actions & purposes.
 
         // Isolating corresponding picture as "Drawable" (always by Int):
         pic = oneCard.picture
