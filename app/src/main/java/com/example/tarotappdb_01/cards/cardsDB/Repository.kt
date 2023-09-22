@@ -15,54 +15,28 @@ class Repository(private val databse: CardsDatabase) {
     // Saves the result of the   fun getAllCardsDao()   of the DAO as LiveData:
     val cardsLiveList: LiveData<List<Card>> = MutableLiveData()
 
-    // Saves (persists) ONE 'Card' to CardsDB:
-    fun insertCard(card: Card){
-        try {
-            Log.d(TAG, "TRY: loading card to DB with fun insertCard()")
-            databse.cardsDao.insertCardDao(card)
-        }catch (e: Exception){
-            Log.e(TAG, "ERROR loading card to DB with fun insertCard()")
-        }
-        Log.d(TAG, "SUCCESS: loading card to DB with fun insertCard()")
-    }
+    // Saves a NO Live Data List<Card>
+    val cardsListNoLD: List<Card> = listOf()
 
     //  populate our DB in the ...
     fun populateDB(){
-        try{
-            Log.d(TAG, "TRY: populating the DB")
-            // Add RawCardsDatabase to DB
+        try {
+            Log.d(TAG, "TRY: populating the DB in Repository")
+            // Put each card from the cardListRaw into DB:
             if (databse.cardsDao.countDAO() == 0){
-                Log.d(TAG, "START: populating the DB")
-                databse.cardsDao.insertCardDao(RawCardData.card01TheFool)
-                databse.cardsDao.insertCardDao(RawCardData.card02TheMagician)
-                databse.cardsDao.insertCardDao(RawCardData.card03TheHighPriestess)
-                databse.cardsDao.insertCardDao(RawCardData.card04TheEmpress)
-                databse.cardsDao.insertCardDao(RawCardData.card05TheEmperor)
-                databse.cardsDao.insertCardDao(RawCardData.card06TheHierophant)
-                databse.cardsDao.insertCardDao(RawCardData.card07TheLovers)
-                databse.cardsDao.insertCardDao(RawCardData.card08TheChariot)
-                databse.cardsDao.insertCardDao(RawCardData.card09TheStrength)
-                databse.cardsDao.insertCardDao(RawCardData.card10TheHermit)
-                databse.cardsDao.insertCardDao(RawCardData.card11WheelOfFortune)
-                databse.cardsDao.insertCardDao(RawCardData.card12Justice)
-                databse.cardsDao.insertCardDao(RawCardData.card13TheHangedMan)
-                databse.cardsDao.insertCardDao(RawCardData.card14Death)
-                databse.cardsDao.insertCardDao(RawCardData.card15Temperance)
-                databse.cardsDao.insertCardDao(RawCardData.card16TheDevil)
-                databse.cardsDao.insertCardDao(RawCardData.card17TheTower)
-                databse.cardsDao.insertCardDao(RawCardData.card18TheStar)
-                databse.cardsDao.insertCardDao(RawCardData.card19TheMoon)
-                databse.cardsDao.insertCardDao(RawCardData.card20TheSun)
-                databse.cardsDao.insertCardDao(RawCardData.card21Judgement)
-                databse.cardsDao.insertCardDao(RawCardData.card22TheWorld)
-                Log.d(TAG, "SUCCESS_1: populating the DB")
+                for (each in RawCardData.cardListRaw){
+                    Log.d(TAG, "START: populating the DB in Repository")
+                    databse.cardsDao.insertCardDao(each)
+                    Log.d(TAG, "SUCCESS_1: populating the DB in Repository")
+                }
             }
         }catch (e: Exception){
             Log.e(TAG, "ERROR: populating the DB - maybe DB is not empty")
         }
-        Log.d(TAG, "SUCCESS_2: Nothing was loaded, because DB ist not empty")
-
+        Log.d(TAG, "SUCCESS_2: BD is fully loaded  in Repository")
     }
+
+
 
     // Fun to load all cards as LiveData (for a RecyclerView e.g.)
     fun getAllCardsRepoAsLD(): LiveData<List<Card>>{

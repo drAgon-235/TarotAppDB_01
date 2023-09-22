@@ -35,6 +35,8 @@ class OneCardFragment : Fragment() {
 
         //viewmodel.loadCardsFromDBinVM()   // Bullshit ;D
 
+        viewmodel.loadCardListFromDBinViewModel()
+
         // Neccessary pre-declarations & inits:
         var oneCard: Card = RawCardData.card21Judgement
         var pic: Int = 0
@@ -58,7 +60,7 @@ class OneCardFragment : Fragment() {
             oneCard = list[cardID - 1]
             // Doesn't work with Button 1 (from the beginning, if Button 3 is clicked fist, then Button 1 works properly ?!?!?!?!)
         }catch (e: Exception){
-            Log.e(TAG, "ERROR_1 getting one Card from VM - continue to Error2 ;-D ???")
+            Log.e(TAG, "ERROR_1 getting one Card from LiveData - continue to NOT LiveData List ;-D ???")
         }
 
 
@@ -74,6 +76,7 @@ class OneCardFragment : Fragment() {
         try {
             // Use the ID to get our wanted Card:
             oneCard = listNoLD[cardID - 1]
+            Log.d(TAG, "SUCCESS: ONE Card loaded to OneCardFragment for 'Card of the day' Button")
         }catch (e: Exception){
             Log.e(TAG, "ERROR_2 getting one Card from VM - now you're really dumped")
         }

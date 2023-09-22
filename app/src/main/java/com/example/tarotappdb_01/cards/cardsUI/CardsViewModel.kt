@@ -22,10 +22,11 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     // Creating a LD where the abstract LDList of the Repository ist saved
     var cardsListLD: LiveData<List<Card>> = repository.cardsLiveList
 
-    var cardListSimple = repository.getCardsListRepo()
+    // Creating a simple List<Card> for Card of the Day Fragment:
+    var cardListSimple = repository.cardsListNoLD
 
     init{
-        // Filling Cards to Room-DB in App is run for the first time (in Main)
+        // Filling Cards to Room-DB if App is run for the first time (in Main)
         Log.d(TAG, "PrepopulateDB while crating VM")
         repository.populateDB()
     }

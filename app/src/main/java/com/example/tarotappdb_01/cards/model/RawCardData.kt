@@ -2,6 +2,17 @@ package com.example.tarotappdb_01.cards.model
 
 import com.example.tarotappdb_01.R
 
+
+// The "Rider-Waite" Tarot Deck is the most popular one since over 100 years.
+// It is no more protected by any copyrights, which usually expire after 70 years.
+// That means, all the attributes & images of each card are worldwide known & the same & free to use for anybody.
+// But in order NOT to type the texts from a common book, I copied & combined them from two online Datasets:
+// https://www.kaggle.com/datasets/lsind18/tarot-json?resource=download (No API !!!)
+// https://tarot-api-3hv5.onrender.com/api/v1/cards (very unprofessional API,
+// too slow & too unreliable for usage in my App ( I tested it, only each fifth API-Call was working properly - so I just took the 'description')
+
+
+
 object RawCardData {
 
     val card01TheFool = Card(
@@ -317,31 +328,65 @@ object RawCardData {
 
 
 
+    /*
+        val card23 = Card(
+            id = 23,
+            name = "",
+            suit = SuitEnum.CUPS,
+            value = "1",
+            keywords = "",
+            fortuneTelling = "",
+            meaning_up = "",
+            meaning_rev = "",
+            qta = "",
+            description = "",
+            picture = "m0.jpg"
+        )
+
+     */
 
 
 
 
 
+    val cardListRaw: List<Card> = listOf(
 
+        card01TheFool,
+        card02TheMagician,
+        card03TheHighPriestess,
+        card04TheEmpress,
+        card05TheEmperor,
+        card06TheHierophant,
+        card07TheLovers,
+        card08TheChariot,
+        card09TheStrength,
+        card10TheHermit,
+        card11WheelOfFortune,
+        card12Justice,
+        card13TheHangedMan,
+        card14Death,
+        card15Temperance,
+        card16TheDevil,
+        card17TheTower,
+        card18TheStar,
+        card19TheMoon,
+        card20TheSun,
+        card21Judgement,
+        card22TheWorld
 
-
-
-/*
-    val card23 = Card(
-        id = 23,
-        name = "",
-        suit = SuitEnum.CUPS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = "m0.jpg"
     )
 
- */
+
+
+
+
+
+
+
+
+
+
+
 
 
 

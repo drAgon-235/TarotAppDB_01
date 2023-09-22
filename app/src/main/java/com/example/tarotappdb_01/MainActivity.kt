@@ -13,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewmodel = ViewModelProvider(this)[CardsViewModel::class.java]
+        //viewmodel = ViewModelProvider(this)[CardsViewModel::class.java]
     }
 }
