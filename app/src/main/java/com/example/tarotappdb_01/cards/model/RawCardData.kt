@@ -15,6 +15,7 @@ import com.example.tarotappdb_01.R
 
 object RawCardData {
 
+    // Major Arcana
     val card01TheFool = Card(
         id = 1,
         name = "The Fool",
@@ -324,6 +325,8 @@ object RawCardData {
         picture = R.drawable.m21_world
     )
 
+
+    // The Cups
     val card23Cups01 = Card(
         id = 23,
         name = "Ace of Cups",
@@ -497,12 +500,12 @@ object RawCardData {
         name = "Queen of Cups",
         suit = SuitEnum.CUPS,
         value = "13",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
+        keywords = "insightfulness, spirituality, compassion, empathy, instinct",
+        fortuneTelling = "This card represents a woman with an emotional, deeply spiritual nature, likely born between June 11th and July 11th, who uses emotional and spiritual appeals to sway others to her point of view",
+        meaning_up =  "Allowing yourself to be moved by the plight of others, Feeling strong emotions, Possessing unusual sympathy or empathy, Trusting your feelings to guide you, Calling on psychic abilities, Achieving unity with Spirit",
+        meaning_rev = "Becoming so caught up in matters of Spirit, you become detached from the world, Allowing empathy to disable you (instead of inspire action), Using psychic abilities to wield covert influence, Wallowing in emotionalism, sentiment, or self-pity",
+        qta = "How do I handle strong emotions? \nTo what extent am I a victim of my own feelings? \nHow can I move from reflection to action?",
+        description = "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein.",
         picture = R.drawable.c13
     )
 
@@ -511,23 +514,434 @@ object RawCardData {
         name = "King of Cups",
         suit = SuitEnum.CUPS,
         value = "14",
+        keywords = "wisdom, diplomacy, restraint, composure",
+        fortuneTelling = "This card represents an older man with a gentle, sensitive presence, likely born between February 9th and March 10th, who is known for his fairness and tolerance",
+        meaning_up = "Keeping a stiff upper lip, Being brave and clear in the face of adverse circumstances, Sharing experience as a way of comforting others, Making fair and empathetic decisions, Honoring the spirit, not just the letter, of the law",
+        meaning_rev = "Allowing yourself to become rigid and unemotional, Making unfair decisions based on a hidden agenda, Making decisions without regard for their emotional impact on others, Abusing spiritual authority, Using emotional or spiritual leverage to exercise unhealthy control over others",
+        qta = "What wise person could be consulted for good advice? \nHow can I make sure I'm being as objective and fair as possible? \nTo what extent am I capable of keeping a \"stiff upper lip?\"",
+        description = "The figure calls for no special description the face is rather dark, suggesting also courage, but somewhat lethargic in tendency. The bull's head should be noted as a recurrent symbol on the throne. The sign of this suit is represented throughout as engraved or blazoned with the pentagram, typifying the correspondence of the four elements in human nature and that by which they may be governed. In many old Tarot packs this suit stood for current coin, money, deniers. I have not invented the substitution of pentacles and I have no special cause to sustain in respect of the alternative. But the consensus of divinatory meanings is on the side of some change, because the cards do not happen to deal especially with questions of money.",
+        picture = R.drawable.c14
+    )
+
+
+    // The Swords
+    val card37Swords01 = Card(
+        id = 37,
+        name = "Ace of Swords",
+        suit = SuitEnum.SWORDS,
+        value = "1",
+        keywords =  "logic, objectivity, intellect, choice",
+        fortuneTelling = "The time to make a choice is now. \nStop wavering and do what you know is best.",
+        meaning_up = "Making objective decisions, Applying logic, Reasoning your way out of a difficult situation, Solving puzzles, Thinking things through, Emphasizing the facts, Clearing your mind, Seeking clarity",
+        meaning_rev = "Applying ruthless or twisted logic, Gloating over your own superior intellect, Using quick thinking to deceive or confuse others, Confusing snap judgments with quick thinking, Making decisions without thinking through consequences",
+        qta = "If I made my decision purely based on reason and logic, what would my decision be? \nWhat do I think about my own problem-solving ability? \nWho can supply me with the pure and simple facts?",
+        description = "A hand issues from a cloud, grasping as word, the point of which is encircled by a crown.",
+        picture = R.drawable.s01
+    )
+
+    val card38Swords02 = Card(
+        id = 38,
+        name = "Two Swords",
+        suit = SuitEnum.SWORDS,
+        value = "2",
+        keywords = "denial, debate, impasse, truce",
+        fortuneTelling = "Sometimes, the only way to win is to refuse to fight. \nYou're stuck for now; let time pass before taking action.",
+        meaning_up = "Refusing to make a decision without getting the facts, Exploring both sides of an argument, Arguing passionately for what you believe in, Weighing the issues, Encouraging the open exchange of ideas, Discussing political or religious issues without getting \"hot under the collar\"",
+        meaning_rev =  "Rejecting evidence that conflicts with dearly-held beliefs, Arguing with others just for the sake of doing so, Nit-picking, Putting off a decision because you're afraid to face the consequences, Preventing others from getting the information they need to make good decisions",
+        qta = "What information do I need to get past this impasse? \nHow can I get past being defensive and see the facts? \nWhat viewpoints, other than my own, play a role in this situation?",
+        description = "A hoodwinked female figure balances two swords upon her shoulders.",
+        picture = R.drawable.s02
+    )
+
+    val card39Swords03 = Card(
+        id = 39,
+        name = "Three Swords",
+        suit = SuitEnum.SWORDS,
+        value = "3",
+        keywords = "variance, difference, dissatisfaction, heartache, rejection",
+        fortuneTelling = "Breakups and infidelity abound. \nWhat hurts now, though, will turn out to be good for you later on.",
+        meaning_up = "Being brave enough to see things as they really are, Exercising your critical eye, Being your own best critic, Acknowledging that things don't always turn out as planned, Moving past heartbreak to embrace a painful truth",
+        meaning_rev = "Wallowing in despair, Allowing yourself to be completely crushed by the thoughts, words, or deeds of another, Judging yourself too harshly, Holding yourself to an unrealistic standard of excellence, Wearing your heart on your sleeve while carrying a chip on your shoulder",
+        qta = "How can I get past my depression? \nTo what extent are my emotions a matter of choice? \nHow can I learn from the mistakes of the past?",
+        description = "Three swords piercing a heart; cloud and rain behind.",
+        picture = R.drawable.s03
+    )
+
+    val card40Swords04 = Card(
+        id = 40,
+        name = "Four Swords",
+        suit = SuitEnum.SWORDS,
+        value = "4",
+        keywords = "meditation, contemplation, perspective, mindset",
+        fortuneTelling = "Don't make any decision now. \nWait, and you'll be glad you did.",
+        meaning_up = "Thinking over your plans before putting them into action, Pausing to meditate or clear your mind, Taking time to understand someone or something before criticizing it, Resting, Occupying your thoughts with a healthy distraction",
+        meaning_rev = "Failing to think things through, Mistaking procrastination for thoughtfulness, Adopting a point of view and refusing to reconsider your conclusions, even when presented with refuting evidence, Allowing chaos and whimsy to dominate your thoughts",
+        qta = "How long has it been since you deliberately took a \"time out?\"\nHow difficult is it for you to meditate? \nWhat would happen if you simply refused to make a decision today?",
+        description = "The effigy of a knight in the attitude of prayer, at full length upon his tomb.",
+        picture = R.drawable.s04
+    )
+
+    val card41Swords05 = Card(
+        id = 41,
+        name = "Five Swords",
+        suit = SuitEnum.SWORDS,
+        value = "5",
+        keywords = "selfishness, hostility, irrationality, self-preservation",
+        fortuneTelling = "Someone is stealing from you, financially or romantically. \nBe wary of friends who talk behind your back.",
+        meaning_up = "Acting in your own best interest, Choosing to stand up for yourself, Not backing down from disagreement and discord, Taking a stand, Refusing to go along with an unethical plan",
+        meaning_rev = "Taking advantage of others, Intimidating others, Acting in an unethical manner, Picking fights, Using words to goad others into violence and irrationality, Ignoring rules you've agreed to abide by, Looking out for yourself while allowing harm to come to others, Gloating over victory",
+        qta = "How do I behave when I win? What does that say about me? \nHow can I do what's necessary without making others feel defeated? \nWhat's the difference between selfish action and acting in my own best interest?",
+        description = "A disdainful man looks after two retreating and dejected figures. Their swords lie upon the ground. He carries two others on his left shoulder, and a third sword is in his right hand, point to earth. He is the master in possession of the field.",
+        picture = R.drawable.s05
+    )
+
+    val card42Swords06 = Card(
+        id = 42,
+        name = "Six Swords",
+        suit = SuitEnum.SWORDS,
+        value = "6",
+        keywords = "adaptation, adjustments, science, travel",
+        fortuneTelling = "You'll soon go on a long journey over water. \nActions have unexpected consequences, so be prepared.",
+        meaning_up = "Making the best of a bad situation, Recovering from defeat, Resetting expectations, Making allowances for unexpected circumstances, Helping others who find themselves in dire circumstances, Changing the way you see the world, Broadening your perspective through study or travel",
+        meaning_rev = "Refusing to accept that things have changed, Playing the victim, Rejecting the idea that your actions have consequences, Applying scientific criteria to matters of faith, or confusing faith with science, Believing the whole world should be like your small corner of it",
+        qta = "What assumptions govern my thinking? \nHow willing am I to lend aid to others? To request it when I need it? \nHow prepared am I to deal with change? With unexpected outcomes?",
+        description = "A ferryman carrying passengers in his punt to the further shore. The course is smooth, and seeing that the freight is light, it may be noted that the work is not beyond his strength.",
+        picture = R.drawable.s06
+    )
+
+    val card43Swords07 = Card(
+        id = 43,
+        name = "Seven Swords",
+        suit = SuitEnum.SWORDS,
+        value = "7",
+        keywords = "dishonesty, presumption, sneakiness, assumptions",
+        fortuneTelling =  "Don't assume people around you are worthy of your trust. \nAsk for an accounting of where people have been, and what they've been doing.",
+        meaning_up = "Refusing to do something dishonest, even when there's no chance of ever being caught, Handling a difficult situation with finesse, Pointing out assumptions, Acting ethically in public and in private, Living a life that is beyond reproach",
+        meaning_rev = "Stealing or lying, Doing whatever you can get away with, simply because you can, Looking for a way around consequences, Justifying wicked behavior by focusing on the wickedness of others, Failing to examine your own motives and prejudices",
+        qta = "What assumptions am I making? \nHow well-defined is my sense of ethics? \nHow should I respond when I know others are breaking the rules?",
+        description = "A man in the act of carrying away five swords rapidly; the two others of the card remain stuck in the ground. A camp is close at hand.",
+        picture = R.drawable.s07
+    )
+
+    val card44Sowrds08 = Card(
+        id = 44,
+        name = "Eigth Swords",
+        suit = SuitEnum.SWORDS,
+        value = "8",
+        keywords = "restriction, limitation, confinement, helplessness",
+        fortuneTelling = "Get over playing the victim. \nOnce you realize you are your own biggest obstacle, nothing can hold you back.",
+        meaning_up = "Honoring limits, Respecting the rules, Deciding to go on a diet for your health's sake, Recognizing you cannot always be in control, Identifying obstacles to further progress, Refusing to think about unhealthy or unethical options, Asking for assistance",
+        meaning_rev = "Feeling trapped, Being lost in a maze of rules and regulations, Giving in to despair, Playing the victim, Allowing others to dictate what you can and cannot do, Being rendered helpless, Having very few options, Failing to look for a way out",
+        qta = "Who's empowered to cut through the red tape? \nWhat, exactly, are the obstacles? What resources, exactly, are needed to move them? \nTo what extent is your powerlessness a matter of attitude?",
+        description = "A woman, bound and hoodwinked, with the swords of the card about her. Yet it is rather a card of temporary durance than of irretrievable bondage.",
+        picture = R.drawable.s08
+    )
+
+    val card45Swords09 = Card(
+        id = 45,
+        name = "Nine Swords",
+        suit = SuitEnum.SWORDS,
+        value = "9",
+        keywords = "remorse, worry, distraught, conclusion",
+        fortuneTelling = "If you take the action you're considering now, you'll be sorry in the future.",
+        meaning_up = "Refusing to worry about what you cannot control, Rejecting anxiety, Judging your own performance with kindness and gentleness, Using meditation to quiet a troubled mind, Confronting nightmares and fears, Drawing a conclusion and putting an issue out of your mind",
+        meaning_rev = "Torturing yourself with regrets, Second-guessing your every move, Beating yourself up for your mistakes, Depression, Obsessing on errors and overlooked details, Refusing to handle stress in healthy ways, Ruining your ability to appreciate the present by dwelling on the past, Debating irreversible decisions",
+        qta = "What role does worry play in your current situation? \nTo what other ends might you devote the energy you're giving to anxiety? \nHow can you know when it's time to stop thinking and start acting?",
+        description = "One seated on her couch in lamentation, with the swords over her. She is as one who knows no sorrow which is like unto hers. It is a card of utter desolation.",
+        picture = R.drawable.s09
+    )
+
+    val card46Swords10 = Card(
+        id = 46,
+        name = "Ten Swords",
+        suit = SuitEnum.SWORDS,
+        value = "10",
+        keywords = "exhaustion, ruin, disaster, stamina, obsession",
+        fortuneTelling = "Disaster! \nPut off plans and do not take action until omens are better.",
+        meaning_up = "Seeing the signs that you've reached your limits, Paying attention to what your body is trying to tell you, Giving in to the need for rest and renewal, Acknowledging that you've hit bottom, Committing to a turnaround, Knowing the worst is over",
+        meaning_rev = "Accepting defeat prematurely, Driving yourself to total exhaustion, especially mentally, Experiencing a mental breakdown, Obsessing on a problem to the breaking point, Giving up, Refusing to move from thought to action, Deeply unhealthy thoughts",
+        qta = "What are the signs that the time for debate is over? \nHow can you tell when interest has given way to obsession? \nWhen your own limits are reached, where can you turn for aid?",
+        description = "A prostrate figure, pierced by all the swords belonging to the card.",
+        picture = R.drawable.s10
+    )
+
+    val card47SwordsPage = Card(
+        id = 47,
+        name = "Page of Swords",
+        suit = SuitEnum.SWORDS,
+        value = "11",
+        keywords = "student, apprentice, scholarship, information",
+        fortuneTelling = "This card represents a young man or woman with an airy, intellectual demeanor, likely born a Capricorn, Aquarius, or Pisces, who wants to learn something new from you or have a discussion with you.",
+        meaning_up =  "Pursuing a course of study, Asking good questions, Investing time in study and practice, Doing research, Making a habit of learning new things, Starting an investigation, Outlining what you need to know, Finding a mentor or teacher",
+        meaning_rev = "Pretending to knowledge or sophistication you do not possess, Cheating on an exam, Feigning interest as a way of gaining favor, Considering only the evidence that supports conclusions you've already drawn, Rejecting the wise counsel of experienced teachers",
+        qta = "How comfortable are you with revealing your own ignorance? \nWhat are the marks of a good student? \nTo what extent are you open to new information?",
+        description = "A lithe, active figure holds a sword upright in both hands, while in the act of swift walking. He is passing over rugged land, and about his way the clouds are collocated wildly. He is alert and lithe, looking this way and that, as if an expected enemy might appear at any moment.",
+        picture = R.drawable.s11
+    )
+
+    val card48SwordsKnight = Card(
+        id = 48,
+        name = "Knight of Swords",
+        suit = SuitEnum.SWORDS,
+        value = "12",
+        keywords = "bluntness, intelligence, incisiveness, investigation",
+        fortuneTelling = "A blunder leads someone to say something he or she regrets. \nIf this was you, be prepared to apologize and move on.",
+        meaning_up = "Speaking your mind, Making your opinions known, Offering constructive criticism, Sharing your knowledge, Making insightful observations, Pinpointing the problem, Clarifying what others have said, Giving clear direction to others, Uncovering the truth",
+        meaning_rev = "Stating your opinions as fact, Picking fights, Starting arguments, Using clever insults to undermine the confidence of others, Tossing reason out the window, Speaking without taking the feelings of others into account, Going on a witch hunt, Distorting evidence",
+        qta = "What do I really need to know? \nTo what extent have I investigated the facts behind my situation? \nHow can I share what I know without alienating others?",
+        description = "He is riding in full course, as if scattering his enemies. In the design he is really a prototypical hero of romantic chivalry. He might almost be Galahad, whose sword is swift and sure because he is clean of heart.",
+        picture = R.drawable.s12
+    )
+
+    val card49SwordsQueen = Card(
+        id = 49,
+        name = "Queen of Swords",
+        suit = SuitEnum.SWORDS,
+        value = "13",
+        keywords = "grace, skill, wit, charm, aptitude",
+        fortuneTelling = "This card represents a woman with an artistic, intellectual nature, likely born between September 12th and October 12th, who uses clever, positive communication to sway others to her point of view.",
+        meaning_up = "Exercising tact or using diplomacy, Defusing a tense situation, Knowing what to say and how to say it, Making others feel comfortable and confident, Bringing out the best in everyone, Having a way with words, Telling jokes, Possessing a knack for music, math, art, or science",
+        meaning_rev = "Knowing exactly what to say to destroy another person, Withholding critical information, Using a barbed tongue to upset others, Employing sarcasm, Mimicking others unkindly, Making light of the less fortunate, Being disrespectful, Failing to use the talent you've been given",
+        qta = "What do I have a knack for? How might my special gift prove useful now? \nTo what extent am I capable of saying what needs to be said? \nWhat is the best possible way to say what I want to say?",
+        description = "Her right hand raises the weapon vertically and the hilt rests on an arm of her royal chair the left hand is extended, the arm raised her countenance is severe but chastened; it suggests familiarity with sorrow. It does not represent mercy, and, her sword notwithstanding, she is scarcely a symbol of power.",
+        picture = R.drawable.s13
+    )
+
+    val card50SwordsKing = Card(
+        id = 50,
+        name = "King of Swords",
+        suit = SuitEnum.SWORDS,
+        value = "14",
+        keywords = "expertise, decision, verdict, genius",
+        fortuneTelling = "This card represents an older man with an insightful, deliberate spirit, likely born between May 11th and June 10th, who is known for his integrity and sharp decision-making ability.",
+        meaning_up = "Expressing yourself with firmness and authority, Rendering a final decision, Consulting an expert, Calling in advisors and consultants, Coming to a final conclusion, Reaching a beneficial agreement based on sound information",
+        meaning_rev = "Insisting on having the last word, Flaunting your intellectual capability, Talking \"over the heads\" of others, Waffling on an important decision, Constantly changing your mind, Refusing to make choices that are in your own best interest, Wishing in vain you could take back what's been said",
+        qta = "What would your decision be if you had to render a binding verdict right now? \nHow comfortable are you saying exactly what you mean? How often do you temper what you have to say for fear of offending others? \nIf you were to ask others, \"What's my area of expertise?\" what would they say?",
+        description = "He sits in judgment, holding the unsheathed sign of his suit. He recalls, of course, the conventional Symbol of justice in the Trumps Major, and he may represent this virtue, but he is rather the power of life and death, in virtue of his office.",
+        picture = R.drawable.s14
+    )
+
+
+    // The Wands
+    val card51 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
         keywords = "",
         fortuneTelling = "",
         meaning_up = "",
         meaning_rev = "",
         qta = "",
         description = "",
-        picture = R.drawable.c14
+        picture = R.drawable.w01
+    )
+
+    val card52 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card53 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card54 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card55 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card56 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card57 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card58 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card59 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card60 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card61 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card62 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card63 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card64 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
+    )
+
+    val card65 = Card(
+        id = 51,
+        name = "",
+        suit = SuitEnum.WANDS,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.w01
     )
 
 
 
 
+
     /*
-        val card23 = Card(
-            id = 23,
+        val card51 = Card(
+            id = 51,
             name = "",
-            suit = SuitEnum.COINS,
+            suit = SuitEnum.,
             value = "1",
             keywords = "",
             fortuneTelling = "",
@@ -545,7 +959,7 @@ object RawCardData {
 
 
     val cardListRaw: List<Card> = listOf(
-
+        //Major Arcana:
         card01TheFool,
         card02TheMagician,
         card03TheHighPriestess,
@@ -568,6 +982,7 @@ object RawCardData {
         card20TheSun,
         card21Judgement,
         card22TheWorld,
+        // The Cups:
         card23Cups01,
         card24Cups02,
         card25Cups03,
@@ -582,6 +997,25 @@ object RawCardData {
         card34CupsKnight,
         card35CupsQueen,
         card36CupsKing,
+        // The Swords:
+        card37Swords01,
+        card38Swords02,
+        card39Swords03,
+        card40Swords04,
+        card41Swords05,
+        card42Swords06,
+        card43Swords07,
+        card44Sowrds08,
+        card45Swords09,
+        card46Swords10,
+        card47SwordsPage,
+        card48SwordsKnight,
+        card49SwordsQueen,
+        card50SwordsKing
+        // The Wands
+
+
+        // The Pentacles ( Coins )
 
     )
 
