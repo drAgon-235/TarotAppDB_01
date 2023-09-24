@@ -30,6 +30,7 @@ class OneCardFragment : Fragment() {
         binding = FragmentOneCardBinding.inflate(inflater, container, false)
         return binding.root      }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -53,8 +54,9 @@ class OneCardFragment : Fragment() {
         val list = listLD.value.orEmpty()
 
 
-        // Habe ich mal gecatcht, weil es hier crasht, wenn Button 1 'Tageskarte' angeklickt wird?
-        // Following Block is always executed, when Button 1 is clicked first.
+        // I caught this, because it crashes here, when Button 1 'card of the day' is clicked? (because it needs no LD...)
+        // Following Block is always executed, when Button 1 is clicked first and so must crash.
+        // It is working properly with Button 3 "All Cards & Meanings"
         try {
             // Use the ID to get our wanted Card:
             oneCard = list[cardID - 1]
@@ -82,7 +84,7 @@ class OneCardFragment : Fragment() {
         }
         // This double-treatment (LiveData / No LiveData) is neccessary, because I'm reusing this Fragment by different Buttons with different actions & purposes.
 
-        // Isolating corresponding picture as "Drawable" (always by Int):
+        // Isolating Card's corresponding picture as "Drawable" (always by Int):
         pic = oneCard.picture
 
         // Binding picture and texts to (re-usable, scrollable & very flexible) OneCardFragment:
@@ -95,7 +97,6 @@ class OneCardFragment : Fragment() {
         binding.editFortuneTellTV.text = oneCard.fortuneTelling
         binding.editQtaTV.text = oneCard.qta
         binding.editDescriptionTV.text = oneCard.description
-
     }
 }
 

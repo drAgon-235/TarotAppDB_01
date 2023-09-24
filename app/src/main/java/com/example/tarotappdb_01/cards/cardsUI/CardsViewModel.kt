@@ -26,6 +26,7 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     // Creating a simple List<Card> for Card of the Day Fragment (NO LiveData!):
     var cardListSimple = repository.cardsListNoLD
 
+
     init{
         // Filling Cards to Room-DB if App is run for the first time (in Main)
         Log.d(TAG, "PrepopulateDB while crating VM")
@@ -33,14 +34,25 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 
-    // Finally loading the DB to the LD-Variable:
+    // Loading the DB to the LiveData-Variable:
     fun loadCardsFromDBinVMasLD(){
         cardsListLD = repository.getAllCardsRepoAsLD()
     }
 
+    fun loadCUPSFromDBinVWasLD(){
+        cardsListLD = repository.getAllCUPSRepoAsLD()
+    }
+
+
+
+
+
+    // Loading the simple List<Card> - NO LiveData !! (For "Card of the day")
     fun loadCardListFromDBinViewModel(){
         cardListSimple = repository.getCardsListRepo()
     }
+
+
 
 
 }

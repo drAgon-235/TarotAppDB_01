@@ -5,41 +5,12 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".cards.cardsUI.allCardsRVFrag.AllCardsRVFragment"
+    tools:context=".cards.cardsUI.allCupsRVFrag.CupsRVFragment"
     >
 
     <!-- TODO: Update blank fragment layout -->
 
 
-
-    <TextView
-        android:id="@+id/titleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Major Arcana (Trumps)"
-        android:textColor="#D5041D"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardsListRV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTV"
-        app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/card_item_in_rv" />
 
     <TextView
         android:id="@+id/titleCupsTV"
@@ -53,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardsListRV" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cupsListRV"
@@ -69,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleCupsTV"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/card_item_in_rv" />
+
 
 
 

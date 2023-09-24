@@ -13,14 +13,31 @@ interface CardsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCardDao(cards: Card)
 
-    @Query("SELECT * FROM cards_table")
+    //getting only Major Arcana:
+    @Query("SELECT * FROM cards_table WHERE suit = 'MAJOR_ARCANA'")
     fun getAllCardsDao(): LiveData<List<Card>>
 
+    //getting only Swords:
+    @Query("SELECT * FROM cards_table WHERE suit = 'CUPS'")
+    fun getAllCUPSCardsDao(): LiveData<List<Card>>
+
+
+
+
+
+
+
+
+
+
+    // For "Card of the day" (we don't need LiveData here):
     @Query("SELECT * FROM cards_table")
     fun getCardsList(): List<Card>
 
+
     @Query("SELECT COUNT(*) FROM cards_table")
     fun countDAO(): Int
+
 
 
 }
