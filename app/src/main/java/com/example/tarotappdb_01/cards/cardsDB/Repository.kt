@@ -47,6 +47,9 @@ class Repository(private val databse: CardsDatabase) {
         return databse.cardsDao.getAllCUPSCardsDao()
     }
 
+    fun getAllSWORDSRepoAsLD(): LiveData<List<Card>>{
+        return databse.cardsDao.getAllSWORDSCardsDao()
+    }
 
 
 

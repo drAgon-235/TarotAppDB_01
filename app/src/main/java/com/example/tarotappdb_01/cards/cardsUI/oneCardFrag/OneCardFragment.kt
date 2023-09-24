@@ -83,6 +83,7 @@ class OneCardFragment : Fragment() {
             Log.e(TAG, "ERROR_2 getting one Card from VM - now you're really dumped")
         }
         // This double-treatment (LiveData / No LiveData) is neccessary, because I'm reusing this Fragment by different Buttons with different actions & purposes.
+// BUT still not running really properly ...
 
         // Isolating Card's corresponding picture as "Drawable" (always by Int):
         pic = oneCard.picture

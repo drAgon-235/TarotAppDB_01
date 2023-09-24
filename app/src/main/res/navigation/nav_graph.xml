@@ -38,10 +38,5 @@
             android:name="cardID"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/cupsRVFragment"
-        android:name="com.example.tarotappdb_01.cards.cardsUI.allCupsRVFrag.CupsRVFragment"
-        android:label="fragment_cups_rv"
-        tools:layout="@layout/fragment_cups_rv" />
 
 </navigation>

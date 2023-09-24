@@ -43,6 +43,10 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
         cardsListLD = repository.getAllCUPSRepoAsLD()
     }
 
+    fun loadSWORDSFromDBinVMasLD(){
+        cardsListLD = repository.getAllSWORDSRepoAsLD()
+    }
+
 
 
 

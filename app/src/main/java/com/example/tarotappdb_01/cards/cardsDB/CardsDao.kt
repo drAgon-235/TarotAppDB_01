@@ -17,9 +17,13 @@ interface CardsDao {
     @Query("SELECT * FROM cards_table WHERE suit = 'MAJOR_ARCANA'")
     fun getAllCardsDao(): LiveData<List<Card>>
 
-    //getting only Swords:
+    //getting only Cups:
     @Query("SELECT * FROM cards_table WHERE suit = 'CUPS'")
     fun getAllCUPSCardsDao(): LiveData<List<Card>>
+
+    //getting only Swords:
+    @Query("SELECT * FROM cards_table WHERE suit = 'SWORDS'")
+    fun getAllSWORDSCardsDao(): LiveData<List<Card>>
 
 
 

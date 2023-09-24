@@ -26,6 +26,9 @@ class AllCardsRVFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // !! All Recyclerviews are using the same Adapter simultanously !!
+
+        //Major Arcana Recyclerview:
         // Load Databaseto VM used here:
         viewmodel.loadCardsFromDBinVMasLD()
         //bind recyclerview to this Fragment:
@@ -38,6 +41,7 @@ class AllCardsRVFragment : Fragment() {
             recyclerView.adapter = AllCardsRVAdapter(it)
         }
 
+        //CUPS Recyclerview:
         // Load CUPS Databaseto VM used here:
         viewmodel.loadCUPSFromDBinVWasLD()
         //bind recyclerview to this Fragment:
@@ -49,6 +53,23 @@ class AllCardsRVFragment : Fragment() {
         viewmodel.cardsListLD.observe(viewLifecycleOwner) {
             recyclerViewCups.adapter = AllCardsRVAdapter(it)
         }
+
+        //SWORDS Recyclerview:
+        // Load SWORDS Databaseto VM used here:
+        viewmodel.loadSWORDSFromDBinVMasLD()
+        //bind recyclerview to this Fragment:
+        val recyclerViewSWORDS = binding.swordsListRV
+        //optimize occurence of RV:
+        recyclerViewSWORDS.hasFixedSize()
+
+        //Observing theVM's LD 'cardListLD' and attach to Adapter
+        viewmodel.cardsListLD.observe(viewLifecycleOwner) {
+            recyclerViewSWORDS.adapter = AllCardsRVAdapter(it)
+        }
+
+
+
+
     }
 
 

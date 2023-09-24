@@ -27,7 +27,6 @@ class AllCardsRVAdapter(
         holder.binding.imageView.setImageResource(card.picture)
         holder.binding.numberInArcanaTV.text = card.value
 
-
         holder.binding.itemCardView.setOnClickListener {
             holder.itemView.findNavController()
                 .navigate(
