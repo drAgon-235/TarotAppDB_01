@@ -877,7 +877,7 @@ object RawCardData {
     )
 
     val card62WandsKnight = Card(
-        id = 61,
+        id = 62,
         name = "Knight of Wands",
         suit = SuitEnum.WANDS,
         value = "12",

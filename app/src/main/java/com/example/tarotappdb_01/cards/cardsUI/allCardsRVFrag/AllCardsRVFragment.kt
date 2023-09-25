@@ -67,7 +67,31 @@ class AllCardsRVFragment : Fragment() {
             recyclerViewSWORDS.adapter = AllCardsRVAdapter(it)
         }
 
+        //Wands Recyclerview:
+        // Load WANDS Databaseto VM used here:
+        viewmodel.loadWANDSFromDBinVMasLD()
+        //bind recyclerview to this Fragment:
+        val recyclerViewWANDS = binding.wandsListRV
+        //optimize occurence of RV:
+        recyclerViewWANDS.hasFixedSize()
 
+        //Observing theVM's LD 'cardListLD' and attach to Adapter
+        viewmodel.cardsListLD.observe(viewLifecycleOwner) {
+            recyclerViewWANDS.adapter = AllCardsRVAdapter(it)
+        }
+
+        //Wands Recyclerview:
+        // Load WANDS Databaseto VM used here:
+        viewmodel.loadCOINSFromDBinVMasLD()
+        //bind recyclerview to this Fragment:
+        val recyclerViewCOINS = binding.coinsListRV
+        //optimize occurence of RV:
+        recyclerViewCOINS.hasFixedSize()
+
+        //Observing theVM's LD 'cardListLD' and attach to Adapter
+        viewmodel.cardsListLD.observe(viewLifecycleOwner) {
+            recyclerViewCOINS.adapter = AllCardsRVAdapter(it)
+        }
 
 
     }

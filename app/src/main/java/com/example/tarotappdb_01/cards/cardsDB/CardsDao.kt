@@ -25,6 +25,14 @@ interface CardsDao {
     @Query("SELECT * FROM cards_table WHERE suit = 'SWORDS'")
     fun getAllSWORDSCardsDao(): LiveData<List<Card>>
 
+    //getting only Wands:
+    @Query("SELECT * FROM cards_table WHERE suit = 'WANDS'")
+    fun getAllWANDSCardsDao(): LiveData<List<Card>>
+
+    //getting only Coins:
+    @Query("SELECT * FROM cards_table WHERE suit = 'COINS'")
+    fun getAllCOINSCardsDao(): LiveData<List<Card>>
+
 
 
 

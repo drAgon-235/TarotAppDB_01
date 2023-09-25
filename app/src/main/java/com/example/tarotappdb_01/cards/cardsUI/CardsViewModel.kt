@@ -47,6 +47,15 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
         cardsListLD = repository.getAllSWORDSRepoAsLD()
     }
 
+    fun loadWANDSFromDBinVMasLD(){
+        cardsListLD = repository.getAllWANDSRepoAsLD()
+    }
+
+    fun loadCOINSFromDBinVMasLD(){
+        cardsListLD = repository.getAllCOINSRepoAsLD()
+    }
+
+
 
 
 

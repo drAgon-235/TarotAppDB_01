@@ -5,11 +5,13 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".cards.cardsUI.allCardsRVFrag.AllCardsRVFragment"
-    >
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+    android:orientation="vertical"
+
+    tools:context=".cards.cardsUI.allCardsRVFrag.AllCardsRVFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
 
 
     <TextView
@@ -100,6 +102,64 @@
         tools:listitem="@layout/card_item_in_rv" />
 
 
+    <TextView
+        android:id="@+id/titleWANDSTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Wands (Minor Arcana)"
+        android:textColor="#D5041D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swordsListRV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wandsListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleWANDSTV"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/card_item_in_rv" />
+
+
+    <TextView
+        android:id="@+id/titleCOINSTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Wands (Minor Arcana)"
+        android:textColor="#D5041D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wandsListRV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coinsListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCOINSTV"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/card_item_in_rv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,6 +52,13 @@ class Repository(private val databse: CardsDatabase) {
     }
 
 
+    fun getAllWANDSRepoAsLD(): LiveData<List<Card>>{
+        return databse.cardsDao.getAllWANDSCardsDao()
+    }
+
+    fun getAllCOINSRepoAsLD(): LiveData<List<Card>>{
+        return databse.cardsDao.getAllCOINSCardsDao()
+    }
 
 
 

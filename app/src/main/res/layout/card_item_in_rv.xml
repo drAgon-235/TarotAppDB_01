@@ -31,26 +31,13 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="87dp"
-            android:layout_height="137dp"
+            android:layout_width="47dp"
+            android:layout_height="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/m21_world" />
-        <!--
-                <TextView
-                    android:id="@+id/meaning_up_TV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Meaning"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nameTV" />
-                    -->
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
