@@ -9,8 +9,7 @@ import com.example.tarotappdb_01.R
 // But in order NOT to type the texts from a common book, I copied & combined them from two online Datasets:
 // https://www.kaggle.com/datasets/lsind18/tarot-json?resource=download (No API !!!)
 // https://tarot-api-3hv5.onrender.com/api/v1/cards (very unprofessional API,
-// too slow & too unreliable for usage in my App ( I tested it, only each fifth API-Call was working properly - so I just took the 'description')
-
+// too slow & too unreliable for usage in my App ( I tested it, only each fifth API-Call was working properly - so I just took the 'description' into my DB, which was missing in the kaggle-DB)
 
 
 object RawCardData {
@@ -276,7 +275,7 @@ object RawCardData {
         value = "18",
         keywords = "mystery, fantasy, imagination, dreams, uncertainty",
         fortuneTelling = "Watch for problems at the end of the month. \nSomeone you know needs to howl at the moon more often. \nSomeone is about to change his or her mind about an important decision.",
-        meaning_up =  "Enjoying healthy fantasies and daydreams, Using your imagination, Practicing magic or celebrating the magic of everyday life, Attuning yourself to the cycles of nature, Embracing the unknown",
+        meaning_up = "Enjoying healthy fantasies and daydreams, Using your imagination, Practicing magic or celebrating the magic of everyday life, Attuning yourself to the cycles of nature, Embracing the unknown",
         meaning_rev = "Becoming unable to separate fantasy from reality, Suffering from delusions, Losing your appreciation for the fantastic or magical, Adopting a ruthlessly logical mindset, Failing to appreciate life's mysteries",
         qta = "How can I face my fears and move forward? \nWhat helpers can serve me as guides through my personal darkness? \nHow can I deal with the unknown in healthy ways?",
         description = "The distinction between this card and some of the conventional types is that the moon is increasing on what is called the side of mercy, to the right of the observer. It has sixteen chief and sixteen secondary rays. The card represents life of the imagination apart from life of the spirit. The path between the towers is the issue into the unknown. The dog and wolf are the fears of the natural mind in the presence of that place of exit, when there is only reflected light to guide it.\nThe last reference is a key to another form of symbolism. The intellectual light is a reflection and beyond it is the unknown mystery which it cannot shew forth. It illuminates our animal nature, types of which are represented below--the dog, the wolf and that which comes up out of the deeps, the nameless and hideous tendency which is lower than the savage beast. It strives to attain manifestation, symbolized by crawling from the abyss of water to the land, but as a rule it sinks back whence it came. The face of the mind directs a calm gaze upon the unrest below; the dew of thought falls; the message is: Peace, be still; and it may be that there shall come a calm upon the animal nature, while the abyss beneath shall cease from giving up a form.",
@@ -473,7 +472,7 @@ object RawCardData {
         suit = SuitEnum.CUPS,
         value = "11",
         keywords = "enthusiasm, first impressions, romanticism, superficiality",
-        fortuneTelling =  "This card represents a young man or woman with a watery, dreamy demeanor, likely born a Libra, Scorpio, or Sagittarius, who wants to start a new relationship with you",
+        fortuneTelling = "This card represents a young man or woman with a watery, dreamy demeanor, likely born a Libra, Scorpio, or Sagittarius, who wants to start a new relationship with you",
         meaning_up = "Showing your emotions freely, Throwing yourself into romance, Nursing a secret crush, Indulging in romantic fantasy, Starting a new relationship, Recalling your first love, Experiencing love for the first time, Converting to a new religion",
         meaning_rev = "Mistaking a crush for true love, Reading romantic intention into innocent action, Frantically trying to impress others, Indulging in overly-sweet sentimentality, Pretending to more romantic or spiritual experience than you possess",
         qta = "How worried are you that others will see you as foolish or inexperienced? \nTo what extent can you be honest about your lack of experience in love and faith? \nHow can you maintain enthusiasm over time?",
@@ -502,7 +501,7 @@ object RawCardData {
         value = "13",
         keywords = "insightfulness, spirituality, compassion, empathy, instinct",
         fortuneTelling = "This card represents a woman with an emotional, deeply spiritual nature, likely born between June 11th and July 11th, who uses emotional and spiritual appeals to sway others to her point of view",
-        meaning_up =  "Allowing yourself to be moved by the plight of others, Feeling strong emotions, Possessing unusual sympathy or empathy, Trusting your feelings to guide you, Calling on psychic abilities, Achieving unity with Spirit",
+        meaning_up = "Allowing yourself to be moved by the plight of others, Feeling strong emotions, Possessing unusual sympathy or empathy, Trusting your feelings to guide you, Calling on psychic abilities, Achieving unity with Spirit",
         meaning_rev = "Becoming so caught up in matters of Spirit, you become detached from the world, Allowing empathy to disable you (instead of inspire action), Using psychic abilities to wield covert influence, Wallowing in emotionalism, sentiment, or self-pity",
         qta = "How do I handle strong emotions? \nTo what extent am I a victim of my own feelings? \nHow can I move from reflection to action?",
         description = "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein.",
@@ -530,7 +529,7 @@ object RawCardData {
         name = "Ace of Swords",
         suit = SuitEnum.SWORDS,
         value = "1",
-        keywords =  "logic, objectivity, intellect, choice",
+        keywords = "logic, objectivity, intellect, choice",
         fortuneTelling = "The time to make a choice is now. \nStop wavering and do what you know is best.",
         meaning_up = "Making objective decisions, Applying logic, Reasoning your way out of a difficult situation, Solving puzzles, Thinking things through, Emphasizing the facts, Clearing your mind, Seeking clarity",
         meaning_rev = "Applying ruthless or twisted logic, Gloating over your own superior intellect, Using quick thinking to deceive or confuse others, Confusing snap judgments with quick thinking, Making decisions without thinking through consequences",
@@ -547,7 +546,7 @@ object RawCardData {
         keywords = "denial, debate, impasse, truce",
         fortuneTelling = "Sometimes, the only way to win is to refuse to fight. \nYou're stuck for now; let time pass before taking action.",
         meaning_up = "Refusing to make a decision without getting the facts, Exploring both sides of an argument, Arguing passionately for what you believe in, Weighing the issues, Encouraging the open exchange of ideas, Discussing political or religious issues without getting \"hot under the collar\"",
-        meaning_rev =  "Rejecting evidence that conflicts with dearly-held beliefs, Arguing with others just for the sake of doing so, Nit-picking, Putting off a decision because you're afraid to face the consequences, Preventing others from getting the information they need to make good decisions",
+        meaning_rev = "Rejecting evidence that conflicts with dearly-held beliefs, Arguing with others just for the sake of doing so, Nit-picking, Putting off a decision because you're afraid to face the consequences, Preventing others from getting the information they need to make good decisions",
         qta = "What information do I need to get past this impasse? \nHow can I get past being defensive and see the facts? \nWhat viewpoints, other than my own, play a role in this situation?",
         description = "A hoodwinked female figure balances two swords upon her shoulders.",
         picture = R.drawable.s02
@@ -615,7 +614,7 @@ object RawCardData {
         suit = SuitEnum.SWORDS,
         value = "7",
         keywords = "dishonesty, presumption, sneakiness, assumptions",
-        fortuneTelling =  "Don't assume people around you are worthy of your trust. \nAsk for an accounting of where people have been, and what they've been doing.",
+        fortuneTelling = "Don't assume people around you are worthy of your trust. \nAsk for an accounting of where people have been, and what they've been doing.",
         meaning_up = "Refusing to do something dishonest, even when there's no chance of ever being caught, Handling a difficult situation with finesse, Pointing out assumptions, Acting ethically in public and in private, Living a life that is beyond reproach",
         meaning_rev = "Stealing or lying, Doing whatever you can get away with, simply because you can, Looking for a way around consequences, Justifying wicked behavior by focusing on the wickedness of others, Failing to examine your own motives and prejudices",
         qta = "What assumptions am I making? \nHow well-defined is my sense of ethics? \nHow should I respond when I know others are breaking the rules?",
@@ -672,7 +671,7 @@ object RawCardData {
         value = "11",
         keywords = "student, apprentice, scholarship, information",
         fortuneTelling = "This card represents a young man or woman with an airy, intellectual demeanor, likely born a Capricorn, Aquarius, or Pisces, who wants to learn something new from you or have a discussion with you.",
-        meaning_up =  "Pursuing a course of study, Asking good questions, Investing time in study and practice, Doing research, Making a habit of learning new things, Starting an investigation, Outlining what you need to know, Finding a mentor or teacher",
+        meaning_up = "Pursuing a course of study, Asking good questions, Investing time in study and practice, Doing research, Making a habit of learning new things, Starting an investigation, Outlining what you need to know, Finding a mentor or teacher",
         meaning_rev = "Pretending to knowledge or sophistication you do not possess, Cheating on an exam, Feigning interest as a way of gaining favor, Considering only the evidence that supports conclusions you've already drawn, Rejecting the wise counsel of experienced teachers",
         qta = "How comfortable are you with revealing your own ignorance? \nWhat are the marks of a good student? \nTo what extent are you open to new information?",
         description = "A lithe, active figure holds a sword upright in both hands, while in the act of swift walking. He is passing over rugged land, and about his way the clouds are collocated wildly. He is alert and lithe, looking this way and that, as if an expected enemy might appear at any moment.",
@@ -723,223 +722,402 @@ object RawCardData {
 
 
     // The Wands
-    val card51 = Card(
+    val card51Wands01 = Card(
         id = 51,
-        name = "",
+        name = "Ace of Wands",
         suit = SuitEnum.WANDS,
         value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
+        keywords = "desire, inspiration, vision, creation, invention",
+        fortuneTelling = "Someone has the \"hots\" for you, A new job offer is coming your way, Walk softly, and carry a big stick",
+        meaning_up = "Being inspired, Identifying an important goal, Being given the opportunity to do whatever you want to do, Giving or receiving direction, Seeing a solution, Creating something new, Being aroused, sexually or creatively",
+        meaning_rev = "Failing to take advantage of a great opportunity, Being ineffectual or lazy, Making an inadequate effort, Working toward a goal, but lacking the resources or initiative to achieve success, Setting inappropriate goals, Failing to take a stand",
+        qta = "What do I really want, more than anything else? \nWhat happens if I let this opportunity pass me by? \nHow clearly have I defined my directions, values, and goals?",
+        description = "A hand issuing from a cloud grasps a stout wand or club.",
         picture = R.drawable.w01
     )
 
-    val card52 = Card(
-        id = 51,
-        name = "",
+    val card52Wands02 = Card(
+        id = 52,
+        name = "Two Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "2",
+        keywords = "conflict, decision, option, individuality",
+        fortuneTelling = "Beware false friends. \nDon't be mealy-mouthed; say what you think and do what you want to do.",
+        meaning_up = "Having a choice, Offering or being offered an option, Seeing the value of another person's approach, Understanding there's more than one way to \"skin a cat\", Successfully doing more than one thing at a time, Being empowered to make a choice",
+        meaning_rev = "Misrepresenting your intentions, Doing one thing while desiring another, Changing course mid-stream for no good reason, Refusing to change your goal even when pursuing it no longer makes sense, Disregarding the input of others",
+        qta = "In a conflict, how do you decide who wins? \nWhat values govern your decision-making process? \nWhat choice will you make if you make no choice at all?",
+        description = "A tall man looks from a battlemented roof over sea and shore; he holds a globe in his right hand, while a staff in his left rests on the battlement; another is fixed in a ring. The Rose and Cross and Lily should be noticed on the left side.",
+        picture = R.drawable.w02
     )
 
-    val card53 = Card(
-        id = 51,
-        name = "",
+    val card53Wands03 = Card(
+        id = 53,
+        name = "Three Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "3",
+        keywords = "implementation, action, exploration",
+        fortuneTelling = "You'll be planning a trip soon. \nBe on the lookout: your ship is coming in.",
+        meaning_up = "Putting a plan into motion, Taking that critical first step, Making good things happen, Going beyond your limits, Blazing new trails, Hitting the ground running, Seeing your plans come to fruition",
+        meaning_rev = "Procrastinating, Knowing what to do, but refusing to do it, Launching a project without a clear definition of who should do what, Rejecting an opportunity to try something new, Failing to finish what you start",
+        qta = "How can you make a habit of breaking your habits? \nHow can you be a decisive leader in this circumstance? \nWhat's your action plan for the next week, month, year, or decade?",
+        description = "A calm, stately personage, with his back turned, looking from a cliff's edge at ships passing over the sea. Three staves are planted in the ground, and he leans slightly on one of them.",
+        picture = R.drawable.w03
     )
 
-    val card54 = Card(
-        id = 51,
-        name = "",
+    val card54Wands04 = Card(
+        id = 54,
+        name = "Four Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "4",
+        keywords = "celebration, jubilation, community, teamwork, completion",
+        fortuneTelling = "Someone is watching and evaluating your work. \nYou may get a wedding invitation soon.",
+        meaning_up = "Sharing in a great celebration, Sharing in a communal sense of achievement and success, Preparing for a party, Working together toward a common goal, Giving or winning awards",
+        meaning_rev = "Keeping your nose to the grindstone, Recognizing good work by demanding more work, Failing to share in a group celebration, Allowing sour grapes to poison your moment in the sun, Refusing to do your part",
+        qta = "To what extent am I doing my part? \nWhat kind of recognition would be most meaningful? \nHow might a celebration now impact community morale?",
+        description = "From the four great staves planted in the foreground there is a great garland suspended; two female figures uplift nosegays; at their side is a bridge over a moat, leading to an old manorial house.",
+        picture = R.drawable.w04
     )
 
-    val card55 = Card(
-        id = 51,
-        name = "",
+    val card55Wands05 = Card(
+        id = 55,
+        name = "Five Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "5",
+        keywords = "confrontation, disruption, distinction, objection, strife",
+        fortuneTelling = "Prepare for a fight with your best friend. \nRemember: once you let words loose, you can't take them back.",
+        meaning_up = "Calmly expressing a dissenting opinion, Allowing someone to use his or her own methods to get a job done, Opening the floor for discussion or debate, Comparing progress made so far to standards set earlier",
+        meaning_rev = "Berating others for their ridiculous opinions, Picking fights, Offering destructive criticism, Baiting people with barbed remarks, Disrupting progress with an endless stream of pointless objections",
+        qta = "To what extent is your current issue worth fighting for? \nWhat alternatives are there to outright conflict? \nWhat happens in a \"fair fight?\" \nHow can you keep this fight fair?",
+        description = "A posse of youths, who are brandishing staves, as if in sport or strife. It is mimic warfare, and hereto correspond the five wands.",
+        picture = R.drawable.w05
     )
 
-    val card56 = Card(
-        id = 51,
-        name = "",
+    val card56Wands06 = Card(
+        id = 56,
+        name = "Six Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "6",
+        keywords = "victory, achievement, success, triumph",
+        fortuneTelling = "Someone is planning a party for you, but not everyone feels so good about your recent success. \nWatch out for envious friends.",
+        meaning_up = "Outperforming your peers, Winning a competition, Being recognized as a capable person, Having your \"moment in the spotlight\", Being cheered on by the crowd, Getting an award, Earning the admiration of others, Telling someone, \"Good job!\"",
+        meaning_rev = "Being a bad winner, Allowing your achievements to inflate your ego, Looking down on people who seem less capable, Craving to be the center of attention, Giving or receiving insincere praise, Envying the achievements of others",
+        qta = "What kind of recognition do I crave? Why? \nHow freely do I praise the achievements of others? \nWhat happens when the parade is over?",
+        description = "A laurelled horseman bears one staff adorned with a laurel crown; footmen with staves are at his side.",
+        picture = R.drawable.w06
     )
 
-    val card57 = Card(
-        id = 51,
-        name = "",
+    val card57Wands07 = Card(
+        id = 57,
+        name = "Seven Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "7",
+        keywords = "bravery, resolve, determination",
+        fortuneTelling = "Don't be surprised by a personal attack. \nPrepare to defend yourself or someone you love.",
+        meaning_up = "Refusing to be silenced through fear or intimidation, Continuing a fight against all odds, Being fierce, Defending yourself against physical and emotional attacks, Refusing to put up with abuse, Clinging to your values despite all pressure to abandon them",
+        meaning_rev = "Having a chip on your shoulder, Taking unnecessary risks as a means of proving your fearlessness, Looking for an opportunity to take offense, Responding to constructive criticism with defensiveness, Refusing to stand up for yourself and your beliefs",
+        qta = "When do you feel most threatened? When do you get defensive? \nHow capable are you of defending yourself? \nWhat kinds of beliefs are worth defending?",
+        description = "A young man on a craggy eminence brandishing a staff; six other staves are raised towards him from below.",
+        picture = R.drawable.w07
     )
 
-    val card58 = Card(
-        id = 51,
-        name = "",
+    val card58Wands08 = Card(
+        id = 58,
+        name = "Eight Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "8",
+        keywords = "speed, swiftness, responsiveness, change",
+        fortuneTelling = "Watch for a surprising letter in the mail. \nYour whole world is about to be turned on its ear.",
+        meaning_up = "Taking swift action, Moving forward with a plan as quickly as possible, Energizing yourself, Adapting to sudden changes, Taking setbacks in stride, Embracing the idea that nothing stays the same forever, Reacting quickly and appropriately to unforeseen problems",
+        meaning_rev = "Giving in to panic, Running in circles and screaming, Insisting things must always stay the same, Stirring the pot just to see what will happen, Rushing others, Refusing to re-evaluate a schedule or program, even when it's clearly no longer appropriate",
+        qta = "How quickly to you adapt to change? \nWhat would your response be to overwhelming, sudden change? \nWhat changes are on your horizon? How well have you prepared for them?",
+        description = "The card represents motion through the immovable-a flight of wands through an open country; but they draw to the term of their course. That which they signify is at hand; it may be even on the threshold.",
+        picture = R.drawable.w08
     )
 
-    val card59 = Card(
-        id = 51,
-        name = "",
+    val card59Wands09 = Card(
+        id = 59,
+        name = "Nine Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "9",
+        keywords = "toughness, persistence, stamina, loyalty, release",
+        fortuneTelling = "Don't relax yet; there's more to come. \nThe test you're facing now is happening for one reason: to show you who your real friends are.",
+        meaning_up = "Sticking with it for the duration, Fulfilling your promises and obligations, Bearing up under incredible duress, Dragging yourself across the finish line, Picking yourself up by your own bootstraps, Refusing to quit, Going as far as you can go and being satisfied with your performance",
+        meaning_rev = "Making yourself a martyr, Abandoning your post, Giving up at the first sign of opposition, Being prevented from fulfilling an obligation, Failing to be dependable, Refusing to let something go that needs to be released, Beating a dead horse",
+        qta = "How do you cope when things get really tough? \nWhen you get low, what encourages you to go on? \nAt what point should you be able to let this situation go?",
+        description = "The figure leans upon his staff and has an expectant look, as if awaiting an enemy. Behind are eight other staves--erect, in orderly disposition, like a palisade.",
+        picture = R.drawable.w09
     )
 
-    val card60 = Card(
-        id = 51,
-        name = "",
+    val card60Wands10 = Card(
+        id = 60,
+        name = "Ten Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "10",
+        keywords = "exhaustion, resistance, burden, oppression",
+        fortuneTelling = "You're worn out. \nBack off, take a time out, and let someone else handle things for a while.",
+        meaning_up = "Holding your own in extreme circumstances, Helping others carry their burdens, Coming to the aid of the oppressed, Knowing and being honest about your own limits, Recognizing when you are not well-suited for a particular task",
+        meaning_rev = "Taking on more work than you know you can handle, Refusing to say \"No\" when you're already overloaded, Making a habit of working overtime, Shielding others from facing the consequences of their own poor judgment, Over-extending yourself on a regular basis",
+        qta = "How will you know when you reach the end of your rope? \nHow easily do you say no to new projects and requests? \nWhat projects could you delegate...or eliminate?",
+        description = "A man oppressed by the weight of the ten staves which he is carrying.",
+        picture = R.drawable.w10
     )
 
-    val card61 = Card(
-        id = 51,
-        name = "",
+    val card61WandsPage = Card(
+        id = 61,
+        name = "Page of Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "11",
+        keywords = "enthusiasm, eagerness, confidence, validation, affirmation",
+        fortuneTelling = "This card represents a young man or woman with a fiery, enthusiastic demeanor, likely born a Cancer, Leo, or Virgo, who wants to start a new relationship with you",
+        meaning_up = "Leaping at a new opportunity, Being a cheerleader or ardent advocate for your cause, Being a True Believer, Taking first steps toward independence, Trusting in your own abilities, Asking for feedback",
+        meaning_rev = "Basing your entire self-image on what others think, Seizing every new idea that comes your way without question, Habitually discounting input or feedback from others, Being so eager to \"do it yourself\" that you hinder your own progress",
+        qta = "How easily do you admit your own inexperience? \nHow can you be a better student or employee? \nWhat qualities would make a total beginner's voyage of discovery easier?",
+        description = "In a scene similar to the former, a young man stands in the act of proclamation. He is unknown but faithful, and his tidings are strange.",
+        picture = R.drawable.w11
     )
 
-    val card62 = Card(
-        id = 51,
-        name = "",
+    val card62WandsKnight = Card(
+        id = 61,
+        name = "Knight of Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "12",
+        keywords = "boldness, bravado, passion, persuasion, advocacy",
+        fortuneTelling = "This card represents a man with a bold, passionate personality, likely born between July 12th and August 11th, who wants to sweep you off your feet",
+        meaning_up = "Charging ahead, Making rapid progress, Refusing limits, Dazzling those around you with your wit and charm, Convincing others of your right to leadership, Convincing others to follow you, Being a catalyst for change",
+        meaning_rev = "Blundering forward with inadequate skill or information, Running roughshod over the feelings of others, Using sex appeal to manipulate others, Forcing your leadership or ideology on others, Beginning many projects without finishing any",
+        qta = "To what extent have you defined your ultimate goal? \nWhat's the fastest way to get the job done? Is this necessarily the best way? \nHow long has it been since you looked back to see if others really are following your lead?",
+        description = "He is shewn as if upon a journey, armed with a short wand, and although mailed is not on a warlike errand. He is passing mounds or pyramids. The motion of the horse is a key to the character of its rider, and suggests the precipitate mood, or things connected therewith.",
+        picture = R.drawable.w12
     )
 
-    val card63 = Card(
-        id = 51,
-        name = "",
+    val card63WandsQueen = Card(
+        id = 63,
+        name = "Queen of Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "13",
+        keywords = "attention, attraction, unification, collaboration",
+        fortuneTelling = "This card represents a woman with an attractive, appealing personality, likely born between March 11th and April 20th, who wants to charm you into doing things her way",
+        meaning_up = "Paying close attention, Helping others focus on the issue at hand, Getting everyone to work together, Identifying common ground, Bringing people together, despite their differences, Using reverse psychology",
+        meaning_rev = "Being distracted, or using your charms or skills to distract others from the goal, Calling attention to yourself with negative or unhealthy behaviors, Disrupting group activities as a means of feeding your own ego",
+        qta = "How attentive am I? \nHow can I draw people's attention to what we have in common? \nTo what extent am I able to convince people to do what I want them to do?",
+        description = "The Wands throughout this suit are always in leaf, as it is a suit of life and animation. Emotionally and otherwise, the Queen's personality corresponds to that of the King, but is more magnetic.",
+        picture = R.drawable.w13
     )
 
-    val card64 = Card(
-        id = 51,
-        name = "",
+    val card64WandsKing = Card(
+        id = 64,
+        name = "King of Wands",
         suit = SuitEnum.WANDS,
-        value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        value = "14",
+        keywords = "creativity, ingenuity, achievement, direction",
+        fortuneTelling = "This card represents an older man with a commanding, charismatic personality, likely born between November 13th and December 12th, who prefers to give directions and have them followed",
+        meaning_up = "Putting old things together in new and exciting ways, Coming up with unexpected solutions, Using your experience to solve puzzles and problems, Doing what you set out to do, Directing the efforts of others",
+        meaning_rev = "Using your creativity to get out of honest work, Investing great energy in avoiding responsibility, Boasting about achievements without putting your expertise to practical use, Lording it over others",
+        qta = "How confident a leader am I? \nHow can I project more confidence? \nHow can I offer my expertise in ways that inspire others to follow me?",
+        description = "The physical and emotional nature to which this card is attributed is dark, ardent, lithe, animated, impassioned, noble. The King uplifts a flowering wand, and wears, like his three correspondences in the remaining suits, what is called a cap of maintenance beneath his crown. He connects with the symbol of the lion, which is emblazoned on the back of his throne.",
+        picture = R.drawable.w14
     )
 
-    val card65 = Card(
-        id = 51,
-        name = "",
-        suit = SuitEnum.WANDS,
+    val card65Coins01 = Card(
+        id = 65,
+        name = "Ace of Pentacles",
+        suit = SuitEnum.COINS,
         value = "1",
-        keywords = "",
-        fortuneTelling = "",
-        meaning_up = "",
-        meaning_rev = "",
-        qta = "",
-        description = "",
-        picture = R.drawable.w01
+        keywords = "health, wealth, practicality, receiving",
+        fortuneTelling = "Your health will improve. \nThe check you're looking for really is in the mail.",
+        meaning_up = "Outlining a plan for achieving prosperity, Becoming aware of opportunities to improve income or health, Realizing you have everything you need, Appreciating everything the Universe has given you, Receiving the perfect gift at the perfect time",
+        meaning_rev = "Indulging in relentless consumerism, Wanting more, no matter how much you have, Obsessing on your account balance, Suffering from hypochondria, Consuming blessings without expressing gratitude, Taking what you want without concern for the needs of others",
+        qta = "If I made my decision based solely on practical concerns, what would my decision be? \nWhat resources are available to me? \nWhat will be the physical and financial impact of my decisions?",
+        description = "A hand--issuing, as usual, from a cloud--holds up a pentacle.",
+        picture = R.drawable.p01
     )
 
+    val card66Coins02 = Card(
+        id = 66,
+        name = "Two Coins",
+        suit = SuitEnum.COINS,
+        value = "2",
+        keywords = "evaluation, decision, budgeting, diagnosis",
+        fortuneTelling = "It's time to balance the budget. \nAvoid the temptation to spend critical funds on frivolous goods.",
+        meaning_up = "Weighing options, Comparing prices, Determining the value of one option over another, Juggling resources to make ends meet, Making difficult choices based on what's best for your body or your bankbook, Looking at the bottom line, Asking for a second opinion on health issues",
+        meaning_rev = "Engaging in endless price comparison, Putting off a buying decision for fear of finding a slightly better value later on, Buying something without regard for value, Breaking your budget with unnecessary expenses, Engaging in behavior with no regard for how your body or bankbook will be impacted",
+        qta = "What values govern my decisions? \nHow willing am I to sacrifice a little pleasure now in order to have more pleasure later on? \nGiven my current situation, which course of action will give me more of what I really need?",
+        description = "A young man, in the act of dancing, has a pentacle in either hand, and they are joined by that endless cord which is like the number 8 reversed.",
+        picture = R.drawable.p02
+    )
 
+    val card67Coins03 = Card(
+        id = 67,
+        name = "Three Coins",
+        suit = SuitEnum.COINS,
+        value = "3",
+        keywords = "expression, production, work, contribution",
+        fortuneTelling = "A high-dollar contract is in your future. \nIf you work hard, you'll succeed.",
+        meaning_up = "Finishing a project, Setting and meeting standards, Performing according to specifications, Making something others value, Creating something new, Doing your part in a group project, Delivering exactly what others have asked for",
+        meaning_rev = "Pandering to the tastes of others, Failing to deliver what you've promised, Not delivering your best work unless closely supervised, Ignoring or breaking agreements with those who have invested in you, Refusing to do your part, Failing to abide by a clearly-outlined agreement with yourself or others",
+        qta = "How can I get more done? \nWhat's expected of me? How large a role do I play in controlling those expectations? \nWhat's been agreed to? How well has that agreement been followed?",
+        description = "A sculptor at his work in a monastery. Compare the design which illustrates the Eight of Pentacles. The apprentice or amateur therein has received his reward and is now at work in earnest.",
+        picture = R.drawable.p03
+    )
 
+    val card68Coins04 = Card(
+        id = 68,
+        name = "Four Coins",
+        suit = SuitEnum.COINS,
+        value = "4",
+        keywords = "protection, conservation, preservation, safety",
+        fortuneTelling = "A rainy day is coming - it's time to save",
+        meaning_up = "Saving for a rainy day, Fasting as part of a spiritual practice, Dieting in an effort to improve your body, Abstaining from sex as a way of honoring a spiritual tradition or personal promise, Being financially conservative, Establishing a trust fund, Opening a savings account",
+        meaning_rev = "Being stingy, Refusing to spend money that needs to be spent, Withholding sex from your partner, Taking care of your own needs exclusively, without regard for the needs of others, Spending a dollar to save a penny, Failing to be a good manager of the blessings you've been given",
+        qta = "What factors determine how conservative or generous you are? \nWhat kinds of things must be preserved at all costs? \nWhen is greediness or stinginess a good trait to have? When might generosity work against you?",
+        description = "A crowned figure, having a pentacle over his crown, clasps another with hands and arms; two pentacles are under his feet. He holds to that which he has.",
+        picture = R.drawable.p04
+    )
+
+    val card69Coins05 = Card(
+        id = 69,
+        name = "Five Coins",
+        suit = SuitEnum.COINS,
+        value = "5",
+        keywords = "poverty, destitution, need, crisis",
+        fortuneTelling = "Finances are getting tighter, \nPrepare for a setback.",
+        meaning_up = "Recognizing your needs and taking action to fulfill them, Doing as much as you can do with what little you have, Admitting you need help, Embracing the aid that comes your way, Focusing on what you have versus what you don't, Looking for the light at the end of the tunnel",
+        meaning_rev = "Exaggerating your financial or physical needs, Adopting a poverty mentality, Refusing to support yourself, Refusing offers of support, Playing the martyr, Turning down opportunities to improve your health or finances, Wallowing in misery",
+        qta = "What critical resources do I lack? \nWhat people or groups would come to my aid if I asked? \nHow might an impoverished spirit be impacting my physical or financial condition?",
+        description = "Two mendicants in a snow-storm pass a lighted casement.",
+        picture = R.drawable.p05
+    )
+
+    val card70Coins06 = Card(
+        id = 70,
+        name = "Six Coins",
+        suit = SuitEnum.COINS,
+        value = "6",
+        keywords = "charity, fairness, cooperation, sharing",
+        fortuneTelling = "When you need help, ask for it. \nRemember, though: what you receive may be limited by what you've given to others in the past.",
+        meaning_up = "Giving time, money, or effort to a charity, Taking part in a group effort, Lending your resources to others without expecting anything in return, Making sure everyone is treated equally, Working together toward a common goal, Redistributing wealth, time, or attention, Tithing, Sharing credit for your success",
+        meaning_rev = "Making a loan as a means of gaining control over someone, Using charitable acts to draw attention to yourself, Dividing work or resources unfairly, Failing to do your part in a group effort, Ignoring obligations and commitments",
+        qta = "How do I feel about charity? About giving it? About receiving it? \nHow can I know if I'm treating others fairly? \nWhat could I give that no one else can?",
+        description = "A person in the guise of a merchant weighs money in a pair of scales and distributes it to the needy and distressed. It is a testimony to his own success in life, as well as to his goodness of heart.",
+        picture = R.drawable.p06
+    )
+
+    val card71Coins07 = Card(
+        id = 71,
+        name = "Seven Coins",
+        suit = SuitEnum.COINS,
+        value = "7",
+        keywords = "assessment, evaluation, re-evaluation, reflection",
+        fortuneTelling = "Things won't work out as expected. \nPick up the pieces and prepare to move on.",
+        meaning_up = "Looking at results with an eye toward improving performance, Asking, \"How happy am I?\", Coming up with ideas for improving your health or prosperity, Deciding it's time for a change, Expressing an honest opinion",
+        meaning_rev = "Becoming distracted by melancholy thoughts, Longing for \"the good old days\", Beating yourself up over lost opportunities, Judging your own work harshly, Holding others to inappropriate standards, Refusing to take part in a project, then whining about the quality of the outcome",
+        qta = "To what extent have I fulfilled my own expectations? \nWhat are the terms of success? \nHow can I be happier with the progress I've made?",
+        description = "A young man, leaning on his staff, looks intently at seven pentacles attached to a clump of greenery on his right; one would say that these were his treasures and that his heart was there.",
+        picture = R.drawable.p07
+    )
+
+    val card72Coins08 = Card(
+        id = 72,
+        name = "Eight Coins",
+        suit = SuitEnum.COINS,
+        value = "8",
+        keywords = "effort, work diligence, skill",
+        fortuneTelling = "Stop over-analyzing, researching, and outlining. \nBuckle down and get the work done.",
+        meaning_up = "Doing your best, Bringing enthusiasm and zeal to your work, Making an effort to be the best you can be, Finding the work that is right for you, Taking care of the small details, Becoming a finely skilled craftsperson, Building something with your hands, Making a handmade gift",
+        meaning_rev = "Working yourself to death, Doing a half-hearted or sloppy job, Continuing in a job you hate, Buying thoughtless gifts, Producing work with shoddy craftsmanship, Rushing through your work, Rejecting opportunities to learn more about your craft",
+        qta = "How long has it been since you were \"lost in your work?\" \nHow can you improve your level of dedication and focus? \nWhat work do you do best? What about that work appeals to you?",
+        description = "An artist in stone at his work, which he exhibits in the form of trophies.",
+        picture = R.drawable.p08
+    )
+
+    val card73Coins09 = Card(
+        id = 73,
+        name = "Nine Coins",
+        suit = SuitEnum.COINS,
+        value = "9",
+        keywords = "training, discipline, confidence, enough",
+        fortuneTelling = "Until you appreciate what you have, you won't have any luck getting more.",
+        meaning_up = "Investing time in learning or teaching a difficult task, Restraining yourself from physical or financial extremes, Making sacrifices as a way of achieving larger goals, Breaking a complex task down into simple steps, Wanting what you have, Knowing the difference between needs and wants",
+        meaning_rev = "Being assigned to a task without being trained to perform it, Pursuing a position for which you are not qualified, Disregarding requirements, Refusing to dedicate adequate time or attention when learning about something or someone new, Always craving more",
+        qta = "If you could not have what you want, how would you make do? \nCould you make a complex task easier by breaking it down into smaller steps? \nHow patient are you during the learning process? With yourself? With others?",
+        description = "A woman, with a bird upon her wrist, stands amidst a great abundance of grapevines in the garden of a manorial house. It is a wide domain, suggesting plenty in all things. Possibly it is her own possession and testifies to material well-being.",
+        picture = R.drawable.p09
+    )
+
+    val card74Coins10 = Card(
+        id = 74,
+        name = "Ten Coins",
+        suit = SuitEnum.COINS,
+        value = "10",
+        keywords = "wealth, abundance, acquisition, greed",
+        fortuneTelling = "Big money is in the near future. \nExpect a powerful blessing to come your way.",
+        meaning_up = "Celebrating your physical and financial blessings, Realizing how lucky or how blessed you are, Being satisfied with your physical and financial achievements, Taking best advantage of \"times of plenty\", Enjoying a feast, Showering friends or family with gifts",
+        meaning_rev = "Spending all of your money on extravagant gifts and possessions, Trying too hard to impress others with your wealth or physique, Giving an inappropriately expensive gift as a means of currying favor, Obsessing on matters of weight, health, or finance, Always asking, \"What's in it for me?\"",
+        qta = "How much stuff do I really need? \nHow do I feel about wealth and abundance? How do I define these terms? \nHow might shedding some possessions open room for growth?",
+        description = "A man and woman beneath an archway which gives entrance to a house and domain. They are accompanied by a child, who looks curiously at two dogs accosting an ancient personage seated in the foreground. The child's hand is on one of them.",
+        picture = R.drawable.p10
+    )
+
+    val card75CoinsPage = Card(
+        id = 75,
+        name = "Page of Coins",
+        suit = SuitEnum.COINS,
+        value = "11",
+        keywords = "practicality, prosperity, learning, growth, adolescence",
+        fortuneTelling = "This card represents a young man or woman with an earthy, practical demeanor, likely born an Aries, Taurus, or Gemini, who playfully encourages you to take financial or sexual risks.",
+        meaning_up = "Learning the value of a dollar, Starting a savings plan, Taking the first steps toward getting out of debt, Learning new physical tasks, Discovering your sexuality, Launching a diet, a weight-lifting program, or a health-related effort, Learning by doing",
+        meaning_rev = "Trying to appear healthier or wealthier than you really are, Spending money carelessly, Living strictly for today, with no thought of tomorrow, Possessing immature attitudes toward sex and sexuality, Using wealth or beauty as an excuse for not having to learn and grow",
+        qta = "How can you get more financial or sexual experience without risking your livelihood or health? \nHow might hands-on learning play a role in your situation? \nWhat's the most practical choice you could make?",
+        description = "A youthful figure, looking intently at the pentacle which hovers over his raised hands. He moves slowly, insensible of that which is about him.",
+        picture = R.drawable.p11
+    )
+
+    val card76CoinsKnight = Card(
+        id = 76,
+        name = "Knight of Coins",
+        suit = SuitEnum.COINS,
+        value = "12",
+        keywords = "caution, focus, realism, invention",
+        fortuneTelling = "A stingy person may chide you for spending money. \nBe prepared to defend an economic or sexual decision.",
+        meaning_up = "Spending money wisely, Saving for a rainy day, Paying close attention to physical or financial details, Knowing where every dollar goes, Having safe sex, Preferring facts to \"good feelings\", Finding creative ways to \"make do\" with resources on hand, Completing a new invention",
+        meaning_rev = "Throwing caution to the four winds, Spending without regard for consequence, Spending on luxury when necessities are lacking, Escaping stress by spending money, Obsessing on tiny physical or financial details, Perpetually chasing after some new bauble, Copying another's work and claiming it as your own",
+        qta = "What's the difference between caution and fear? \nHow can I evaluate the practicality of my own ideas and methods? \nHow realistic are my goals?",
+        description = "He rides a slow, enduring, heavy horse, to which his own aspect corresponds. He exhibits his symbol, but does not look therein.",
+        picture = R.drawable.p12
+    )
+
+    val card77CoinsQueen = Card(
+        id = 77,
+        name = "Queen of Coins",
+        suit = SuitEnum.COINS,
+        value = "13",
+        keywords = "luxury, comfort, resourcefulness, generosity, prosperity",
+        fortuneTelling = "This card represents a woman with an expansive, sensual nature, likely born between December 13th and 31st, who uses sensual appeal and the promise of reward to sway others to her point of view.",
+        meaning_up = "Appreciating fine food, fine wine, beautiful art, beautiful bodies, or any of the better things in life, Reveling in healthy sexuality, Treating yourself, Splurging on the occasional \"nice to have\" item, Rewarding someone with compensation above and beyond expectations, Having it all",
+        meaning_rev = "Indulging in gluttony or greediness, Becoming insatiable, Blunting the impact of treats by indulging in them too often, Providing physical comfort without providing for emotional needs, Allowing a feeling of entitlement to distort your gratitude for what you're given",
+        qta = "How do I define luxury? \nTo what extent am I capable of reveling in sensual pleasure? \nWhat would I have to give up in order to \"have it all?\"",
+        description = "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein.",
+        picture = R.drawable.p13
+    )
+
+    val card78CoinsKing = Card(
+        id = 78,
+        name = "King of Coins",
+        suit = SuitEnum.COINS,
+        value = "14",
+        keywords = "stability, dependability, confidence, intervention",
+        fortuneTelling = "This card represents an older man with a financially, socially, and politically conservative spirit, likely born between August 12th and September 11th, who is known for putting his money where his mouth is.",
+        meaning_up = "Becoming debt-free, Having more than enough to get by, Making contributions to a savings plan, Taking a new job with an eye toward advancing your career, Buying life or health insurance, Being confident in the bedroom, Taking on the role of enforcer when called upon to do so",
+        meaning_rev = "Becoming so conservative you resist all change on principle alone, Ignoring innovations in the name of preserving tradition, Being smug or cocky, Becoming ruthlessly dedicated to profit or pleasure, Being sexually selfish, Bossing others around, especially when you're not empowered to do so",
+        qta = "How can you handle expenses with greater confidence and maturity? \nHow dependable are you? How dependable would others say you are? \nTo what extent is a conservative viewpoint valuable? At what point does it become more of a burden than a blessing?",
+        description = "The figure calls for no special description the face is rather dark, suggesting also courage, but somewhat lethargic in tendency. The bull's head should be noted as a recurrent symbol on the throne. The sign of this suit is represented throughout as engraved or blazoned with the pentagram, typifying the correspondence of the four elements in human nature and that by which they may be governed. In many old Tarot packs this suit stood for current coin, money, deniers. I have not invented the substitution of pentacles and I have no special cause to sustain in respect of the alternative. But the consensus of divinatory meanings is on the side of some change, because the cards do not happen to deal especially with questions of money.",
+        picture = R.drawable.p14
+    )
 
 
     /*
-        val card51 = Card(
-            id = 51,
+        val card78 = Card(
+            id = 78,
             name = "",
             suit = SuitEnum.,
             value = "1",
@@ -949,13 +1127,10 @@ object RawCardData {
             meaning_rev = "",
             qta = "",
             description = "",
-            picture = "m0.jpg"
+            picture = "R.drawable.p14"
         )
 
      */
-
-
-
 
 
     val cardListRaw: List<Card> = listOf(
@@ -1011,27 +1186,38 @@ object RawCardData {
         card47SwordsPage,
         card48SwordsKnight,
         card49SwordsQueen,
-        card50SwordsKing
+        card50SwordsKing,
         // The Wands
-
-
+        card51Wands01,
+        card52Wands02,
+        card53Wands03,
+        card54Wands04,
+        card55Wands05,
+        card56Wands06,
+        card57Wands07,
+        card58Wands08,
+        card59Wands09,
+        card60Wands10,
+        card61WandsPage,
+        card62WandsKnight,
+        card63WandsQueen,
+        card64WandsKing,
         // The Pentacles ( Coins )
-
+        card65Coins01,
+        card66Coins02,
+        card67Coins03,
+        card68Coins04,
+        card69Coins05,
+        card70Coins06,
+        card71Coins07,
+        card72Coins08,
+        card73Coins09,
+        card74Coins10,
+        card75CoinsPage,
+        card76CoinsKnight,
+        card77CoinsQueen,
+        card78CoinsKing
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
