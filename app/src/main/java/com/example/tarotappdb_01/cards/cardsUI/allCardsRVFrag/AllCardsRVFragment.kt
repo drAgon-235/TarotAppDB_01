@@ -35,60 +35,39 @@ class AllCardsRVFragment : Fragment() {
         val recyclerView = binding.cardsListRV
         //optimize occurence of RV:
         recyclerView.hasFixedSize()
-
         //Observing theVM's LD 'cardListLD' and attach to Adapter
         viewmodel.cardsListLD.observe(viewLifecycleOwner){
             recyclerView.adapter = AllCardsRVAdapter(it)
         }
 
         //CUPS Recyclerview:
-        // Load CUPS Databaseto VM used here:
         viewmodel.loadCUPSFromDBinVWasLD()
-        //bind recyclerview to this Fragment:
         val recyclerViewCups = binding.cupsListRV
-        //optimize occurence of RV:
         recyclerViewCups.hasFixedSize()
-
-        //Observing theVM's LD 'cardListLD' and attach to Adapter
         viewmodel.cardsListLD.observe(viewLifecycleOwner) {
             recyclerViewCups.adapter = AllCardsRVAdapter(it)
         }
 
         //SWORDS Recyclerview:
-        // Load SWORDS Databaseto VM used here:
         viewmodel.loadSWORDSFromDBinVMasLD()
-        //bind recyclerview to this Fragment:
         val recyclerViewSWORDS = binding.swordsListRV
-        //optimize occurence of RV:
         recyclerViewSWORDS.hasFixedSize()
-
-        //Observing theVM's LD 'cardListLD' and attach to Adapter
         viewmodel.cardsListLD.observe(viewLifecycleOwner) {
             recyclerViewSWORDS.adapter = AllCardsRVAdapter(it)
         }
 
         //Wands Recyclerview:
-        // Load WANDS Databaseto VM used here:
         viewmodel.loadWANDSFromDBinVMasLD()
-        //bind recyclerview to this Fragment:
         val recyclerViewWANDS = binding.wandsListRV
-        //optimize occurence of RV:
         recyclerViewWANDS.hasFixedSize()
-
-        //Observing theVM's LD 'cardListLD' and attach to Adapter
         viewmodel.cardsListLD.observe(viewLifecycleOwner) {
             recyclerViewWANDS.adapter = AllCardsRVAdapter(it)
         }
 
-        //Wands Recyclerview:
-        // Load WANDS Databaseto VM used here:
+        //Coins Recyclerview:
         viewmodel.loadCOINSFromDBinVMasLD()
-        //bind recyclerview to this Fragment:
         val recyclerViewCOINS = binding.coinsListRV
-        //optimize occurence of RV:
         recyclerViewCOINS.hasFixedSize()
-
-        //Observing theVM's LD 'cardListLD' and attach to Adapter
         viewmodel.cardsListLD.observe(viewLifecycleOwner) {
             recyclerViewCOINS.adapter = AllCardsRVAdapter(it)
         }

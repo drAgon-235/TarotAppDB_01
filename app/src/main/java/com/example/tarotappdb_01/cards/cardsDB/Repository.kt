@@ -62,6 +62,9 @@ class Repository(private val databse: CardsDatabase) {
 
 
 
+    fun getALLRepoAsLD(): LiveData<List<Card>> {
+        return databse.cardsDao.getAllCardsListLDDAO()
+    }
 
     // Load all without LiveData for "Card of the day" - Button:
     fun getCardsListRepo(): List<Card> {

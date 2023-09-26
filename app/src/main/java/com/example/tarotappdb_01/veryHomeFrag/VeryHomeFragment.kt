@@ -46,7 +46,7 @@ class VeryHomeFragment : Fragment() {
         dayCardBTN.setOnClickListener {
             // Generates a random card-ID, which is trasmitted by argument in the nav_graph to the OneCardFragment
 
-            val randomCardID = (0 until 23).random()
+            val randomCardID = (0 until 79).random()
             findNavController().navigate(
                 VeryHomeFragmentDirections.actionVeryHomeFragmentToOneCardFragment(
                     randomCardID

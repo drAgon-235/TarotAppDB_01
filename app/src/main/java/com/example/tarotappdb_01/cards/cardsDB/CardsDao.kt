@@ -33,8 +33,9 @@ interface CardsDao {
     @Query("SELECT * FROM cards_table WHERE suit = 'COINS'")
     fun getAllCOINSCardsDao(): LiveData<List<Card>>
 
-
-
+    // Yet getting all AS LiveData :
+    @Query("SELECT * FROM cards_table")
+    fun getAllCardsListLDDAO(): LiveData<List<Card>>
 
 
 

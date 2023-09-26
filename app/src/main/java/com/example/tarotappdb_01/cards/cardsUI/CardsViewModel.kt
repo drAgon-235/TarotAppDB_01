@@ -57,6 +57,9 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
 
 
 
+    fun loadALLFromDBinVMasLD(){
+        cardsListLD = repository.getALLRepoAsLD()
+    }
 
 
 

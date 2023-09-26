@@ -13,10 +13,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -25,15 +26,14 @@
                 tools:context=".cards.cardsUI.allCardsRVFrag.AllCardsRVFragment">
 
 
-
                 <TextView
                     android:id="@+id/titleTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:background="#EFB3AE"
                     android:text="Major Arcana (Trumps)"
-                    android:textColor="#D5041D"
-                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -44,6 +44,7 @@
                     android:id="@+id/cardsListRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#EFB3AE"
                     android:orientation="horizontal"
                     android:paddingHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -59,13 +60,13 @@
                     android:id="@+id/titleCupsTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:background="#9FD895"
                     android:text="Cups (Minor Arcana)"
-                    android:textColor="#D5041D"
-                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.208"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cardsListRV" />
 
@@ -73,6 +74,7 @@
                     android:id="@+id/cupsListRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#9FD895"
                     android:orientation="horizontal"
                     android:paddingHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -88,26 +90,27 @@
                     android:id="@+id/titleSWORDSTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:background="#A6D9EF"
                     android:text="Swords (Minor Arcana)"
-                    android:textColor="#D5041D"
-                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cupsListRV" />
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/swordsListRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#A6D9EF"
                     android:orientation="horizontal"
                     android:paddingHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/titleSWORDSTV"
                     app:layout_constraintVertical_bias="0.0"
@@ -118,13 +121,13 @@
                     android:id="@+id/titleWANDSTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:background="#C8A98D"
                     android:text="Wands (Minor Arcana)"
-                    android:textColor="#D5041D"
-                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.801"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/swordsListRV" />
 
@@ -132,6 +135,7 @@
                     android:id="@+id/wandsListRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#C8A98D"
                     android:orientation="horizontal"
                     android:paddingHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -143,18 +147,18 @@
                     app:layout_constraintVertical_bias="0.0"
                     tools:listitem="@layout/card_item_in_rv" />
 
-
                 <TextView
                     android:id="@+id/titleCOINSTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Wands (Minor Arcana)"
-                    android:textColor="#D5041D"
-                    android:textSize="14sp"
+                    android:background="#BBA3C5"
+                    android:text="Coins (Minor Arcana)"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/wandsListRV" />
 
@@ -162,6 +166,7 @@
                     android:id="@+id/coinsListRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#BBA3C5"
                     android:orientation="horizontal"
                     android:paddingHorizontal="16dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

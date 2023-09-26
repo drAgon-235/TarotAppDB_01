@@ -34,9 +34,7 @@ class OneCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Neccessary pre-declarations & inits:
-        // Loading the simple List<Cards> into viewmodel's 'cardListSimple' (NO LiveData), used later on:
-        viewmodel.loadCardListFromDBinViewModel()
+        // Neccessary pre-declarations & inits (never used, just refilled later, but Kotlin requires an Initialization here):
         // Create & initialize "holder" for one Card (DefaultData neccessery!)
         var oneCard: Card = RawCardData.card21Judgement
         // Create & initialize "holder" for picture Drawable (always by Int !!!) (DefaultData neccessery!)
@@ -71,6 +69,8 @@ class OneCardFragment : Fragment() {
 
         // Rescue: extra Function in Dao (without LiveData - just get simple List<Card>)
         // -> extra Variable in Repo, in VM & here in the Fragment, after catching the upper TC-Blocks,
+        // Loading the simple List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
+        viewmodel.loadCardListFromDBinViewModel()
         val listNoLD = viewmodel.cardListSimple
 
         // Try again, with simple List<Card> - NO LiveData !!:
