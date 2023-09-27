@@ -43,6 +43,12 @@ class VeryHomeFragment : Fragment() {
             findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToAllCardsRVFragment())
         }
 
+
+        cardsReading.setOnClickListener {
+            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToReadingsHomeFragment())
+        }
+
+
         dayCardBTN.setOnClickListener {
             // Generates a random card-ID, which is trasmitted by argument in the nav_graph to the OneCardFragment
 
@@ -53,5 +59,8 @@ class VeryHomeFragment : Fragment() {
                 )
             )
         }
+
+
+
     }
 }

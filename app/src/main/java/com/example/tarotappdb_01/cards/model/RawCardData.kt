@@ -13,6 +13,26 @@ import com.example.tarotappdb_01.R
 
 
 object RawCardData {
+/*
+    The design of the backside of the card deck is a freepik from:
+    <a href="https://www.freepik.com/free-vector/hand-drawn-mystical-tarot-mobile-wallpaper_21862417.htm#page=2&query=tarot%20background&position=9&from_view=keyword&track=ais">Image by pikisuperstar</a> on Freepik
+    Thanks a lot :-)
+ */
+
+    // Back side
+    val card00Backside = Card(
+        id = 0,
+        name = "Back Side",
+        suit = SuitEnum.MAJOR_ARCANA,
+        value = "1",
+        keywords = "",
+        fortuneTelling = "",
+        meaning_up = "",
+        meaning_rev = "",
+        qta = "",
+        description = "",
+        picture = R.drawable.back_02
+    )
 
     // Major Arcana
     val card01TheFool = Card(

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_veryHomeFragment_to_oneCardFragment"
             app:destination="@id/oneCardFragment" />
+        <action
+            android:id="@+id/action_veryHomeFragment_to_readingsHomeFragment"
+            app:destination="@id/readingsHomeFragment" />
     </fragment>
 
 
@@ -38,5 +41,22 @@
             android:name="cardID"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/readingsHomeFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.readingsHomeFrag.ReadingsHomeFragment"
+        android:label="fragment_readings_home"
+        tools:layout="@layout/fragment_readings_home" >
+        <action
+            android:id="@+id/action_readingsHomeFragment_to_shuffleFragment"
+            app:destination="@id/shuffleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shuffleFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.shuffleAndLayFrag.ShuffleFragment"
+        android:label="fragment_shuffle"
+        tools:layout="@layout/fragment_shuffle" />
+
 
 </navigation>
