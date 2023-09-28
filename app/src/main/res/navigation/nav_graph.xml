@@ -48,15 +48,15 @@
         android:label="fragment_readings_home"
         tools:layout="@layout/fragment_readings_home" >
         <action
-            android:id="@+id/action_readingsHomeFragment_to_shuffleFragment"
-            app:destination="@id/shuffleFragment" />
+            android:id="@+id/action_readingsHomeFragment_to_simplePathFragment"
+            app:destination="@id/simplePathFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/shuffleFragment"
-        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.shuffleAndLayFrag.ShuffleFragment"
-        android:label="fragment_shuffle"
-        tools:layout="@layout/fragment_shuffle" />
+        android:id="@+id/simplePathFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.SimplePathFragment"
+        android:label="fragment_simple_path"
+        tools:layout="@layout/fragment_simple_path" />
 
 
 </navigation>
