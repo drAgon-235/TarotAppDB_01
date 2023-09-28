@@ -1,14 +1,17 @@
 package com.example.tarotappdb_01.cards.cardsUI.cardReadings.shuffleAndLayFrag
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.clearFragmentResultListener
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentReadingsHomeBinding
 import com.example.tarotappdb_01.databinding.FragmentShuffleBinding
 
+private val TAG = "ShuffleFragment_TAG"
 
 class ShuffleFragment : Fragment() {
 
@@ -26,7 +29,9 @@ class ShuffleFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentShuffleBinding.inflate(inflater, container, false)
-        return binding.root      }
+        return binding.root
+    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,16 +41,8 @@ class ShuffleFragment : Fragment() {
 
         val mixCard1 = binding.cardMixIV1
 
-        shuffleBTN.setOnClickListener {
-            mixCard1.animate().rotation(360f)
-            // BUG : Der Button reagiert nur beim ersten Click !!!
-            // Er soll aber unbegrenzt oft shuffeln können:
-        }
+        // The animation (rotating card) ist completely programmed in XML and
 
     }
-
-
-
-
 
 }
