@@ -35,7 +35,7 @@ class ReadingsHomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.simplePathIV.setOnClickListener {
-            findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToShuffleFragment())
+            findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToSimplePathFragment())
         }
 
     }
