@@ -42,5 +42,9 @@ class ReadingsHomeFragment : Fragment() {
         binding.littleCrossIV.setOnClickListener {
             findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToLittleCrossFragment())
         }
+
+        binding.pathOfWisdomIV.setOnClickListener {
+            findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToPathOfWisdomFragment())
+        }
     }
 }

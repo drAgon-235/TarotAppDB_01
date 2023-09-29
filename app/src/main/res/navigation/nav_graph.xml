@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_readingsHomeFragment_to_littleCrossFragment"
             app:destination="@id/littleCrossFragment" />
+        <action
+            android:id="@+id/action_readingsHomeFragment_to_pathOfWisdomFragment"
+            app:destination="@id/pathOfWisdomFragment" />
     </fragment>
 
     <fragment
@@ -65,6 +68,11 @@
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragment"
         android:label="fragment_little_cross"
         tools:layout="@layout/fragment_little_cross" />
+    <fragment
+        android:id="@+id/pathOfWisdomFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathOfWisdomFragment"
+        android:label="PathOfWisdomFragment"
+        tools:layout="@layout/fragment_path_of_wisdom"/>
 
 
 </navigation>
