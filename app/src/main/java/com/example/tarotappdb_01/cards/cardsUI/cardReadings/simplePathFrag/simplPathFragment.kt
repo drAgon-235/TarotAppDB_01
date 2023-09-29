@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tarotappdb_01.R
-import com.example.tarotappdb_01.databinding.FragmentShuffleBinding
-import com.example.tarotappdb_01.databinding.FragmentSimplePathBinding
+import com.example.tarotappdb_01.databinding.FragmentReadingsHomeBinding
+import com.example.tarotappdb_01.databinding.FragmentSimplPathBinding
 
 
-class SimplePathFragment : Fragment() {
+class simplPathFragment : Fragment() {
 
-    private lateinit var binding: FragmentSimplePathBinding
+    private lateinit var binding: FragmentSimplPathBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +21,16 @@ class SimplePathFragment : Fragment() {
         }
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentSimplePathBinding.inflate(inflater, container, false)
-        return binding.root    }
+        binding = FragmentSimplPathBinding.inflate(inflater, container, false)
+        return binding.root      }
+
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,5 +38,8 @@ class SimplePathFragment : Fragment() {
 
 
     }
+
+
+
 
 }
