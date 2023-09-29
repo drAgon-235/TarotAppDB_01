@@ -39,5 +39,8 @@ class ReadingsHomeFragment : Fragment() {
             findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToSimplPathFragment())
         }
 
+        binding.littleCrossIV.setOnClickListener {
+            findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToLittleCrossFragment())
+        }
     }
 }
