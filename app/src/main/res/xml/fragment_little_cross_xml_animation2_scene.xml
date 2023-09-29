@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
+        motion:autoTransition="jumpToStart"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000"
-        motion:autoTransition="jumpToStart">
-       <KeyFrameSet>
+        motion:duration="1000">
+        <KeyFrameSet>
 
-       </KeyFrameSet>
+        </KeyFrameSet>
         <OnClick motion:targetId="@+id/layCrossBTN" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/backCardIV"
-            motion:layout_constraintEnd_toStartOf="@+id/layCrossBTN"
             android:layout_width="71dp"
             android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="@+id/layCrossBTN"
             motion:layout_constraintHorizontal_bias="0.817"
-            motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="4dp" />
+            motion:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end"
-        android:visibility="invisible">
+    <ConstraintSet
+        android:id="@+id/end"
+        android:visibility="visible">
         <Constraint
-            android:layout_height="100dp"
-            motion:layout_constraintEnd_toStartOf="@+id/layCrossBTN"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="152dp"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintHorizontal_bias="0.817"
+            android:id="@+id/backCardIV"
             android:layout_width="71dp"
-            android:id="@+id/backCardIV" />
+            android:layout_height="100dp"
+            android:layout_marginTop="152dp"
+            android:visibility="visible"
+            motion:layout_constraintEnd_toStartOf="@+id/layCrossBTN"
+            motion:layout_constraintHorizontal_bias="0.817"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 </MotionScene>
