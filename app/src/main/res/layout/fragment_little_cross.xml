@@ -7,10 +7,10 @@
     tools:context=".cards.cardsUI.cardReadings.littleCross.LittleCrossFragment">
 
     <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/animation2"
+        android:id="@+id/laycards"
         android:layout_width="match_parent"
         android:layout_height="291dp"
-        app:layoutDescription="@xml/fragment_little_cross_xml_animation2_scene">
+        app:layoutDescription="@xml/fragment_little_cross_xml_laycards_scene">
 
         <Button
             android:id="@+id/layCrossBTN"
@@ -36,10 +36,10 @@
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/shuffle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutDescription="@xml/fragment_little_cross_xml_constraintlayout_scene">
+        app:layoutDescription="@xml/fragment_little_cross_xml_shuffle_scene">
 
         <Button
             android:id="@+id/shuffleCross"
