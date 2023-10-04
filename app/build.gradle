@@ -72,5 +72,8 @@ dependencies {
     //Coil
     implementation "io.coil-kt:coil:2.4.0"
 
+    //Animations:
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
 
 }

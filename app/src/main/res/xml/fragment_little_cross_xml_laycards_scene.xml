@@ -6,11 +6,11 @@
         motion:autoTransition="jumpToStart"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="800">
         <KeyFrameSet>
 
         </KeyFrameSet>
-        <OnClick motion:targetId="@+id/layCrossBTN" />
+        <OnClick motion:targetId="@+id/layCrossBTN" /> -->
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

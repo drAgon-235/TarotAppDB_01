@@ -9,7 +9,7 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/laycards"
         android:layout_width="match_parent"
-        android:layout_height="291dp"
+        android:layout_height="258dp"
         app:layoutDescription="@xml/fragment_little_cross_xml_laycards_scene">
 
         <Button

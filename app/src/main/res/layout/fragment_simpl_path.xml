@@ -6,11 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".cards.cardsUI.cardReadings.littleCross.LittleCrossFragment">
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laying_are_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card01CV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:outlineAmbientShadowColor="#AC6EF3"
+            app:cardBackgroundColor="#E8C7F6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499">
+
+            <ImageView
+                android:id="@+id/card1IV"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:padding="4dp"
+                android:src="@drawable/s01"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/back01IV"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:padding="4dp"
+                android:src="@drawable/back_02"
+                android:visibility="invisible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card02CV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="#AC6EF3"
+            app:cardBackgroundColor="#E8C7F6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/card2IV"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:padding="4dp"
+                android:src="@drawable/p05"
+                android:visibility="invisible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card03CV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:outlineAmbientShadowColor="#AC6EF3"
+            app:cardBackgroundColor="#E8C7F6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/cardIV"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:padding="4dp"
+                android:src="@drawable/m08_strength"
+                android:visibility="invisible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/backCardIV"
+            android:layout_width="71dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/back_02"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/laycards"
         android:layout_width="match_parent"
-        android:layout_height="291dp"
-        app:layoutDescription="@xml/fragment_little_cross_xml_laycards_scene">
+        android:layout_height="258dp">
+        <!-- app:layoutDescription="@xml/fragment_little_cross_xml_laycards_scene" -->
+
 
         <Button
             android:id="@+id/layCrossBTN"
@@ -22,24 +115,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/backCardIV"
-            android:layout_width="71dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/back_02"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toStartOf="@+id/layCrossBTN"
-            app:layout_constraintHorizontal_bias="0.817"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shuffle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutDescription="@xml/fragment_little_cross_xml_shuffle_scene">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/shuffleCross"
@@ -61,5 +142,15 @@
             app:layout_constraintHorizontal_bias="0.154"
             app:layout_constraintStart_toEndOf="@+id/shuffleCross"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
+
+
+<!--
+            <ImageView
+                android:id="@+id/card1IV"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:padding="4dp"
+                android:src="@drawable/back_02" />
+-->
