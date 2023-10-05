@@ -53,7 +53,6 @@ class simplPathFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val rotatingCard = binding.rotatingCardIV
-        val backCard = binding.backCardIV
 
         // Loading the simple, UNSHUFFLED List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
         viewmodel.loadCardListFromDBinViewModel()

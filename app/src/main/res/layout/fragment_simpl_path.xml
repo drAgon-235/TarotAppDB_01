@@ -80,16 +80,16 @@
 
             <ImageView
                 android:id="@+id/card1IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/s01"
                 android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/back01IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/back_02"
                 android:visibility="invisible" />
@@ -109,20 +109,19 @@
 
             <ImageView
                 android:id="@+id/card2IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/p05"
                 android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/back02IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/back_02"
                 android:visibility="invisible" />
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -138,32 +137,22 @@
 
             <ImageView
                 android:id="@+id/card03IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/m08_strength"
                 android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/back03IV"
-                android:layout_width="60dp"
-                android:layout_height="100dp"
+                android:layout_width="74dp"
+                android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/back_02"
                 android:visibility="invisible" />
 
         </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/backCardIV"
-            android:layout_width="71dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/back_02"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -171,7 +160,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/laycards"
         android:layout_width="match_parent"
-        android:layout_height="258dp">
+        android:layout_height="wrap_content">
         <!-- app:layoutDescription="@xml/fragment_little_cross_xml_laycards_scene" -->
 
 
@@ -204,7 +193,7 @@
 
         <ImageView
             android:id="@+id/rotatingCardIV"
-            android:layout_width="71dp"
+            android:layout_width="70dp"
             android:layout_height="100dp"
             android:layout_marginTop="4dp"
             android:src="@drawable/back_02"
