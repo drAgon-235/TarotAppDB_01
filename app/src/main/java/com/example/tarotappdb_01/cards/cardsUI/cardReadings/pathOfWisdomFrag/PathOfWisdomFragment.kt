@@ -42,7 +42,6 @@ class PathOfWisdomFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val rotatingCard = binding.rotatingCardIV
-        val backCard = binding.backCardIV
 
         // Loading the simple, UNSHUFFLED List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
         viewmodel.loadCardListFromDBinViewModel()
@@ -66,6 +65,8 @@ class PathOfWisdomFragment : Fragment() {
             }
             // NOW we are actually shuffeling and using shuffled Card List:
             shuffledCardList = shuffledCardList.shuffled()
+            // NOW we make "LAY"-Button visible:
+            binding.layCardsBTN.visibility = View.VISIBLE
         }
 
 
@@ -90,8 +91,9 @@ class PathOfWisdomFragment : Fragment() {
             var pic7 = shuffledCardList[7].picture
             binding.card07IV.setImageResource(pic7)
 
+
             // Appearing-Animation Card 01 - A:
-            // CardBack comes faning in dowm...
+            // CardBack comes fading in dowm...
             binding.back01IV.visibility = View.VISIBLE
             YoYo.with(Techniques.FadeInDown).playOn(binding.back01IV)
 
@@ -224,8 +226,16 @@ class PathOfWisdomFragment : Fragment() {
                     this.rotationYBy(90f)
 
                 }
-
             }
+
+            binding.futureTV.visibility = View.VISIBLE
+            YoYo.with(Techniques.BounceInRight).playOn(binding.futureTV)
+
+            binding.presentTV.visibility = View.VISIBLE
+            YoYo.with(Techniques.BounceInLeft).playOn(binding.presentTV)
+
+
+
         }
     }
 }
