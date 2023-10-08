@@ -62,11 +62,7 @@
         android:id="@+id/simplPathFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.SimplPathFragment"
         android:label="fragment_simpl_path"
-        tools:layout="@layout/fragment_simpl_path" >
-        <action
-            android:id="@+id/action_simplPathFragment_to_oneCardFragment"
-            app:destination="@id/oneCardFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_simpl_path" />
 
 
 

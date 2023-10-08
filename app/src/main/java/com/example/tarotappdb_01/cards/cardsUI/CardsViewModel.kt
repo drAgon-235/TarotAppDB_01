@@ -1,6 +1,8 @@
 package com.example.tarotappdb_01.cards.cardsUI
 
+import androidx.appcompat.app.AppCompatActivity
 import android.app.Application
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -17,6 +19,9 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
 
     //Creating a Repository (as an object) and giving it the (empty) DB:
     private var repository = Repository(database)
+
+    val sharedPreferences = application.applicationContext.getSharedPreferences("counter", Context.MODE_PRIVATE)
+
 
 
     // Creating a LiveData! where the abstract LDList of the Repository ist saved,

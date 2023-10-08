@@ -1,5 +1,7 @@
 package com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag
 
+import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,6 +21,8 @@ class SimplPathFragment : Fragment() {
 
     private lateinit var binding: FragmentSimplPathBinding
     private val viewmodel: CardsViewModel by activityViewModels()
+
+
 
     //private var shuffledCardList: List<Card> = viewmodel.cardListSimple.shuffled()
 
@@ -45,10 +49,11 @@ class SimplPathFragment : Fragment() {
 
         val rotatingCard = binding.rotatingCardIV
 
-        // Loading the simple, UNSHUFFLED List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
         viewmodel.loadCardListFromDBinViewModel()
+        // Loading the simple, UNSHUFFLED List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
         var shuffledCardList: List<Card> =
-            viewmodel.cardListSimple  // is not shuffled yet for educational purposes
+            viewmodel.cardListSimple  // is not shuffled yet for educational purposes & control/testing
+
 
 
         // Shuffeling Cards Button:
@@ -73,21 +78,24 @@ class SimplPathFragment : Fragment() {
 
 
 
+
+
         // Laying Cards Button:
         binding.layCrossBTN.setOnClickListener {
-
-            //YoYo.with(Techniques.BounceInDown).playOn(backCard)
 
             // Connecting the pictures to the View (not visible yet), taking the shuffled cards from top (left) to bottom (right):
             var pic1 = shuffledCardList[0].picture
             val id1  = shuffledCardList[0].id
-            binding.card1IV.setImageResource(pic1)
             var pic2 = shuffledCardList[1].picture
             val id2  = shuffledCardList[1].id
-            binding.card2IV.setImageResource(pic2)
             var pic3 = shuffledCardList[2].picture
             val id3  = shuffledCardList[2].id
+            binding.card1IV.setImageResource(pic1)
+            binding.card2IV.setImageResource(pic2)
             binding.card03IV.setImageResource(pic3)
+
+
+
 
 
             // Appearing-Animation Card 01 - A:
@@ -108,7 +116,7 @@ class SimplPathFragment : Fragment() {
                 binding.card1IV.isVisible = true
                 binding.card1IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -126,7 +134,7 @@ class SimplPathFragment : Fragment() {
                 binding.card2IV.isVisible = true
                 binding.card2IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -145,17 +153,12 @@ class SimplPathFragment : Fragment() {
                 binding.card03IV.isVisible = true
                 binding.card03IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
         }
 
-        //val id1  = shuffledCardList[0].id
 
-        // OnClickLiszener for each layed card:
-        binding.card1IV.setOnClickListener {
-            findNavController().navigate(SimplPathFragmentDirections.actionSimplPathFragmentToOneCardFragment(shuffledCardList[0].id))
-        }
 
 
     }

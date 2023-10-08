@@ -110,7 +110,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card1IV.isVisible = true
                 binding.card1IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -128,7 +128,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card2IV.isVisible = true
                 binding.card2IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -147,7 +147,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card03IV.isVisible = true
                 binding.card03IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -166,7 +166,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card04IV.isVisible = true
                 binding.card04IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -185,7 +185,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card05IV.isVisible = true
                 binding.card05IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -204,7 +204,7 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card06IV.isVisible = true
                 binding.card06IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
                 }
             }
 
@@ -223,16 +223,18 @@ class PathOfWisdomFragment : Fragment() {
                 binding.card07IV.isVisible = true
                 binding.card07IV.animate().apply {
                     duration = 1000
-                    this.rotationYBy(90f)
+                    this.rotationYBy(270f)
 
                 }
             }
 
-            binding.futureTV.visibility = View.VISIBLE
-            YoYo.with(Techniques.BounceInRight).playOn(binding.futureTV)
-
+            // extra information popping up: present vs. future
+            // coming from left:
             binding.presentTV.visibility = View.VISIBLE
             YoYo.with(Techniques.BounceInLeft).playOn(binding.presentTV)
+            // coming from right:
+            binding.futureTV.visibility = View.VISIBLE
+            YoYo.with(Techniques.BounceInRight).playOn(binding.futureTV)
 
 
 
