@@ -71,6 +71,9 @@ class Repository(private val databse: CardsDatabase) {
         return databse.cardsDao.getCardsList()
     }
 
+    fun getCardByIDRepo(id: Int): Card {
+        return databse.cardsDao.getOneCardByID(id)
+    }
 
 
 

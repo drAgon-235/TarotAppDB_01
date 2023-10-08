@@ -58,6 +58,7 @@ class SimplPathFragment : Fragment() {
 
         // Shuffeling Cards Button:
         binding.shuffleCross.setOnClickListener {
+
             // First Animation: Shaking
             YoYo.with(Techniques.Shake).playOn(rotatingCard)
             // Second Animation: Rotating up & down
@@ -83,13 +84,12 @@ class SimplPathFragment : Fragment() {
         // Laying Cards Button:
         binding.layCrossBTN.setOnClickListener {
 
+            binding.interpretationBTN.visibility = View.VISIBLE
+
             // Connecting the pictures to the View (not visible yet), taking the shuffled cards from top (left) to bottom (right):
             var pic1 = shuffledCardList[0].picture
-            val id1  = shuffledCardList[0].id
             var pic2 = shuffledCardList[1].picture
-            val id2  = shuffledCardList[1].id
             var pic3 = shuffledCardList[2].picture
-            val id3  = shuffledCardList[2].id
             binding.card1IV.setImageResource(pic1)
             binding.card2IV.setImageResource(pic2)
             binding.card03IV.setImageResource(pic3)
@@ -156,6 +156,13 @@ class SimplPathFragment : Fragment() {
                     this.rotationYBy(270f)
                 }
             }
+        }
+
+        binding.interpretationBTN.setOnClickListener {
+            val id1  = shuffledCardList[0].id
+            val id2  = shuffledCardList[1].id
+            val id3  = shuffledCardList[2].id
+            findNavController().navigate(SimplPathFragmentDirections.actionSimplPathFragmentToCardMeaningFragment(card01ID = id1, card02ID = id2, card03ID = id3))
         }
 
 

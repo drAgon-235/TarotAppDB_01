@@ -46,7 +46,7 @@
         android:id="@+id/readingsHomeFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.readingsHomeFrag.ReadingsHomeFragment"
         android:label="fragment_readings_home"
-        tools:layout="@layout/fragment_readings_home" >
+        tools:layout="@layout/fragment_readings_home">
         <action
             android:id="@+id/action_readingsHomeFragment_to_simplPathFragment"
             app:destination="@id/simplPathFragment" />
@@ -58,24 +58,49 @@
             app:destination="@id/pathOfWisdomFragment" />
     </fragment>
 
+
     <fragment
         android:id="@+id/simplPathFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.SimplPathFragment"
         android:label="fragment_simpl_path"
-        tools:layout="@layout/fragment_simpl_path" />
+        tools:layout="@layout/fragment_simpl_path">
+        <action
+            android:id="@+id/action_simplPathFragment_to_cardMeaningFragment"
+            app:destination="@id/cardMeaningFragment" />
 
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardMeaningFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.CardMeaningFragment"
+        android:label="fragment_card_meaning"
+        tools:layout="@layout/fragment_card_meaning">
+        <argument
+            android:name="card03ID"
+            app:argType="integer" />
+        <argument
+            android:name="card02ID"
+            app:argType="integer" />
+        <argument
+            android:name="card01ID"
+            app:argType="integer" />
+    </fragment>
 
 
     <fragment
         android:id="@+id/littleCrossFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragment"
         android:label="fragment_little_cross"
-        tools:layout="@layout/fragment_little_cross" />
+        tools:layout="@layout/fragment_little_cross">
+
+    </fragment>
+
+
     <fragment
         android:id="@+id/pathOfWisdomFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathOfWisdomFragment"
         android:label="PathOfWisdomFragment"
-        tools:layout="@layout/fragment_path_of_wisdom"/>
+        tools:layout="@layout/fragment_path_of_wisdom"></fragment>
 
 
 </navigation>

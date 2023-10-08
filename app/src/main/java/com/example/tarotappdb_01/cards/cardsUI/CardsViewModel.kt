@@ -3,6 +3,7 @@ package com.example.tarotappdb_01.cards.cardsUI
 import androidx.appcompat.app.AppCompatActivity
 import android.app.Application
 import android.content.Context
+import android.content.LocusId
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -20,7 +21,7 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     //Creating a Repository (as an object) and giving it the (empty) DB:
     private var repository = Repository(database)
 
-    val sharedPreferences = application.applicationContext.getSharedPreferences("counter", Context.MODE_PRIVATE)
+   // val sharedPreferences = application.applicationContext.getSharedPreferences("counter", Context.MODE_PRIVATE)
 
 
 
@@ -31,6 +32,9 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
     // Creating a simple List<Card> for Card of the Day Fragment (NO LiveData!):
     var cardListSimple = repository.cardsListNoLD
 
+    var oneCard: Card = repository.getCardByIDRepo(id = 0)
+
+    var id: Int = 0
 
     init{
         // Filling Cards to Room-DB if App is run for the first time (in Main)
@@ -62,10 +66,6 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
 
 
 
-    fun loadALLFromDBinVMasLD(){
-        cardsListLD = repository.getALLRepoAsLD()
-    }
-
 
 
     // Loading the simple List<Card> - NO LiveData !! (For "Card of the day")
@@ -73,6 +73,19 @@ class CardsViewModel(application: Application) : AndroidViewModel(application) {
         cardListSimple = repository.getCardsListRepo()
     }
 
+    fun loadOneCardByID(cd: Int){
+
+    }
+
+
+
+
+
+
+
+    fun emergingCardAnimation(){
+
+    }
 
 
 

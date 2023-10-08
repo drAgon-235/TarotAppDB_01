@@ -53,4 +53,8 @@ interface CardsDao {
 
 
 
+
+    @Query("SELECT * FROM cards_table WHERE id = :id")
+    fun getOneCardByID(id: Int): Card
+
 }
