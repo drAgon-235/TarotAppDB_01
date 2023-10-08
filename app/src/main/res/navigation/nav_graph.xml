@@ -84,6 +84,9 @@
         <argument
             android:name="card01ID"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_cardMeaningFragment_to_oneCardFragment"
+            app:destination="@id/oneCardFragment" />
     </fragment>
 
 
