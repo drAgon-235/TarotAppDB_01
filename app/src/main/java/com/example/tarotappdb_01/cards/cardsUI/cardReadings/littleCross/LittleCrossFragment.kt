@@ -77,6 +77,8 @@ class LittleCrossFragment : Fragment() {
         // Laying Cards Button:
         binding.layCrossBTN.setOnClickListener {
 
+            binding.interpeteBTN.visibility = View.VISIBLE
+
             // Connecting the pictures to the View (not visible yet), taking the shuffled cards from top (left) to bottom (right):
             var pic1 = shuffledCardList[0].picture
             val id1  = shuffledCardList[0].id

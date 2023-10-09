@@ -94,16 +94,52 @@
         android:id="@+id/littleCrossFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragment"
         android:label="fragment_little_cross"
-        tools:layout="@layout/fragment_little_cross">
-
-    </fragment>
+        tools:layout="@layout/fragment_little_cross"/>
 
 
     <fragment
         android:id="@+id/pathOfWisdomFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathOfWisdomFragment"
-        android:label="PathOfWisdomFragment"
-        tools:layout="@layout/fragment_path_of_wisdom"></fragment>
+        android:label="fragment_path_of_wisdom"
+        tools:layout="@layout/fragment_path_of_wisdom">
+
+        <action
+            android:id="@+id/action_pathOfWisdomFragment_to_pathofWisdomMeaningFragment"
+            app:destination="@id/pathofWisdomMeaningFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pathofWisdomMeaningFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathofWisdomMeaningFragment"
+        android:label="PathofWisdomMeaningFragment"
+        tools:layout="@layout/fragment_pathof_wisdom_meaning">
+
+        <argument
+            android:name="card01ID"
+            app:argType="integer" />
+        <argument
+            android:name="card02ID"
+            app:argType="integer" />
+        <argument
+            android:name="card03ID"
+            app:argType="integer" />
+        <argument
+            android:name="card04ID"
+            app:argType="integer" />
+        <argument
+            android:name="card05ID"
+            app:argType="integer" />
+        <argument
+            android:name="card06ID"
+            app:argType="integer" />
+        <argument
+            android:name="card07ID"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_pathofWisdomMeaningFragment_to_oneCardFragment"
+            app:destination="@id/oneCardFragment" />
+    </fragment>
 
 
 </navigation>

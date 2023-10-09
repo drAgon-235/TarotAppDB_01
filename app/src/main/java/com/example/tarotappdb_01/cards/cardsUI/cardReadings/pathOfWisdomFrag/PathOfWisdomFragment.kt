@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.tarotappdb_01.R
@@ -235,6 +236,19 @@ class PathOfWisdomFragment : Fragment() {
             // coming from right:
             binding.futureTV.visibility = View.VISIBLE
             YoYo.with(Techniques.BounceInRight).playOn(binding.futureTV)
+
+            binding.interpretataionBTN.visibility = View.VISIBLE
+
+            binding.interpretataionBTN.setOnClickListener {
+                val id1  = shuffledCardList[0].id
+                val id2  = shuffledCardList[1].id
+                val id3  = shuffledCardList[2].id
+                val id4  = shuffledCardList[3].id
+                val id5  = shuffledCardList[4].id
+                val id6  = shuffledCardList[5].id
+                val id7  = shuffledCardList[6].id
+                findNavController().navigate(PathOfWisdomFragmentDirections.actionPathOfWisdomFragmentToPathofWisdomMeaningFragment(id1, id2, id3, id4,  id5,  id6, id7))
+            }
 
 
 

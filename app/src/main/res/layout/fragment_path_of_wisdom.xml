@@ -397,6 +397,17 @@
             app:layout_constraintStart_toEndOf="@+id/presentTV"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/interpretataionBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:text="INTERPRETE"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/card01CV"
+            app:layout_constraintStart_toStartOf="@+id/card01CV"
+            app:layout_constraintTop_toBottomOf="@+id/description01TV" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

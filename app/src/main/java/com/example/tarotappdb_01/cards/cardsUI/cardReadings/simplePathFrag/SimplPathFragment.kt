@@ -96,8 +96,6 @@ class SimplPathFragment : Fragment() {
 
 
 
-
-
             // Appearing-Animation Card 01 - A:
             // CardBack comes faning in dowm...
             binding.back01IV.visibility = View.VISIBLE

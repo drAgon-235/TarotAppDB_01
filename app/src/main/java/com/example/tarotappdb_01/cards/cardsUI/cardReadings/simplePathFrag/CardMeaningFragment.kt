@@ -103,6 +103,7 @@ class CardMeaningFragment : Fragment() {
         binding.edit3NameTV.text = cardNr03.name
 
 
+
         binding.card01CV.setOnClickListener {
             val id01 = card01ID
             findNavController().navigate(CardMeaningFragmentDirections.actionCardMeaningFragmentToOneCardFragment(id01))
