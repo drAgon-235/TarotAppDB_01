@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.tarotappdb_01.R
@@ -73,7 +74,6 @@ class LittleCrossFragment : Fragment() {
 
 
 
-
         // Laying Cards Button:
         binding.layCrossBTN.setOnClickListener {
 
@@ -86,10 +86,12 @@ class LittleCrossFragment : Fragment() {
             val id2  = shuffledCardList[1].id
             var pic3 = shuffledCardList[2].picture
             val id3  = shuffledCardList[2].id
+            var pic4 = shuffledCardList[3].picture
+            val id4  = shuffledCardList[3].id
             binding.card1IV.setImageResource(pic1)
             binding.card2IV.setImageResource(pic2)
             binding.card03IV.setImageResource(pic3)
-
+            binding.card04IV.setImageResource(pic4)
 
 
 
@@ -156,7 +158,7 @@ class LittleCrossFragment : Fragment() {
 
             // Appearing-Animation Card 04 - A:
             binding.back04IV.visibility = View.VISIBLE
-            YoYo.with(Techniques.FadeInDown).playOn(binding.back03IV)
+            YoYo.with(Techniques.FadeInDown).playOn(binding.back04IV)
 
             // Appearing-Animation Card 04 - B:
             binding.back04IV.animate().apply {
@@ -173,6 +175,15 @@ class LittleCrossFragment : Fragment() {
             }
         }
 
+
+        // Interpretation Button:
+        binding.interpeteBTN.setOnClickListener {
+            val id1  = shuffledCardList[0].id
+            val id2  = shuffledCardList[1].id
+            val id3  = shuffledCardList[2].id
+            val id4  = shuffledCardList[3].id
+            findNavController().navigate(LittleCrossFragmentDirections.actionLittleCrossFragmentToLittleCrossMeaningFragment(id1, id2, id3, id4))
+        }
     }
 
 }

@@ -84,29 +84,27 @@
             android:id="@+id/card02TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Do this"
-            app:layout_constraintEnd_toEndOf="@+id/card02CV"
-            app:layout_constraintStart_toStartOf="@+id/card02CV"
-            app:layout_constraintTop_toBottomOf="@+id/card02CV" />
-
-        <TextView
-            android:id="@+id/card03TV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't do this"
-            app:layout_constraintEnd_toEndOf="@+id/card03CV"
-            app:layout_constraintStart_toStartOf="@+id/card03CV"
-            app:layout_constraintTop_toBottomOf="@+id/card03CV" />
+            android:text="Don't do this!"
+            app:layout_constraintStart_toStartOf="@+id/card2CV"
+            app:layout_constraintTop_toBottomOf="@+id/card2CV" />
 
         <TextView
             android:id="@+id/card02nrTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/card02CV"
-            app:layout_constraintEnd_toEndOf="@+id/card02CV"
-            app:layout_constraintStart_toStartOf="@+id/card02CV" />
+            app:layout_constraintBottom_toTopOf="@+id/card2CV"
+            app:layout_constraintEnd_toEndOf="@+id/card2CV"
+            app:layout_constraintStart_toStartOf="@+id/card2CV" />
+
+        <TextView
+            android:id="@+id/card03TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do this!"
+            app:layout_constraintEnd_toEndOf="@+id/card03CV"
+            app:layout_constraintStart_toStartOf="@+id/card03CV"
+            app:layout_constraintTop_toBottomOf="@+id/card03CV" />
 
         <TextView
             android:id="@+id/card03nrTV"
@@ -132,23 +130,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/card04CV"
             app:layout_constraintEnd_toEndOf="@+id/card04CV"
             app:layout_constraintStart_toStartOf="@+id/card04CV" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card02CV"
+            android:id="@+id/card03CV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="212dp"
-            android:outlineAmbientShadowColor="#AC6EF3"
             app:cardBackgroundColor="#E8C7F6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/card2IV"
+                android:id="@+id/card03IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
@@ -156,7 +154,7 @@
                 android:visibility="invisible" />
 
             <ImageView
-                android:id="@+id/back02IV"
+                android:id="@+id/back03IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
@@ -170,7 +168,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
-            android:outlineAmbientShadowColor="#AC6EF3"
             app:cardBackgroundColor="#E8C7F6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -196,18 +193,18 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card03CV"
+            android:id="@+id/card04CV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:outlineAmbientShadowColor="#AC6EF3"
+            android:layout_marginTop="60dp"
             app:cardBackgroundColor="#E8C7F6"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/card02CV">
+            app:layout_constraintTop_toBottomOf="@+id/card03TV">
 
             <ImageView
-                android:id="@+id/card03IV"
+                android:id="@+id/card04IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
@@ -215,28 +212,26 @@
                 android:visibility="invisible" />
 
             <ImageView
-                android:id="@+id/back03IV"
+                android:id="@+id/back04IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
                 android:src="@drawable/back_02"
                 android:visibility="invisible" />
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card04CV"
+            android:id="@+id/card2CV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="44dp"
-            android:outlineAmbientShadowColor="#AC6EF3"
             app:cardBackgroundColor="#E8C7F6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/card04IV"
+                android:id="@+id/card2IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
@@ -244,7 +239,7 @@
                 android:visibility="invisible" />
 
             <ImageView
-                android:id="@+id/back04IV"
+                android:id="@+id/back02IV"
                 android:layout_width="74dp"
                 android:layout_height="120dp"
                 android:padding="4dp"
@@ -257,12 +252,12 @@
             android:id="@+id/interpeteBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:text="INTERPRETATION"
             android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card03TV" />
+            app:layout_constraintEnd_toEndOf="@+id/card04CV"
+            app:layout_constraintStart_toStartOf="@+id/card04CV"
+            app:layout_constraintTop_toBottomOf="@+id/card04TV" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

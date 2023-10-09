@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/card02CV" />
 
         <TextView
-            android:id="@+id/card02nrTV"
+            android:id="@+id/card03nrTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toBottomOf="@+id/card04CV" />
 
         <TextView
-            android:id="@+id/card04nrTV"
+            android:id="@+id/card02nrTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3"
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:outlineAmbientShadowColor="#AC6EF3"
-            app:cardBackgroundColor="#E8C7F6"
+            app:cardBackgroundColor="#7CD8E8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:outlineAmbientShadowColor="#AC6EF3"
-            app:cardBackgroundColor="#E8C7F6"
+            app:cardBackgroundColor="#7CD8E8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="44dp"
             android:outlineAmbientShadowColor="#AC6EF3"
-            app:cardBackgroundColor="#E8C7F6"
+            app:cardBackgroundColor="#7CD8E8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">

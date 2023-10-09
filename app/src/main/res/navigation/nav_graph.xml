@@ -94,7 +94,34 @@
         android:id="@+id/littleCrossFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragment"
         android:label="fragment_little_cross"
-        tools:layout="@layout/fragment_little_cross"/>
+        tools:layout="@layout/fragment_little_cross">
+        <action
+            android:id="@+id/action_littleCrossFragment_to_littleCrossMeaningFragment"
+            app:destination="@id/littleCrossMeaningFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/littleCrossMeaningFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossMeaningFragment"
+        android:label="fragment_little_cross_meaning"
+        tools:layout="@layout/fragment_little_cross_meaning">
+        <argument
+            android:name="card01ID"
+            app:argType="integer" />
+        <argument
+            android:name="card02ID"
+            app:argType="integer" />
+        <argument
+            android:name="card03ID"
+            app:argType="integer" />
+        <argument
+            android:name="card04ID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_littleCrossMeaningFragment_to_oneCardFragment"
+            app:destination="@id/oneCardFragment" />
+    </fragment>
+
 
 
     <fragment
@@ -113,7 +140,6 @@
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathofWisdomMeaningFragment"
         android:label="PathofWisdomMeaningFragment"
         tools:layout="@layout/fragment_pathof_wisdom_meaning">
-
         <argument
             android:name="card01ID"
             app:argType="integer" />
@@ -135,11 +161,13 @@
         <argument
             android:name="card07ID"
             app:argType="integer" />
-
         <action
             android:id="@+id/action_pathofWisdomMeaningFragment_to_oneCardFragment"
             app:destination="@id/oneCardFragment" />
     </fragment>
+
+
+
 
 
 </navigation>

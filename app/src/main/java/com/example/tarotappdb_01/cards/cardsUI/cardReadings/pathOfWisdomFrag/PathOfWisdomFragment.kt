@@ -89,7 +89,7 @@ class PathOfWisdomFragment : Fragment() {
             binding.card05IV.setImageResource(pic5)
             var pic6 = shuffledCardList[5].picture
             binding.card06IV.setImageResource(pic6)
-            var pic7 = shuffledCardList[7].picture
+            var pic7 = shuffledCardList[6].picture
             binding.card07IV.setImageResource(pic7)
 
 
@@ -155,7 +155,7 @@ class PathOfWisdomFragment : Fragment() {
 
             // Appearing-Animation Card 04 - A:
             binding.back04IV.visibility = View.VISIBLE
-            YoYo.with(Techniques.FadeInDown).playOn(binding.back03IV)
+            YoYo.with(Techniques.FadeInDown).playOn(binding.back04IV)
 
             // Appearing-Animation Card 04 - B:
             binding.back04IV.animate().apply {
@@ -174,7 +174,7 @@ class PathOfWisdomFragment : Fragment() {
 
             // Appearing-Animation Card 05 - A:
             binding.back05IV.visibility = View.VISIBLE
-            YoYo.with(Techniques.FadeInDown).playOn(binding.back03IV)
+            YoYo.with(Techniques.FadeInDown).playOn(binding.back05IV)
 
             // Appearing-Animation Card 05 - B:
             binding.back05IV.animate().apply {
@@ -193,7 +193,7 @@ class PathOfWisdomFragment : Fragment() {
 
             // Appearing-Animation Card 06 - A:
             binding.back06IV.visibility = View.VISIBLE
-            YoYo.with(Techniques.FadeInDown).playOn(binding.back03IV)
+            YoYo.with(Techniques.FadeInDown).playOn(binding.back06IV)
 
             // Appearing-Animation Card 06 - B:
             binding.back06IV.animate().apply {
@@ -212,7 +212,7 @@ class PathOfWisdomFragment : Fragment() {
 
             // Appearing-Animation Card 07 - A:
             binding.back07IV.visibility = View.VISIBLE
-            YoYo.with(Techniques.FadeInDown).playOn(binding.back03IV)
+            YoYo.with(Techniques.FadeInDown).playOn(binding.back07IV)
 
             // Appearing-Animation Card 07 - B:
             binding.back07IV.animate().apply {
@@ -236,7 +236,7 @@ class PathOfWisdomFragment : Fragment() {
             // coming from right:
             binding.futureTV.visibility = View.VISIBLE
             YoYo.with(Techniques.BounceInRight).playOn(binding.futureTV)
-
+            // make "Interpretation"-Button visible:
             binding.interpretataionBTN.visibility = View.VISIBLE
 
             binding.interpretataionBTN.setOnClickListener {

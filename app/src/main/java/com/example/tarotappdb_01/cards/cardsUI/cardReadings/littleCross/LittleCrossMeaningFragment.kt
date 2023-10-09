@@ -1,4 +1,4 @@
-package com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag
+package com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross
 
 import android.os.Bundle
 import android.util.Log
@@ -10,17 +10,18 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
+import com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathofWisdomMeaningFragmentDirections
 import com.example.tarotappdb_01.cards.model.Card
 import com.example.tarotappdb_01.cards.model.RawCardData
-import com.example.tarotappdb_01.databinding.FragmentCardMeaningBinding
+import com.example.tarotappdb_01.databinding.FragmentLittleCrossMeaningBinding
 import com.example.tarotappdb_01.databinding.FragmentPathofWisdomMeaningBinding
 import java.lang.Exception
 
-private val TAG = "PathOfWisdom_MeaningFragment"
+private val TAG = "LittleCross_MeaningFragment"
 
-class PathofWisdomMeaningFragment : Fragment() {
+class LittleCrossMeaningFragment : Fragment() {
 
-    private lateinit var binding: FragmentPathofWisdomMeaningBinding
+    private lateinit var binding: FragmentLittleCrossMeaningBinding
     private val viewmodel: CardsViewModel by activityViewModels()
 
 
@@ -36,10 +37,8 @@ class PathofWisdomMeaningFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentPathofWisdomMeaningBinding.inflate(inflater, container, false)
-        return binding.root      }
-
-
+        binding = FragmentLittleCrossMeaningBinding.inflate(inflater, container, false)
+        return binding.root     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -126,96 +125,33 @@ class PathofWisdomMeaningFragment : Fragment() {
 
 
 
-        // --- Card Nr. 05 ---
-        var cardNr05: Card = RawCardData.card21Judgement
-        var picNr05: Int = 0
-        val card05ID = requireArguments().getInt("card05ID")
-
-        try {
-            // Use the ID to get our wanted Card:
-            cardNr05 = listNoLD[card05ID - 1]
-            Log.d(TAG, "SUCCESS_2.4: ONE Card loaded to OneCardFragment for 'Card of the day' Button")
-        }catch (e: Exception){
-            Log.e(TAG, "ERROR_2.4: getting one Card from VM - now you're really dumped")
-        }
-        picNr05 = cardNr05.picture
-        binding.card05PictureIV.setImageResource(picNr05)
-        binding.edit5NameTV.text = cardNr05.name
-
-
-
-        // --- Card Nr. 06 ---
-        var cardNr06: Card = RawCardData.card21Judgement
-        var picNr06: Int = 0
-        val card06ID = requireArguments().getInt("card06ID")
-
-        try {
-            // Use the ID to get our wanted Card:
-            cardNr06 = listNoLD[card06ID - 1]
-            Log.d(TAG, "SUCCESS_2.4: ONE Card loaded to OneCardFragment for 'Card of the day' Button")
-        }catch (e: Exception){
-            Log.e(TAG, "ERROR_2.4: getting one Card from VM - now you're really dumped")
-        }
-        picNr06 = cardNr06.picture
-        binding.card06PictureIV.setImageResource(picNr06)
-        binding.edit6NameTV.text = cardNr06.name
-
-
-
-        // --- Card Nr. 07 ---
-        var cardNr07: Card = RawCardData.card21Judgement
-        var picNr07: Int = 0
-        val card07ID = requireArguments().getInt("card07ID")
-
-        try {
-            // Use the ID to get our wanted Card:
-            cardNr07 = listNoLD[card07ID - 1]
-            Log.d(TAG, "SUCCESS_2.4: ONE Card loaded to OneCardFragment for 'Card of the day' Button")
-        }catch (e: Exception){
-            Log.e(TAG, "ERROR_2.4: getting one Card from VM - now you're really dumped")
-        }
-        picNr07 = cardNr07.picture
-        binding.card07PictureIV.setImageResource(picNr07)
-        binding.edit7NameTV.text = cardNr07.name
-
-
-
 
         // Getting the whole Card Intepretation of a distinct card (reusing the OneCardFragment again !!:
         binding.card01CV.setOnClickListener {
             val id01 = card01ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id01))
+            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id01))
         }
 
         binding.card02CV.setOnClickListener {
             val id02 = card02ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id02))
+            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id02))
         }
 
         binding.card03CV.setOnClickListener {
             val id03 = card03ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id03))
+            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id03))
         }
 
         binding.card04CV.setOnClickListener {
             val id04 = card04ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id04))
+            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id04))
         }
 
-        binding.card05CV.setOnClickListener {
-            val id05 = card05ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id05))
-        }
 
-        binding.card06CV.setOnClickListener {
-            val id06 = card06ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id06))
-        }
 
-        binding.card07CV.setOnClickListener {
-            val id07 = card07ID
-            findNavController().navigate(PathofWisdomMeaningFragmentDirections.actionPathofWisdomMeaningFragmentToOneCardFragment(id07))
-        }
+
 
     }
+
+
 }
