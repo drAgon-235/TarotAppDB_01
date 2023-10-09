@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_veryHomeFragment_to_readingsHomeFragment"
             app:destination="@id/readingsHomeFragment" />
+        <action
+            android:id="@+id/action_veryHomeFragment_to_quoteFragment"
+            app:destination="@id/quoteFragment" />
     </fragment>
 
 
@@ -166,8 +169,11 @@
             app:destination="@id/oneCardFragment" />
     </fragment>
 
-
-
+    <fragment
+        android:id="@+id/quoteFragment"
+        android:name="com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment.QuoteFragment"
+        android:label="fragment_quote"
+        tools:layout="@layout/fragment_quote" />
 
 
 </navigation>

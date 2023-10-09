@@ -33,33 +33,30 @@ class VeryHomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
-        val dayCardBTN = binding.dayCardBTN
-        val cardsReading = binding.cardReadingBTN
-        val allCardsBTN = binding.allCardsListBTN
-        val quoteBTN = binding.quoteBTN
-
-        allCardsBTN.setOnClickListener {
-            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToAllCardsRVFragment())
+        // Random Card of the Day:
+        binding.dayCardBTN.setOnClickListener {
+            // Generates a random card-ID, which is trasmitted by argument in the nav_graph to the OneCardFragment:
+            val randomCardID = (0 until 79).random()
+            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToOneCardFragment(randomCardID))
         }
 
 
-        cardsReading.setOnClickListener {
+        // Brings you to diverse Card Reading Options:
+        binding.cardReadingBTN.setOnClickListener {
             findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToReadingsHomeFragment())
         }
 
 
-        dayCardBTN.setOnClickListener {
-            // Generates a random card-ID, which is trasmitted by argument in the nav_graph to the OneCardFragment
-
-            val randomCardID = (0 until 79).random()
-            findNavController().navigate(
-                VeryHomeFragmentDirections.actionVeryHomeFragmentToOneCardFragment(
-                    randomCardID
-                )
-            )
+        // Overview of all Tarot Cards sorted by Arcanas:
+        binding.allCardsListBTN.setOnClickListener {
+            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToAllCardsRVFragment())
         }
 
+
+        // API - Call: Quote of the Day:
+        binding.quoteBTN.setOnClickListener {
+            findNavController().navigate(VeryHomeFragmentDirections.actionVeryHomeFragmentToQuoteFragment())
+        }
 
 
     }
