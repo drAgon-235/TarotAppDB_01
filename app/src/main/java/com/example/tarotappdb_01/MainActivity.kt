@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        // Test 01
+
         //viewmodel = ViewModelProvider(this)[CardsViewModel::class.java]
     }
 }
