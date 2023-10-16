@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/veryHomeFragment"
         android:name="com.example.tarotappdb_01.veryHomeFrag.VeryHomeFragment"
-        android:label="fragment_very_home"
+        android:label="Home"
         tools:layout="@layout/fragment_very_home">
         <action
             android:id="@+id/action_veryHomeFragment_to_allCardsRVFragment"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/allCardsRVFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.allCardsRVFrag.AllCardsRVFragment"
-        android:label="fragment_all_cards_rv"
+        android:label="All Cards by Arcanas"
         tools:layout="@layout/fragment_all_cards_rv">
         <action
             android:id="@+id/action_allCardsRVFragment_to_oneCardFragment"
@@ -38,17 +38,18 @@
     <fragment
         android:id="@+id/oneCardFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.oneCardFrag.OneCardFragment"
-        android:label="fragment_one_card"
+        android:label="Card Interpretation"
         tools:layout="@layout/fragment_one_card">
         <argument
             android:name="cardID"
             app:argType="integer" />
     </fragment>
 
+
     <fragment
         android:id="@+id/readingsHomeFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.readingsHomeFrag.ReadingsHomeFragment"
-        android:label="fragment_readings_home"
+        android:label="Readings"
         tools:layout="@layout/fragment_readings_home">
         <action
             android:id="@+id/action_readingsHomeFragment_to_simplPathFragment"
@@ -65,7 +66,7 @@
     <fragment
         android:id="@+id/simplPathFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.SimplPathFragment"
-        android:label="fragment_simpl_path"
+        android:label="The Simple Path"
         tools:layout="@layout/fragment_simpl_path">
         <action
             android:id="@+id/action_simplPathFragment_to_cardMeaningFragment"
@@ -73,10 +74,11 @@
 
     </fragment>
 
+
     <fragment
         android:id="@+id/cardMeaningFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.simplePathFrag.CardMeaningFragment"
-        android:label="fragment_card_meaning"
+        android:label="Card Meanings"
         tools:layout="@layout/fragment_card_meaning">
         <argument
             android:name="card03ID"
@@ -96,17 +98,18 @@
     <fragment
         android:id="@+id/littleCrossFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragment"
-        android:label="fragment_little_cross"
+        android:label="The Little Cross"
         tools:layout="@layout/fragment_little_cross">
         <action
             android:id="@+id/action_littleCrossFragment_to_littleCrossMeaningFragment"
             app:destination="@id/littleCrossMeaningFragment" />
     </fragment>
 
+
     <fragment
         android:id="@+id/littleCrossMeaningFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossMeaningFragment"
-        android:label="fragment_little_cross_meaning"
+        android:label="Cards Meanings"
         tools:layout="@layout/fragment_little_cross_meaning">
         <argument
             android:name="card01ID"
@@ -130,7 +133,7 @@
     <fragment
         android:id="@+id/pathOfWisdomFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathOfWisdomFragment"
-        android:label="fragment_path_of_wisdom"
+        android:label="The Big Path"
         tools:layout="@layout/fragment_path_of_wisdom">
 
         <action
@@ -141,7 +144,7 @@
     <fragment
         android:id="@+id/pathofWisdomMeaningFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathofWisdomMeaningFragment"
-        android:label="PathofWisdomMeaningFragment"
+        android:label="Card Meanings"
         tools:layout="@layout/fragment_pathof_wisdom_meaning">
         <argument
             android:name="card01ID"
@@ -172,7 +175,7 @@
     <fragment
         android:id="@+id/quoteFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment.QuoteFragment"
-        android:label="fragment_quote"
+        android:label="Quote for the day"
         tools:layout="@layout/fragment_quote" />
 
 

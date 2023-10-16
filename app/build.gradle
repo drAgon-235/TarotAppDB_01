@@ -57,8 +57,8 @@ dependencies {
 
 
     //Navigation Dependencies using nav_version Variable to ensure same versions
-    implementation "androidx.navigation:navigation-fragment-ktx:2.7.2"
-    implementation "androidx.navigation:navigation-ui-ktx:2.7.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.4"
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.4"
 
     // Room Dependencies
     implementation 'androidx.room:room-runtime:2.5.2'
