@@ -43,22 +43,26 @@ class Repository(private val databse: CardsDatabase) {
         return databse.cardsDao.getAllCardsDao()
     }
 
+    // Fun to load all CUPS-cards as LiveData (for a RecyclerView e.g.)
     fun getAllCUPSRepoAsLD(): LiveData<List<Card>>{
         return databse.cardsDao.getAllCUPSCardsDao()
     }
 
+    // Fun to load all SWORDS-cards as LiveData (for a RecyclerView e.g.)
     fun getAllSWORDSRepoAsLD(): LiveData<List<Card>>{
         return databse.cardsDao.getAllSWORDSCardsDao()
     }
 
-
+    // Fun to load all WANDS-cards as LiveData (for a RecyclerView e.g.)
     fun getAllWANDSRepoAsLD(): LiveData<List<Card>>{
         return databse.cardsDao.getAllWANDSCardsDao()
     }
 
+    // Fun to load all COINS-cards as LiveData (for a RecyclerView e.g.)
     fun getAllCOINSRepoAsLD(): LiveData<List<Card>>{
         return databse.cardsDao.getAllCOINSCardsDao()
     }
+
 
 
 

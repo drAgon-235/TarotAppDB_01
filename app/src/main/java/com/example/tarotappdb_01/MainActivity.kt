@@ -1,13 +1,20 @@
 package com.example.tarotappdb_01
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
 import com.example.tarotappdb_01.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-    // The Boiler-Plate for implementing the Material Toolbar
-    //
+
+        // The Boiler-Plate for implementing the Material Toolbar
+        //
         // Get the navHostFragment:
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -36,7 +44,10 @@ class MainActivity : AppCompatActivity() {
         // setting up the ActionTOOLBar with the navController:
         setupActionBarWithNavController(navController)
 
+
+
     }
+
 
 
     // making the Back-Arrow work properly:

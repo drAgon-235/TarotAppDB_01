@@ -24,4 +24,7 @@ class QuotesRepository(val apiService: QuotesApi) {
         Log.d(TAG, "load QuoteList from API to Repository : Successful")
     }
 
+
+
+
 }

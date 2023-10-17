@@ -12,12 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/purple_500</item>
         <!-- Customize your theme here. -->
-
-
     </style>
+
+
+    <!--  Doesn't work :-(  -->
+    <style name="NoActionBar" parent="Theme.TarotAppDB_01">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>
 
-<!--
-
-<style name="Theme.TarotAppDB_01" parent="Base.Theme.TarotAppDB_01" />
--->
+<!--  -->

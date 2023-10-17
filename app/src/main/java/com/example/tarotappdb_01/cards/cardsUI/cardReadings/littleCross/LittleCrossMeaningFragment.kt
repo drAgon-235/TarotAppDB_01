@@ -24,9 +24,9 @@ class LittleCrossMeaningFragment : Fragment() {
     private lateinit var binding: FragmentLittleCrossMeaningBinding
     private val viewmodel: CardsViewModel by activityViewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
 
         }
@@ -36,12 +36,16 @@ class LittleCrossMeaningFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setMenuVisibility(false)
+
         // Inflate the layout for this fragment
         binding = FragmentLittleCrossMeaningBinding.inflate(inflater, container, false)
-        return binding.root     }
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         // --- Card Nr. 01 ---
         // Create & initialize "holder" for Card 01 (DefaultData neccessery!)
