@@ -5,14 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
 import com.example.tarotappdb_01.databinding.FragmentQuoteBinding
+import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
+import com.example.tarotappdb_01.quotes.uiModel.QuotesViewModel
 
 
 class FavoriteQrvFragment : Fragment() {
 
     private lateinit var binding: FragmentFavoriteQrvBinding
+    private val viewModel: FavQuotesViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,15 @@ class FavoriteQrvFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.quoteRV.hasFixedSize()
+
+        viewModel.loadQuotesVM()
+
+        viewModel.favQuotesList.observe(viewLifecycleOwner){
+            binding.quoteRV.adapter = FavoriteQrvAdapter(it)
+        }
+
 
 
 
