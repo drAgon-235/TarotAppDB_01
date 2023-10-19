@@ -176,7 +176,18 @@
         android:id="@+id/quoteFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment.QuoteFragment"
         android:label="Quote for the day"
-        tools:layout="@layout/fragment_quote" />
+        tools:layout="@layout/fragment_quote" >
+        <action
+            android:id="@+id/action_quoteFragment_to_favoriteQrvFragment"
+            app:destination="@id/favoriteQrvFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favoriteQrvFragment"
+        android:name="com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQrvFragment"
+        android:label="My Favorite Quotes List"
+        tools:layout="@layout/fragment_favorite_qrv" />
 
 
 </navigation>
