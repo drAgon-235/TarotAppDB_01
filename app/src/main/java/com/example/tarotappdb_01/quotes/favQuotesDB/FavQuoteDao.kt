@@ -17,6 +17,6 @@ interface FavQuoteDao {
     fun getAll(): LiveData<List<FavoriteQuote>>
 
     @Query("DELETE FROM favorites_table WHERE id = :nr")
-    fun delede(nr: Int)
+    fun delete(nr: Int)
 
 }

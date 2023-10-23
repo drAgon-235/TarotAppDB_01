@@ -23,7 +23,6 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
         database.favQuoteDao.insertFavDao(DummyQuotes.quote6)
         database.favQuoteDao.insertFavDao(DummyQuotes.quote7)
         database.favQuoteDao.insertFavDao(DummyQuotes.quote8)
-
     }
 
 
