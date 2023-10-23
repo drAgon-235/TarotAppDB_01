@@ -9,13 +9,16 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentQuoteBinding
+import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
 import com.example.tarotappdb_01.quotes.uiModel.QuotesViewModel
+import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
 
 
 class QuoteFragment : Fragment() {
 
     private lateinit var binding: FragmentQuoteBinding
     private val viewmodel: QuotesViewModel by viewModels()
+    private val viewModelFavQuotes: FavQuotesViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,21 +34,23 @@ class QuoteFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentQuoteBinding.inflate(inflater, container, false)
-        return binding.root      }
+        return binding.root
+    }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val likedLogo = binding.favoriteBorderIV.setImageResource(R.drawable.baseline_favorite_border_24)
+        val likedLogo =
+            binding.favoriteBorderIV.setImageResource(R.drawable.baseline_favorite_border_24)
         val notLikedLogo = binding.favoriteFullIV.setImageResource(R.drawable.baseline_favorite_24)
         val favListLogo = binding.favoriteListIV.setImageResource(R.drawable.baseline_view_list_24)
 
 
         // Putting the quote to the
         val finalDayQuote = viewmodel.dayQuote
-        viewmodel.dayQuote.observe(viewLifecycleOwner){
+        viewmodel.dayQuote.observe(viewLifecycleOwner) {
             binding.quoteOfTheDayTV.setText(finalDayQuote.value!!.q)
             binding.sourceTV.setText(finalDayQuote.value!!.a)
         }
@@ -56,7 +61,24 @@ class QuoteFragment : Fragment() {
             findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
         }
 
+        // Putting the Quote of the Day into DB:
+        binding.likingCV.setOnClickListener {
+            binding.favoriteFullIV.visibility = View.VISIBLE
 
+
+            val newID: Int = viewModelFavQuotes.getCountFavsTable() +1
+   //         findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
+            viewModelFavQuotes.insertFavQuoteVM(
+                //Creating new FavoriteQuote Object:
+                FavoriteQuote(
+                    newID,
+                    binding.quoteOfTheDayTV.text.toString(),
+                    binding.sourceTV.text.toString(),
+                    isLiked = true
+                )
+            )
+
+        }
 
 
     }

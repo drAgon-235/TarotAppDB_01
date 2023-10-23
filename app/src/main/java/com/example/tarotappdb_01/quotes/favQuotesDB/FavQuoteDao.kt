@@ -19,4 +19,6 @@ interface FavQuoteDao {
     @Query("DELETE FROM favorites_table WHERE id = :nr")
     fun delete(nr: Int)
 
+    @Query("SELECT COUNT(*) FROM favorites_table")
+    fun count(): Int
 }
