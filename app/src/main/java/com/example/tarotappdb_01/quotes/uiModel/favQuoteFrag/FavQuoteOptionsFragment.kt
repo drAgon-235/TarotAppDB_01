@@ -6,14 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import com.example.tarotappdb_01.R
+import com.example.tarotappdb_01.databinding.FragmentFavQuoteOptionsBinding
 import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
 import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
 
 
-class FavoriteQrvFragment : Fragment() {
+class FavQuoteOptionsFragment : Fragment() {
 
-    private lateinit var binding: FragmentFavoriteQrvBinding
+    private lateinit var binding: FragmentFavQuoteOptionsBinding
     private val viewModel: FavQuotesViewModel by activityViewModels()
+    private var favQuoteID: String = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,34 +25,30 @@ class FavoriteQrvFragment : Fragment() {
         }
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentFavoriteQrvBinding.inflate(inflater, container, false)
-        return binding.root      }
+        binding = FragmentFavQuoteOptionsBinding.inflate(inflater, container, false)
+        return binding.root       }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.quoteRV.hasFixedSize()
+        // Gettiing the Argument-ID:
+        favQuoteID = requireArguments().getString("favQuoteIDText")!!
 
-        viewModel.loadQuotesVM()
+        //Finding the Quote using the Key (from the argument in the nav_graph):
+        val favQuote = viewModel.favQuotesListLD.value?.find { it.q == favQuoteID } ?: return
 
-        viewModel.favQuotesListLD.observe(viewLifecycleOwner){
-            binding.quoteRV.adapter = FavoriteQrvAdapter(it)
-            //binding.quoteRV.setOnDragListener(viewModel.deleteFavQuoteVM(it.value.toString()))
-
-        }
-
-
+        // Now set the Data into fields again:
+        binding.quoteOfTheDayTV.setText(favQuote.q)
+        binding.sourceTV.setText(favQuote.a)
 
 
 
     }
-
 
 }

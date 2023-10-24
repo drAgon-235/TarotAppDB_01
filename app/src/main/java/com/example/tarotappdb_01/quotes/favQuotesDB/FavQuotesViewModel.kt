@@ -36,4 +36,10 @@ class FavQuotesViewModel(application: Application) : AndroidViewModel(applicatio
             repository.insertFavQuote(favQuote)
         }
     }
+
+    fun deleteFavQuoteVM(idText: String) : Job{
+        return viewModelScope.launch {
+            repository.deleteFavQuoteByID(idText)
+        }
+    }
 }

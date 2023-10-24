@@ -13,7 +13,7 @@ object DummyQuotes {
 
     val quote2 = FavoriteQuote(
 
-        q = "Easy come, easy go.",
+        q = "...",
         a = "Old roman wisdom",
         isLiked = true
     )

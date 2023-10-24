@@ -39,6 +39,16 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
         return database.favQuoteDao.count()
     }
 
+    fun deleteFavQuoteByID(idText: String){
+        try {
+            database.favQuoteDao.delete(idText)
+        }catch (e: Exception){
+            Log.e(TAG, "Error while deleting FAVQuote from Database: $e!!")
+        }
+
+
+    }
+
 
 
 }

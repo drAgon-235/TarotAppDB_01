@@ -5,6 +5,8 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/veryHomeFragment">
 
+
+
     <fragment
         android:id="@+id/veryHomeFragment"
         android:name="com.example.tarotappdb_01.veryHomeFrag.VeryHomeFragment"
@@ -24,6 +26,7 @@
             app:destination="@id/quoteFragment" />
     </fragment>
 
+<!-- Tarot Cards Fragments: -->
 
     <fragment
         android:id="@+id/allCardsRVFragment"
@@ -172,6 +175,8 @@
             app:destination="@id/oneCardFragment" />
     </fragment>
 
+
+    <!--  Quotes Fragments:  -->
     <fragment
         android:id="@+id/quoteFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment.QuoteFragment"
@@ -187,7 +192,23 @@
         android:id="@+id/favoriteQrvFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQrvFragment"
         android:label="My Favorite Quotes List"
-        tools:layout="@layout/fragment_favorite_qrv" />
+        tools:layout="@layout/fragment_favorite_qrv" >
+        <action
+            android:id="@+id/action_favoriteQrvFragment_to_favQuoteOptionsFragment"
+            app:destination="@id/favQuoteOptionsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favQuoteOptionsFragment"
+        android:name="com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavQuoteOptionsFragment"
+        android:label="Favorite Quote Options"
+        tools:layout="@layout/fragment_fav_quote_options" >
+    <argument
+        android:name="favQuoteIDText"
+        android:defaultValue="..."
+        app:argType="string"/>
+    </fragment>
 
 
 </navigation>
