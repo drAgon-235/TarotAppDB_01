@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
-import com.example.tarotappdb_01.databinding.FragmentQuoteBinding
 import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
-import com.example.tarotappdb_01.quotes.uiModel.QuotesViewModel
 
 
 class FavoriteQrvFragment : Fragment() {
@@ -41,7 +38,7 @@ class FavoriteQrvFragment : Fragment() {
 
         viewModel.loadQuotesVM()
 
-        viewModel.favQuotesList.observe(viewLifecycleOwner){
+        viewModel.favQuotesListLD.observe(viewLifecycleOwner){
             binding.quoteRV.adapter = FavoriteQrvAdapter(it)
         }
 

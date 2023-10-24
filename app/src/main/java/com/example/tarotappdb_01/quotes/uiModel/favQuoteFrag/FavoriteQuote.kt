@@ -5,8 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "favorites_table")
 data class FavoriteQuote (
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    //val id: Int,
+    @PrimaryKey
     val q: String,
     val a: String,
     var isLiked: Boolean = false

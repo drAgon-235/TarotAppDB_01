@@ -21,6 +21,7 @@ class QuoteFragment : Fragment() {
     private val viewModelFavQuotes: FavQuotesViewModel by viewModels()
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -48,7 +49,7 @@ class QuoteFragment : Fragment() {
         val favListLogo = binding.favoriteListIV.setImageResource(R.drawable.baseline_view_list_24)
 
 
-        // Putting the quote to the
+        // The Day Quote live from API:
         val finalDayQuote = viewmodel.dayQuote
         viewmodel.dayQuote.observe(viewLifecycleOwner) {
             binding.quoteOfTheDayTV.setText(finalDayQuote.value!!.q)
@@ -56,30 +57,36 @@ class QuoteFragment : Fragment() {
         }
 
 
+
         // Go to My Favorite Quotes List RV-Fragment:
         binding.goToFavListCV.setOnClickListener {
             findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
         }
 
-        // Putting the Quote of the Day into DB:
+
+        // Saving the Quote of the Day into DB:
         binding.likingCV.setOnClickListener {
             binding.favoriteFullIV.visibility = View.VISIBLE
 
-
-            val newID: Int = viewModelFavQuotes.getCountFavsTable() +1
-   //         findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
+            //         findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
             viewModelFavQuotes.insertFavQuoteVM(
-                //Creating new FavoriteQuote Object:
+                //Creating new FavoriteQuote Object for the DB to insert into:
                 FavoriteQuote(
-                    newID,
                     binding.quoteOfTheDayTV.text.toString(),
                     binding.sourceTV.text.toString(),
                     isLiked = true
                 )
             )
 
+
+
+
+            }
+
+
         }
 
 
+
+
     }
-}

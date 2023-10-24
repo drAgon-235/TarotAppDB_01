@@ -29,6 +29,7 @@ class FavoriteQrvAdapter(
 
         holder.binding.quoteOfTheDayTV.text = favoriteQuote.q
         holder.binding.sourceTV.text = favoriteQuote.a
+        holder.binding.quoteIDTV.text = (position+1).toString()
 
 
 
