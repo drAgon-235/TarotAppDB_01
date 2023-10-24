@@ -24,12 +24,13 @@ class FavoriteQrvAdapter(
     }
 
     override fun onBindViewHolder(holder: FavoriteQuoteViewHolder, position: Int) {
-        val favoriteQuote = favoriteQList[position]
 
+        val favoriteQuote = favoriteQList[position]
 
         holder.binding.quoteOfTheDayTV.text = favoriteQuote.q
         holder.binding.sourceTV.text = favoriteQuote.a
         holder.binding.quoteIDTV.text = (position+1).toString()
+
 
 
 

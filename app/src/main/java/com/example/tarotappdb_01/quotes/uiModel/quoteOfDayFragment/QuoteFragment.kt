@@ -1,6 +1,7 @@
 package com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,13 +14,12 @@ import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
 import com.example.tarotappdb_01.quotes.uiModel.QuotesViewModel
 import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
 
-
+private val TAG = "QuoteFragment_TAG"
 class QuoteFragment : Fragment() {
 
     private lateinit var binding: FragmentQuoteBinding
     private val viewmodel: QuotesViewModel by viewModels()
     private val viewModelFavQuotes: FavQuotesViewModel by viewModels()
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,36 +57,34 @@ class QuoteFragment : Fragment() {
         }
 
 
-
         // Go to My Favorite Quotes List RV-Fragment:
         binding.goToFavListCV.setOnClickListener {
             findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
         }
 
 
-        // Saving the Quote of the Day into DB:
+        // Saving the Quote of the Day into Favorites-DB:
         binding.likingCV.setOnClickListener {
             binding.favoriteFullIV.visibility = View.VISIBLE
 
-            //         findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
-            viewModelFavQuotes.insertFavQuoteVM(
-                //Creating new FavoriteQuote Object for the DB to insert into:
-                FavoriteQuote(
-                    binding.quoteOfTheDayTV.text.toString(),
-                    binding.sourceTV.text.toString(),
-                    isLiked = true
+            try {
+                Log.d(TAG, "Start: INSERTING Quote of the Day into FavoriteQuotesDB!")
+                viewModelFavQuotes.insertFavQuoteVM(
+                    //Creating new FavoriteQuote Object for the DB to insert into:
+                    FavoriteQuote(
+                        binding.quoteOfTheDayTV.text.toString(),
+                        binding.sourceTV.text.toString(),
+                        isLiked = true
+                    )
                 )
-            )
-
-
-
-
+                Log.d(TAG, "Finish: INSERTING Quote of the Day into FavoriteQuotesDB Successful!")
+            } catch (e: Exception) {
+                Log.e(TAG, "ERROR: INSERTING Quote of the Day into FavoriteQuotesDB!")
             }
 
 
+            //         findNavController().navigate(QuoteFragmentDirections.actionQuoteFragmentToFavoriteQrvFragment())
+
         }
-
-
-
-
     }
+}

@@ -17,11 +17,17 @@ class QuotesRepository(val apiService: QuotesApi) {
 
 
     suspend fun loadQuoteListFromApiToRepo(){
-        Log.d(TAG, "load QuoteList from API to Repository : Start")
-        val loadedQuoteList = QuotesApi.apiRetrofitService.getRandomQuoteFromAPI()
-        val workingQuote = loadedQuoteList[0]  // Diese Zeile war Gehirnschmalz pur, hat nämlich zu tun mit der ganze Daten-Struktur !!!
-        _quoteList.postValue(workingQuote)
-        Log.d(TAG, "load QuoteList from API to Repository : Successful")
+        try {
+            Log.d(TAG, "load QuoteList from API to Repository : Start")
+            //Downloading a list with DEFINITELY just ONE Quote (API Random Method):
+            val loadedQuoteList = QuotesApi.apiRetrofitService.getRandomQuoteFromAPI()
+            // Saving this ONE (first[0]) Quote into our LiveData<Quote> with the Quote of the Day to be displplayed:
+            val workingQuote = loadedQuoteList[0]
+            _quoteList.postValue(workingQuote)
+            Log.d(TAG, "load QuoteList from API to Repository : Successful")
+        }catch (e: Exception){
+            Log.e(TAG, "ERROR loading QuoteList from API to Repository !!!")
+        }
     }
 
 

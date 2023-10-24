@@ -45,6 +45,7 @@ class FavoriteQrvFragment : Fragment() {
 
 
 
+
     }
 
 

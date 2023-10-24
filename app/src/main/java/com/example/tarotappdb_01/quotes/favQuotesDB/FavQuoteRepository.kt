@@ -16,9 +16,11 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
 
     fun insertFavQuote(newFavQuote: FavoriteQuote){
         try {
+            Log.d(TAG, "START: Inserting FavoriteQuote into DB")
             database.favQuoteDao.insertFavDao(newFavQuote)
+            Log.d(TAG, "SUCCESS: Inserting FavoriteQuote into DB finished!")
         }catch (e: Exception){
-            Log.d(TAG, "Error while inserting FAVQuote to Database: $e")
+            Log.e(TAG, "Error while inserting FAVQuote to Database: $e!!")
         }
 
     }
@@ -31,12 +33,6 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
     fun dummyData() {
         database.favQuoteDao.insertFavDao(DummyQuotes.quote1)
         database.favQuoteDao.insertFavDao(DummyQuotes.quote2)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote3)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote4)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote5)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote6)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote7)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote8)
     }
 
     fun getCount(): Int {
