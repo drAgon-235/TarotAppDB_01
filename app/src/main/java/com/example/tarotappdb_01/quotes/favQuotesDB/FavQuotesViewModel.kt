@@ -16,10 +16,10 @@ class FavQuotesViewModel(application: Application) : AndroidViewModel(applicatio
     private var repository = FavQuoteRepository(database)
 
     var favQuotesListLD: LiveData<List<FavoriteQuote>> = repository.favQuotesList
-    //var favQuotesList: List<FavoriteQuote> = favQuotesListLD.value!!.toList()  //BULLSHIT
+
 
     init {
-        repository.dummyData()
+       // repository.dummyData()
     }
 
     fun loadQuotesVM(){
@@ -30,6 +30,7 @@ class FavQuotesViewModel(application: Application) : AndroidViewModel(applicatio
     fun getCountFavsTable(): Int{
         return repository.getCount()
     }
+
 
     fun insertFavQuoteVM(favQuote: FavoriteQuote) : Job {
         return viewModelScope.launch {

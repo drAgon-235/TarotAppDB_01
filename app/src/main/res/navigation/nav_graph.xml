@@ -6,7 +6,6 @@
     app:startDestination="@id/veryHomeFragment">
 
 
-
     <fragment
         android:id="@+id/veryHomeFragment"
         android:name="com.example.tarotappdb_01.veryHomeFrag.VeryHomeFragment"
@@ -26,7 +25,7 @@
             app:destination="@id/quoteFragment" />
     </fragment>
 
-<!-- Tarot Cards Fragments: -->
+    <!-- Tarot Cards Fragments: -->
 
     <fragment
         android:id="@+id/allCardsRVFragment"
@@ -132,7 +131,6 @@
     </fragment>
 
 
-
     <fragment
         android:id="@+id/pathOfWisdomFragment"
         android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathOfWisdomFragment"
@@ -181,7 +179,7 @@
         android:id="@+id/quoteFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.quoteOfDayFragment.QuoteFragment"
         android:label="Quote for the day"
-        tools:layout="@layout/fragment_quote" >
+        tools:layout="@layout/fragment_quote">
         <action
             android:id="@+id/action_quoteFragment_to_favoriteQrvFragment"
             app:destination="@id/favoriteQrvFragment" />
@@ -192,7 +190,7 @@
         android:id="@+id/favoriteQrvFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQrvFragment"
         android:label="My Favorite Quotes List"
-        tools:layout="@layout/fragment_favorite_qrv" >
+        tools:layout="@layout/fragment_favorite_qrv">
         <action
             android:id="@+id/action_favoriteQrvFragment_to_favQuoteOptionsFragment"
             app:destination="@id/favQuoteOptionsFragment" />
@@ -203,11 +201,14 @@
         android:id="@+id/favQuoteOptionsFragment"
         android:name="com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavQuoteOptionsFragment"
         android:label="Favorite Quote Options"
-        tools:layout="@layout/fragment_fav_quote_options" >
-    <argument
-        android:name="favQuoteIDText"
-        android:defaultValue="..."
-        app:argType="string"/>
+        tools:layout="@layout/fragment_fav_quote_options">
+        <argument
+            android:name="favQuoteIDText"
+            android:defaultValue="..."
+            app:argType="string" />
+        <action
+            android:id="@+id/action_favQuoteOptionsFragment_to_favoriteQrvFragment"
+            app:destination="@id/favoriteQrvFragment" />
     </fragment>
 
 

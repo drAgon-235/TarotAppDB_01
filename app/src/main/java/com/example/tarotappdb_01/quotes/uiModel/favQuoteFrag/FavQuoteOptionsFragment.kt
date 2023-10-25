@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentFavQuoteOptionsBinding
 import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
@@ -37,6 +38,9 @@ class FavQuoteOptionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val shareLogo = binding.shareIV.setImageResource(R.drawable.baseline_share_24)
+        val deleteLogo = binding.deleteIV.setImageResource(R.drawable.baseline_delete_forever_24)
+
         // Gettiing the Argument-ID:
         favQuoteID = requireArguments().getString("favQuoteIDText")!!
 
@@ -47,7 +51,17 @@ class FavQuoteOptionsFragment : Fragment() {
         binding.quoteOfTheDayTV.setText(favQuote.q)
         binding.sourceTV.setText(favQuote.a)
 
+        // Delete Button:
+        binding.dislikingCV.setOnClickListener {
+            viewModel.deleteFavQuoteVM(favQuote.q)
+            //findNavController().navigate(FavQuoteOptionsFragmentDirections.actionFavQuoteOptionsFragmentToFavoriteQrvFragment())
+            binding.quoteOfTheDayTV.setText("deleted from\nFavorite Quotes List")
+            binding.sourceTV.setText(" ")
+            binding.quoteOfTheDayTV.setTextColor(0xFFE30000.toInt())
+        }
 
+        // Share Button:
+        // TODO :
 
     }
 

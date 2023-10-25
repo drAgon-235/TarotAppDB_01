@@ -79,12 +79,12 @@
                 android:text="Delete from my \nfavorite quotes list"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/favorite_borderIV"
+                app:layout_constraintEnd_toStartOf="@+id/deleteIV"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/favorite_borderIV"
+                android:id="@+id/deleteIV"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:layout_marginEnd="8dp"
@@ -129,6 +129,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="..."
+                android:gravity="center_horizontal"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -141,6 +142,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="..."
+                android:gravity="center_horizontal"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -149,50 +151,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/goToFavListCV"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-
-        android:padding="10dp"
-        app:cardBackgroundColor="#A765BF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quoteCV">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/goTo_fav_listTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:text="My FAVORITE\nQUOTES LIST"
-                android:textSize="16sp"
-                android:textColor="#FFFF05"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <ImageView
-                android:id="@+id/favorite_listIV"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/goTo_fav_listTV"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/baseline_view_list_24" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

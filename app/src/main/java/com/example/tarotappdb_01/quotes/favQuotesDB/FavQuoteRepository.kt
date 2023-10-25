@@ -41,7 +41,9 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
 
     fun deleteFavQuoteByID(idText: String){
         try {
+            Log.d(TAG, "START Deleting FAVQuote from Database...")
             database.favQuoteDao.delete(idText)
+            Log.d(TAG, "...Deleting FAVQuote from Database: SUCCESSFUL!!")
         }catch (e: Exception){
             Log.e(TAG, "Error while deleting FAVQuote from Database: $e!!")
         }
