@@ -46,5 +46,9 @@ class ReadingsHomeFragment : Fragment() {
         binding.pathOfWisdomIV.setOnClickListener {
             findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToPathOfWisdomFragment())
         }
+
+        binding.loveOracleIV.setOnClickListener {
+            findNavController().navigate(ReadingsHomeFragmentDirections.actionReadingsHomeFragmentToLoveOracleFragment())
+        }
     }
 }

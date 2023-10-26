@@ -1,4 +1,4 @@
-package com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross
+package com.example.tarotappdb_01.cards.cardsUI.cardReadings.loveOracle
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,21 +12,20 @@ import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
+import com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossFragmentDirections
 import com.example.tarotappdb_01.cards.model.Card
 import com.example.tarotappdb_01.databinding.FragmentLittleCrossBinding
-import com.example.tarotappdb_01.databinding.FragmentPathOfWisdomBinding
+import com.example.tarotappdb_01.databinding.FragmentLoveOracleBinding
 
 
-class LittleCrossFragment : Fragment() {
+class LoveOracleFragment : Fragment() {
 
-    private lateinit var binding: FragmentLittleCrossBinding
+    private lateinit var binding: FragmentLoveOracleBinding
     private val viewmodel: CardsViewModel by activityViewModels()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
         }
     }
 
@@ -35,11 +34,14 @@ class LittleCrossFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentLittleCrossBinding.inflate(inflater, container, false)
-        return binding.root    }
+        binding = FragmentLoveOracleBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         val rotatingCard = binding.rotatingCardIV
 
@@ -48,7 +50,6 @@ class LittleCrossFragment : Fragment() {
         // Loading the simple, UNSHUFFLED List<Cards> into viewmodel's 'cardListSimple' (NO LiveData):
         var shuffledCardList: List<Card> =
             viewmodel.cardListSimple  // is not shuffled yet for educational purposes & control/testing
-
 
 
         // Shuffeling Cards Button:
@@ -73,7 +74,6 @@ class LittleCrossFragment : Fragment() {
         }
 
 
-
         // Laying Cards Button:
         binding.layCrossBTN.setOnClickListener {
 
@@ -81,19 +81,17 @@ class LittleCrossFragment : Fragment() {
 
             // Connecting the pictures to the View (not visible yet), taking the shuffled cards from top (left) to bottom (right):
             var pic1 = shuffledCardList[0].picture
-            val id1  = shuffledCardList[0].id
+            val id1 = shuffledCardList[0].id
             var pic2 = shuffledCardList[1].picture
-            val id2  = shuffledCardList[1].id
+            val id2 = shuffledCardList[1].id
             var pic3 = shuffledCardList[2].picture
-            val id3  = shuffledCardList[2].id
+            val id3 = shuffledCardList[2].id
             var pic4 = shuffledCardList[3].picture
-            val id4  = shuffledCardList[3].id
+            val id4 = shuffledCardList[3].id
             binding.card1IV.setImageResource(pic1)
             binding.card2IV.setImageResource(pic2)
             binding.card03IV.setImageResource(pic3)
             binding.card04IV.setImageResource(pic4)
-
-
 
 
             // Appearing-Animation Card 01 - A:
@@ -178,12 +176,22 @@ class LittleCrossFragment : Fragment() {
 
         // Interpretation Button:
         binding.interpeteBTN.setOnClickListener {
-            val id1  = shuffledCardList[0].id
-            val id2  = shuffledCardList[1].id
-            val id3  = shuffledCardList[2].id
-            val id4  = shuffledCardList[3].id
-            findNavController().navigate(LittleCrossFragmentDirections.actionLittleCrossFragmentToLittleCrossMeaningFragment(id1, id2, id3, id4))
+            val id1 = shuffledCardList[0].id
+            // Here the cards are exchanged in opposite to "little cross" due to the different order ( 2 <-> 3 )
+            // That's the only difference to "little cross" Fragment
+            val id2 = shuffledCardList[2].id
+            val id3 = shuffledCardList[1].id
+            val id4 = shuffledCardList[3].id
+            findNavController().navigate(
+                LoveOracleFragmentDirections.actionLoveOracleFragmentToLittleCrossMeaningFragment(
+                    id1,
+                    id2,
+                    id3,
+                    id4
+                )
+            )
         }
     }
+
 
 }

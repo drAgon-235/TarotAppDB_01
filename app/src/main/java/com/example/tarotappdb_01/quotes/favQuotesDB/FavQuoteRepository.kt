@@ -22,22 +22,18 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
         }catch (e: Exception){
             Log.e(TAG, "Error while inserting FAVQuote to Database: $e!!")
         }
-
     }
+
 
     fun loadFavQuotes(): LiveData<List<FavoriteQuote>>{
         return database.favQuoteDao.getAll()
-
     }
 
-    fun dummyData() {
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote1)
-        database.favQuoteDao.insertFavDao(DummyQuotes.quote2)
-    }
 
     fun getCount(): Int {
         return database.favQuoteDao.count()
     }
+
 
     fun deleteFavQuoteByID(idText: String){
         try {
@@ -47,10 +43,14 @@ class FavQuoteRepository(private val database: FavQuoteDatabase) {
         }catch (e: Exception){
             Log.e(TAG, "Error while deleting FAVQuote from Database: $e!!")
         }
-
-
     }
 
+
+    // For testing purposes only:
+    fun dummyData() {
+        database.favQuoteDao.insertFavDao(DummyQuotes.quote1)
+        database.favQuoteDao.insertFavDao(DummyQuotes.quote2)
+    }
 
 
 }

@@ -49,6 +49,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/littleCrossIV" />
+
+                <ImageView
+                    android:id="@+id/loveOracleIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:src="@drawable/a_love_oracle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pathOfWisdomIV" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

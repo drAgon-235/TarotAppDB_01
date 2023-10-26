@@ -62,6 +62,20 @@
         <action
             android:id="@+id/action_readingsHomeFragment_to_pathOfWisdomFragment"
             app:destination="@id/pathOfWisdomFragment" />
+        <action
+            android:id="@+id/action_readingsHomeFragment_to_loveOracleFragment"
+            app:destination="@id/loveOracleFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loveOracleFragment"
+        android:name="com.example.tarotappdb_01.cards.cardsUI.cardReadings.loveOracle.LoveOracleFragment"
+        android:label="The Love Oracle"
+        tools:layout="@layout/fragment_love_oracle" >
+        <action
+            android:id="@+id/action_loveOracleFragment_to_littleCrossMeaningFragment"
+            app:destination="@id/littleCrossMeaningFragment" />
     </fragment>
 
 
@@ -75,7 +89,6 @@
             app:destination="@id/cardMeaningFragment" />
 
     </fragment>
-
 
     <fragment
         android:id="@+id/cardMeaningFragment"
@@ -106,7 +119,6 @@
             android:id="@+id/action_littleCrossFragment_to_littleCrossMeaningFragment"
             app:destination="@id/littleCrossMeaningFragment" />
     </fragment>
-
 
     <fragment
         android:id="@+id/littleCrossMeaningFragment"
@@ -210,6 +222,7 @@
             android:id="@+id/action_favQuoteOptionsFragment_to_veryHomeFragment"
             app:destination="@id/veryHomeFragment" />
     </fragment>
+
 
 
 </navigation>
