@@ -1,6 +1,10 @@
 package com.example.tarotappdb_01.quotes.favQuotesDB
 
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
+
+
+// This was created for testing purposes only
+
 
 object DummyQuotes {
 

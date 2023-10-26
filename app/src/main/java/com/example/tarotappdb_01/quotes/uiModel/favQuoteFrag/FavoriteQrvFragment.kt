@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
-import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
+import com.example.tarotappdb_01.quotes.uiModel.FavQuotesViewModel
 
 
 class FavoriteQrvFragment : Fragment() {

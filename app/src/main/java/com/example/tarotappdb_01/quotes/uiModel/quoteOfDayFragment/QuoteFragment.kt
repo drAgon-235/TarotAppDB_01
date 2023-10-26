@@ -10,9 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentQuoteBinding
-import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
+import com.example.tarotappdb_01.quotes.uiModel.FavQuotesViewModel
 import com.example.tarotappdb_01.quotes.uiModel.QuotesViewModel
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 
 private val TAG = "QuoteFragment_TAG"
 class QuoteFragment : Fragment() {

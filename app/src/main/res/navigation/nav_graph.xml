@@ -207,8 +207,8 @@
             android:defaultValue="..."
             app:argType="string" />
         <action
-            android:id="@+id/action_favQuoteOptionsFragment_to_favoriteQrvFragment"
-            app:destination="@id/favoriteQrvFragment" />
+            android:id="@+id/action_favQuoteOptionsFragment_to_veryHomeFragment"
+            app:destination="@id/veryHomeFragment" />
     </fragment>
 
 

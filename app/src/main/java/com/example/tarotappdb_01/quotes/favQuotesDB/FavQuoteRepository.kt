@@ -3,7 +3,7 @@ package com.example.tarotappdb_01.quotes.favQuotesDB
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 import java.lang.Exception
 
 

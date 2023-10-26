@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 
 @Database(entities = [FavoriteQuote::class], version = 1)
 abstract class FavQuoteDatabase : RoomDatabase() {

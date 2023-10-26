@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tarotappdb_01.cards.cardsUI.allCardsRVFrag.AllCardsRVAdapter
 import com.example.tarotappdb_01.databinding.FavoriteQuoteItemBinding
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 
 class FavoriteQrvAdapter(
 

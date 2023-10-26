@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 
 @Dao
 interface FavQuoteDao {

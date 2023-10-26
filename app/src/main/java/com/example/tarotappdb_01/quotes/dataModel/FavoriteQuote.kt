@@ -1,4 +1,4 @@
-package com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag
+package com.example.tarotappdb_01.quotes.dataModel
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

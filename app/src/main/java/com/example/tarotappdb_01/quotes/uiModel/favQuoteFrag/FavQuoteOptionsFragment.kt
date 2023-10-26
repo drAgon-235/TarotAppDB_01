@@ -9,8 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.databinding.FragmentFavQuoteOptionsBinding
-import com.example.tarotappdb_01.databinding.FragmentFavoriteQrvBinding
-import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuotesViewModel
+import com.example.tarotappdb_01.quotes.uiModel.FavQuotesViewModel
 
 
 class FavQuoteOptionsFragment : Fragment() {
@@ -40,6 +39,8 @@ class FavQuoteOptionsFragment : Fragment() {
 
         val shareLogo = binding.shareIV.setImageResource(R.drawable.baseline_share_24)
         val deleteLogo = binding.deleteIV.setImageResource(R.drawable.baseline_delete_forever_24)
+        val homeLogo = binding.homeIV.setImageResource(R.drawable.baseline_home_24)
+
 
         // Gettiing the Argument-ID:
         favQuoteID = requireArguments().getString("favQuoteIDText")!!
@@ -55,6 +56,7 @@ class FavQuoteOptionsFragment : Fragment() {
         binding.dislikingCV.setOnClickListener {
             // Delete the selected Favorite Quote from the List:
             viewModel.deleteFavQuoteVM(favQuote.q)
+
             // Changing the UI:
             // 1. Confirmation text in the quoteCV:
             binding.quoteOfTheDayTV.setText("deleted from\nFavorite Quotes List")
@@ -67,11 +69,11 @@ class FavQuoteOptionsFragment : Fragment() {
             binding.dislikingCV.visibility = View.INVISIBLE
             binding.shareCV.visibility = View.INVISIBLE
 
+        }
 
-
-            // Alternatively, just go back to Favorite Quotes List:
-            //findNavController().navigate(FavQuoteOptionsFragmentDirections.actionFavQuoteOptionsFragmentToFavoriteQrvFragment())
-
+        // Home Button:
+        binding.homeCV.setOnClickListener {
+            findNavController().navigate(FavQuoteOptionsFragmentDirections.actionFavQuoteOptionsFragmentToVeryHomeFragment())
         }
 
         // Share Button:

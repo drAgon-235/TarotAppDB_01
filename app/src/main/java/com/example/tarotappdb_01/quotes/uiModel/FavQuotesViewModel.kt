@@ -1,11 +1,12 @@
-package com.example.tarotappdb_01.quotes.favQuotesDB
+package com.example.tarotappdb_01.quotes.uiModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuoteDatabase.Companion.getDatabase
-import com.example.tarotappdb_01.quotes.uiModel.favQuoteFrag.FavoriteQuote
+import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
+import com.example.tarotappdb_01.quotes.favQuotesDB.FavQuoteRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
