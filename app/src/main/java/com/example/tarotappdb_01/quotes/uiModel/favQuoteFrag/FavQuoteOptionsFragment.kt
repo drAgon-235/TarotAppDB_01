@@ -53,11 +53,25 @@ class FavQuoteOptionsFragment : Fragment() {
 
         // Delete Button:
         binding.dislikingCV.setOnClickListener {
+            // Delete the selected Favorite Quote from the List:
             viewModel.deleteFavQuoteVM(favQuote.q)
-            //findNavController().navigate(FavQuoteOptionsFragmentDirections.actionFavQuoteOptionsFragmentToFavoriteQrvFragment())
+            // Changing the UI:
+            // 1. Confirmation text in the quoteCV:
             binding.quoteOfTheDayTV.setText("deleted from\nFavorite Quotes List")
-            binding.sourceTV.setText(" ")
-            binding.quoteOfTheDayTV.setTextColor(0xFFE30000.toInt())
+            binding.sourceTV.setText("! ! !")
+            // 2. Change the color ot text and CV-Background
+            binding.quoteOfTheDayTV.setTextColor(0xFFFFFFFF.toInt())
+            binding.sourceTV.setTextColor(0xFFFFFFFF.toInt())
+            binding.quoteCV.setBackgroundColor(0xFFFD8989.toInt())
+            // 3. Make share-button and delete-button invisible:
+            binding.dislikingCV.visibility = View.INVISIBLE
+            binding.shareCV.visibility = View.INVISIBLE
+
+
+
+            // Alternatively, just go back to Favorite Quotes List:
+            //findNavController().navigate(FavQuoteOptionsFragmentDirections.actionFavQuoteOptionsFragmentToFavoriteQrvFragment())
+
         }
 
         // Share Button:
