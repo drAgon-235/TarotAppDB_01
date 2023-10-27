@@ -1,4 +1,4 @@
-package com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross
+package com.example.tarotappdb_01.cards.cardsUI.cardReadings.loveOracle
 
 import android.os.Bundle
 import android.util.Log
@@ -10,25 +10,23 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tarotappdb_01.R
 import com.example.tarotappdb_01.cards.cardsUI.CardsViewModel
-import com.example.tarotappdb_01.cards.cardsUI.cardReadings.pathOfWisdomFrag.PathofWisdomMeaningFragmentDirections
+import com.example.tarotappdb_01.cards.cardsUI.cardReadings.littleCross.LittleCrossMeaningFragmentDirections
 import com.example.tarotappdb_01.cards.model.Card
 import com.example.tarotappdb_01.cards.model.RawCardData
 import com.example.tarotappdb_01.databinding.FragmentLittleCrossMeaningBinding
-import com.example.tarotappdb_01.databinding.FragmentPathofWisdomMeaningBinding
+import com.example.tarotappdb_01.databinding.FragmentLoveOracleMeaningBinding
 import java.lang.Exception
 
-private val TAG = "LittleCross_MeaningFragment"
+private val TAG = "LoveOracle_MeaningFragment"
 
-class LittleCrossMeaningFragment : Fragment() {
+class LoveOracleMeaningFragment : Fragment() {
 
-    private lateinit var binding: FragmentLittleCrossMeaningBinding
+    private lateinit var binding: FragmentLoveOracleMeaningBinding
     private val viewmodel: CardsViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
-
         }
     }
 
@@ -36,12 +34,10 @@ class LittleCrossMeaningFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setMenuVisibility(false)
-
         // Inflate the layout for this fragment
-        binding = FragmentLittleCrossMeaningBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+        binding = FragmentLoveOracleMeaningBinding.inflate(inflater, container, false)
+        return binding.root    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -140,22 +136,22 @@ class LittleCrossMeaningFragment : Fragment() {
         // Getting the whole Card Intepretation of a distinct card (reusing the OneCardFragment again !!:
         binding.card01CV.setOnClickListener {
             val id01 = card01ID
-            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id01))
+            findNavController().navigate(LoveOracleMeaningFragmentDirections.actionLoveOracleMeaningFragmentToOneCardFragment(id01))
         }
 
         binding.card02CV.setOnClickListener {
             val id02 = card02ID
-            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id02))
+            findNavController().navigate(LoveOracleMeaningFragmentDirections.actionLoveOracleMeaningFragmentToOneCardFragment(id02))
         }
 
         binding.card03CV.setOnClickListener {
             val id03 = card03ID
-            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id03))
+            findNavController().navigate(LoveOracleMeaningFragmentDirections.actionLoveOracleMeaningFragmentToOneCardFragment(id03))
         }
 
         binding.card04CV.setOnClickListener {
             val id04 = card04ID
-            findNavController().navigate(LittleCrossMeaningFragmentDirections.actionLittleCrossMeaningFragmentToOneCardFragment(id04))
+            findNavController().navigate(LoveOracleMeaningFragmentDirections.actionLoveOracleMeaningFragmentToOneCardFragment(id04))
         }
 
 
@@ -163,6 +159,7 @@ class LittleCrossMeaningFragment : Fragment() {
 
 
     }
+
 
 
 }

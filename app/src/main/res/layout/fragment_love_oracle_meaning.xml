@@ -5,13 +5,13 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cards.cardsUI.cardReadings.simplePathFrag.CardMeaningFragment">
+    tools:context=".cards.cardsUI.cardReadings.loveOracle.LoveOracleMeaningFragment">
 
     <TextView
         android:id="@+id/meaningsTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The Little Cross"
+        android:text="The Love Oracle"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:paddingTop="10dp"
-                    app:cardBackgroundColor="#B2D56F"
+                    app:cardBackgroundColor="#E8C7F6"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +97,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="This card represents your \nissue, topic or quoestion. \nIt shows what's on your mind. \n."
+                            android:text="The Significator:\nThis card represents the \nrelationship, topic or question."
                             android:textColor="#552AA3"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:paddingTop="5dp"
-                    app:cardBackgroundColor="#B2D56F"
+                    app:cardBackgroundColor="#E8C7F6"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -188,7 +188,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="This card tells you what you should \navoid! Don't do that!"
+                            android:text="This card represents your inner world.\nHopes, anxieties, wishes, Motivations!"
                             android:textColor="#552AA3"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -226,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:paddingTop="10dp"
-                    app:cardBackgroundColor="#B2D56F"
+                    app:cardBackgroundColor="#E8C7F6"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -280,7 +280,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="This card tells you \nwhat you should do. \nIt shows you the direction to go."
+                            android:text="This card shows the other person.\nHer/his attitude, expectations, \nHis/her perspective on you."
                             android:textColor="#552AA3"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -317,7 +317,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:paddingTop="10dp"
-                    app:cardBackgroundColor="#B2D56F"
+                    app:cardBackgroundColor="#E8C7F6"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -371,7 +371,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="This card shows a possible outcome, \nif you follow the card 2 and 3. \nThe goal to achieve."
+                            android:text="This card is your Oracle! \n It can be a proposal for an action  \nor attitude."
                             android:textColor="#552AA3"
                             android:textSize="14sp"
                             android:textStyle="bold"
@@ -410,3 +410,8 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+    tools:context=".cards.cardsUI.cardReadings.loveOracle.LoveOracleMeaningFragment">
+
+-->

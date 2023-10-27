@@ -17,6 +17,8 @@ import com.example.tarotappdb_01.cards.model.Card
 import com.example.tarotappdb_01.databinding.FragmentLittleCrossBinding
 import com.example.tarotappdb_01.databinding.FragmentLoveOracleBinding
 
+// This ReadingsFragment has no own Meanigs Fragment. We reuse the LittleCrossMeaningFragment,
+// because the structure ist ALMOST the same, rest can be adapted programmatically:
 
 class LoveOracleFragment : Fragment() {
 
@@ -183,7 +185,7 @@ class LoveOracleFragment : Fragment() {
             val id3 = shuffledCardList[1].id
             val id4 = shuffledCardList[3].id
             findNavController().navigate(
-                LoveOracleFragmentDirections.actionLoveOracleFragmentToLittleCrossMeaningFragment(
+                LoveOracleFragmentDirections.actionLoveOracleFragmentToLoveOracleMeaningFragment(
                     id1,
                     id2,
                     id3,

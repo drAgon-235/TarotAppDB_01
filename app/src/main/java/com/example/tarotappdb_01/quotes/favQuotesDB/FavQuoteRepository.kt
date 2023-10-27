@@ -7,7 +7,7 @@ import com.example.tarotappdb_01.quotes.dataModel.FavoriteQuote
 import java.lang.Exception
 
 
-private val TAG = "RepositoryTAG"
+private val TAG = "FavQuotes_RepositoryTAG"
 class FavQuoteRepository(private val database: FavQuoteDatabase) {
 
     // Variable for saving the List (in the viewModel):

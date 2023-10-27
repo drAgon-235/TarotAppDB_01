@@ -7,7 +7,7 @@ import com.example.tarotappdb_01.quotes.api.QuotesApi
 import com.example.tarotappdb_01.quotes.dataModel.Quote
 
 
-const val TAG = "RepositoryTAG"
+const val TAG = "Quotes_RepositoryTAG"
 
 class QuotesRepository(val apiService: QuotesApi) {
 
