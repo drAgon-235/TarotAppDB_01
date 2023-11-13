@@ -21,4 +21,5 @@ interface FavQuoteDao {
 
     @Query("SELECT COUNT(*) FROM favorites_table")
     fun count(): Int
+
 }
